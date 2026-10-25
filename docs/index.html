@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pontinhos — O Clássico Jogo dos Pontinhos (Dots and Boxes) para Android e iOS | 100% Offline</title>
+  <meta name="description" content="Jogue Pontinhos (Dots and Boxes) no Android e iOS. Estética Tactile Paper & Ink, modos vs Bot (Fácil e Difícil) e 2 Jogadores Local, acessibilidade WCAG 2.1 AA+ com dupla codificação, 100% offline, sem anúncios e zero coleta de dados.">
+  <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="store-assets/play-store-icon-512x512.png">
+  <link rel="apple-touch-icon" href="store-assets/app-store-icon-1024x1024.png">
+  <link rel="canonical" href="https://regardgames.github.io/pontinhos/">
+  <link rel="stylesheet" href="landing.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Pontinhos — Regard">
+  <meta property="og:title" content="Pontinhos — O Clássico Jogo de Estratégia no Seu Bolso (100% Offline)">
+  <meta property="og:description" content="Feche caixas, ganhe turnos extras e vença pelo raciocínio estratégico. Modos vs Bot Fácil/Difícil e Passa e Joga (2P), acessível para daltônicos (WCAG AA+), sem anúncios e sem coleta de dados.">
+  <meta property="og:url" content="https://regardgames.github.io/pontinhos/">
+  <meta property="og:image" content="https://regardgames.github.io/pontinhos/store-assets/feature-graphic-1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="Banner oficial do jogo Pontinhos mostrando o tabuleiro em ação com dupla codificação Azul Cobalto (●) e Coral (◆).">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pontinhos — Dots and Boxes 100% Offline para Android e iOS">
+  <meta name="twitter:description" content="O clássico de papel e caneta reinventado com estética Tactile Paper & Ink, IA estratégica, modo 2 jogadores local e zero anúncios.">
+  <meta name="twitter:image" content="https://regardgames.github.io/pontinhos/store-assets/feature-graphic-1024x500.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["VideoGame", "MobileApplication"],
+    "name": "Pontinhos",
+    "alternateName": "Jogo dos Pontinhos (Dots and Boxes)",
+    "identifier": "com.regard.pontinhos",
+    "softwareVersion": "0.1.0+1",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "GameApplication",
+    "genre": ["Board Game", "Strategy Game", "Puzzle"],
+    "inLanguage": "pt-BR",
+    "isAccessibleForFree": true,
+    "playMode": ["SinglePlayer", "MultiPlayer", "CoOp"],
+    "numberOfPlayers": {
+      "@type": "QuantitativeValue",
+      "minValue": 1,
+      "maxValue": 2
+    },
+    "description": "O clássico Jogo dos Pontinhos (Dots and Boxes) para Android e iOS com estética Tactile Paper & Ink, modos contra o Computador (Fácil e Difícil) e 2 Jogadores Local, acessibilidade WCAG 2.1 AA+ com dupla codificação, 100% offline e sem coleta de dados.",
+    "image": "https://regardgames.github.io/pontinhos/store-assets/feature-graphic-1024x500.png",
+    "url": "https://regardgames.github.io/pontinhos/",
+    "downloadUrl": "https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk",
+    "author": {
+      "@type": "Organization",
+      "name": "Regard",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fortaleza",
+        "addressRegion": "CE",
+        "addressCountry": "BR"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('pontinhos-web-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (err) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <noscript class="noscript">Ative o JavaScript para jogar no tabuleiro interativo e alternar o tema. O restante da página permanece legível.</noscript>
+
+  <header class="site-header">
+    <div class="header-bar container">
+      <a class="brand" href="#hero">
+        <img src="store-assets/play-store-icon-512x512.png" width="36" height="36" alt="Ícone do jogo Pontinhos">
+        <span class="brand-copy">
+          <span class="brand-name">Pontinhos</span>
+          <span class="version-badge">v0.1.0-beta.1</span>
+        </span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu de navegação">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+        <a href="#experiencia">Como Funciona</a>
+        <a href="#modos-de-jogo">Modos &amp; IA</a>
+        <a href="#acessibilidade">Acessibilidade</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar entre tema claro e tema escuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☀</span>
+          <span class="theme-label">Tema Claro</span>
+        </button>
+        <a class="btn btn-primary btn-compact" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk">Baixar APK Beta</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section id="hero" class="hero-section" aria-labelledby="hero-titulo">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">● CLÁSSICO DE PAPEL E CANETA • 100% OFFLINE &amp; SEM ANÚNCIOS ◆</p>
+          <h1 id="hero-titulo">O clássico Jogo dos Pontinhos, redesenhado com <span class="hero-accent">precisão tátil</span> para o seu bolso.</h1>
+          <p class="hero-lead">Conecte pontos, feche caixas, conquiste turnos extras e vença pelo raciocínio estratégico. Uma experiência silenciosamente elegante com estética <em>Tactile Paper &amp; Ink</em>, criada em Flutter para smartphones e tablets Android e iOS — sem internet, sem anúncios e sem coleta de dados.</p>
+          <ul class="trust-pills" aria-label="Garantias do aplicativo">
+            <li>
+              <strong>100% Offline</strong>
+              <span>Jogue no avião, no metrô ou onde quiser, sem depender de sinal.</span>
+            </li>
+            <li>
+              <strong>Zero Anúncios</strong>
+              <span>Sem banners, sem vídeos forçados e sem compras no aplicativo.</span>
+            </li>
+            <li>
+              <strong>Zero Coleta de Dados</strong>
+              <span>Nenhum dado sai do seu aparelho. Sem login e sem rastreadores.</span>
+            </li>
+            <li>
+              <strong>Acessível WCAG 2.1 AA+</strong>
+              <span>Dupla codificação com cores, formas geométricas (● vs ◆) e hachuras.</span>
+            </li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk">📲 Baixar APK Beta (v0.1.0-beta.1)</a>
+            <p class="microcopy">Android 6.0+ • Pacote assinado (50,4 MB) • SHA-256 verificado • Instalação direta</p>
+            <a class="btn btn-secondary" href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1">📦 Ver Release no GitHub (.apk / .aab)</a>
+            <a class="btn btn-text" href="privacy-policy.html">🔒 Ler Política de Privacidade Pública</a>
+          </div>
+        </div>
+
+        <div id="interactive-board-demo" class="board-card">
+          <p class="board-widget-title" id="board-widget-title">Experimente Agora • Tabuleiro Interativo</p>
+          <div class="scoreboard" aria-label="Placar da demonstração">
+            <div class="score score-p1">
+              <span class="score-label">● Você (J1):</span>
+              <strong class="score-value" id="score-p1">02</strong>
+              <span class="turn-badge" id="turn-p1">SUA VEZ</span>
+            </div>
+            <div class="score score-bot">
+              <span class="score-label">◆ Bot:</span>
+              <strong class="score-value" id="score-bot">01</strong>
+              <span class="turn-badge" id="turn-bot" hidden>JOGANDO</span>
+            </div>
+          </div>
+          <p class="board-status" id="board-status" role="status" aria-live="polite">Toque em uma aresta tracejada com 3 lados prontos para fechar a caixa e ganhar turno extra!</p>
+          <p class="visually-hidden" id="board-help">Use Tab para chegar a uma aresta tracejada e Enter ou Espaço para jogar. A aresta destacada em azul fecha uma caixa imediatamente.</p>
+          <div class="board-surface" id="board-mount"></div>
+          <button type="button" class="btn btn-secondary board-reset" id="reset-board" aria-label="Reiniciar demonstração interativa do tabuleiro">↻ Reiniciar Tabuleiro</button>
+          <p class="board-legend">Dupla codificação ativa: ● Azul Cobalto (J1) · ◆ Coral com hachura (Bot) · Halo Esmeralda na última jogada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="band band-alt" aria-labelledby="experiencia-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ESTÉTICA TACTILE PAPER &amp; INK</p>
+          <h2 id="experiencia-titulo">A sensação do caderno quadriculado. A fluidez dos 60 quadros por segundo.</h2>
+          <p class="section-lead">Reduzimos tudo o que não importa para destacar o que torna o Jogo dos Pontinhos inesquecível: a tensão silenciosa de cada traço antes de abrir uma grande cadeia de caixas.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <p class="seal">ZERO FRICÇÃO</p>
+            <h3>Abra o app e comece a jogar imediatamente</h3>
+            <p>Nada de telas de carregamento intermináveis, criação de conta ou tutoriais obrigatórios repetitivos. A tela de Nova Partida já traz configurações inteligentes pré-selecionadas (<span class="tabular">Computador • Fácil • Tabuleiro 3×3</span>) para você iniciar o duelo com apenas 1 toque.</p>
+          </article>
+          <article class="card">
+            <p class="seal">HITBOX &gt;= 44 DP</p>
+            <h3>Nunca erre um traço por acidente</h3>
+            <p>O motor geométrico (<code>BoardGeometry</code> + <code>hitTestEdge</code>) cria áreas de toque generosas ao redor de cada aresta e aplica uma zona de exclusão circular de 18% nos vértices. O resultado é uma resposta tátil imediata, sem toques ambíguos nas quinas do tabuleiro.</p>
+          </article>
+          <article class="card">
+            <p class="seal">FEEDBACK MULTISSENSORIAL</p>
+            <h3>Saiba exatamente onde o adversário jogou</h3>
+            <p>Cada nova aresta recebe um halo <strong>Verde Esmeralda (<code>#10B981</code>)</strong> com marcador central, acompanhado por efeitos sonoros sutis e vibração tátil diferenciada para traços simples, capturas duplas (<span class="tabular">+2</span>) e vitória.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modos-de-jogo" class="band" aria-labelledby="modos-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">DESAFIO SOB MEDIDA</p>
+          <h2 id="modos-titulo">Jogue sozinho contra a IA ou desafie um amigo no mesmo aparelho.</h2>
+          <p class="section-lead">Escolha o ritmo da sua partida combinando dois tamanhos de tabuleiro com três experiências de jogo — sempre com alternância justa do primeiro turno a cada revanche.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <p class="mode-badge">● vs ▲ · IDEAL PARA RELAXAR</p>
+            <h3>Bot Fácil (Casual &amp; Oportunista)</h3>
+            <p>O computador aproveita caixas com 3 lados já desenhados para pontuar e prefere jogadas seguras quando disponíveis, mas não pune cadeias longas com armadilhas avançadas. Perfeito para partidas descontraídas ou para aprender a mecânica de turnos extras.</p>
+            <ul>
+              <li>Fecha caixas de 3 lados imediatamente</li>
+              <li>Ritmo suave com pausa natural (<span class="tabular">350–500 ms</span>)</li>
+              <li>Ótimo para partidas rápidas no tabuleiro <span class="tabular">3×3</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="mode-badge">● vs ▲ · ESTRATÉGIA AVANÇADA</p>
+            <h3>Bot Difícil (Controle de Cadeias &amp; <em>Double-Cross</em>)</h3>
+            <p>Projetado para quem domina <em>Dots and Boxes</em>. O motor tático (<code>HardBot</code> + <code>MoveAnalysis</code>) mapeia todas as cadeias abertas do tabuleiro, evita entregar a 3ª aresta de qualquer caixa enquanto houver lances seguros e executa o sacrifício estratégico (<em>double-dealing</em>) para assumir o controle das maiores sequências.</p>
+            <ul>
+              <li>Evita abrir caixas de 2 lados sem necessidade</li>
+              <li>Minimiza perdas escolhendo a menor cadeia disponível</li>
+              <li>Executa <em>Double-Cross</em> nas 2 últimas caixas de cadeias longas</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="mode-badge">● J1 vs ◆ J2 · NO MESMO APARELHO</p>
+            <h3>Passa e Joga (2 Jogadores Local)</h3>
+            <p>Transforme seu smartphone ou tablet em um tabuleiro de mesa. Dois jogadores se revezam no mesmo dispositivo com identificação visual inconfundível (● Azul Cobalto vs ◆ Coral com hachura). Ao pedir revanche, o jogo alterna automaticamente quem começa.</p>
+            <ul>
+              <li>Perfeito para viagens, salas de espera e encontros</li>
+              <li>Alternância automática do 1º jogador na revanche</li>
+              <li>Experiência de mesa ampliada em Tablets de 7", 10" e iPad</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="subsection-title">Comparativo de tabuleiros 3×3 e 5×5</h3>
+        <div class="table-scroll">
+          <table>
+            <caption class="visually-hidden">Comparativo entre o tabuleiro 3×3 rápido e o tabuleiro 5×5 clássico.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Característica</th>
+                <th scope="col">Tabuleiro 3×3 Rápido (Padrão)</th>
+                <th scope="col">Tabuleiro 5×5 Clássico (Estratégico)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Grade de Pontos</th>
+                <td>4 × 4 (16 pontos de interseção)</td>
+                <td>6 × 6 (36 pontos de interseção)</td>
+              </tr>
+              <tr>
+                <th scope="row">Total de Caixas</th>
+                <td><strong>9 caixas</strong> (vence quem conquistar 5+)</td>
+                <td><strong>25 caixas</strong> (vence quem conquistar 13+)</td>
+              </tr>
+              <tr>
+                <th scope="row">Arestas Jogáveis</th>
+                <td>24 segmentos horizontais e verticais</td>
+                <td>60 segmentos horizontais e verticais</td>
+              </tr>
+              <tr>
+                <th scope="row">Tempo Médio</th>
+                <td>1 a 2 minutos por partida</td>
+                <td>3 a 6 minutos por partida</td>
+              </tr>
+              <tr>
+                <th scope="row">Quando Escolher</th>
+                <td>Pausas rápidas, aquecimento e disputas relâmpago.</td>
+                <td>Duelos táticos profundos com grandes cadeias de captura.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="acessibilidade" class="band band-alt" aria-labelledby="acessibilidade-titulo">
+      <div class="container stack-panels">
+        <div class="section-heading">
+          <p class="eyebrow">DESENHADO PARA TODOS • INCLUSÃO POR PADRÃO</p>
+          <h2 id="acessibilidade-titulo">Dupla codificação visual e adaptação perfeita do smartphone ao iPad Pro.</h2>
+          <p class="section-lead">No Pontinhos, a cor nunca trabalha sozinha. Combinamos paleta de alto contraste, geometria simbólica e texturas táteis para garantir leitura imediata em qualquer condição visual ou tamanho de tela.</p>
+        </div>
+
+        <div class="panel-block encoding-panel">
+          <div class="encoding-layout">
+            <div class="swatch-row" aria-hidden="true">
+              <div class="swatch swatch-p1">● J1</div>
+              <div class="swatch swatch-bot">◆ BOT</div>
+              <div class="swatch swatch-last">◯ Última</div>
+            </div>
+            <div>
+              <h3>Como funciona a Dupla Codificação para Daltônicos (WCAG 2.1 AA+)</h3>
+              <p>Aproximadamente 8% dos homens e 0,5% das mulheres possuem algum grau de deficiência na visão de cores (como deuteranopia, protanopia ou tritanopia). Por isso, cada jogador no Pontinhos possui <strong>três camadas simultâneas de identificação</strong>:</p>
+              <ol>
+                <li><strong>Jogador 1 (Você / J1):</strong> Cor <strong>Azul Cobalto (<code>#2563EB</code> no claro / <code>#60A5FA</code> no escuro)</strong> + Símbolo geométrico <strong>Círculo Sólido (●)</strong> + Preenchimento liso com marca d'água <code>● J1</code>.</li>
+                <li><strong>Jogador 2 / Bot (J2 / BOT):</strong> Cor <strong>Coral / Âmbar (<code>#EA580C</code> no claro / <code>#FBBF24</code> no escuro)</strong> + Símbolo geométrico <strong>Losango (◆) / Triângulo (▲)</strong> + <strong>Hachura diagonal a 45°</strong> dentro das caixas capturadas.</li>
+                <li><strong>Última Jogada (<code>lastMove</code>):</strong> Destaque <strong>Verde Esmeralda (<code>#10B981</code> / <code>#34D399</code>)</strong> com halo luminoso + <strong>Anel circular central (◯)</strong> sobre a aresta recém-jogada.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-block responsive-panel">
+          <h3>Engenharia Responsiva: Smartphones, Tablets 7" e 10" e iPad Pro 12.9"</h3>
+          <p>Nada de interfaces esticadas ou botões gigantescos em telas grandes. Em tablets e iPads, o componente <code>PontinhosContentFrame</code> mantém os controles e placares centralizados em uma coluna ergonômica de <strong><span class="tabular">600 dp</span></strong>, enquanto o <code>BoardMetrics</code> recalcula proporcionalmente o espaçamento dos pontos, a espessura das arestas e os alvos de toque.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="band" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">VITRINE OFICIAL DAS LOJAS</p>
+          <h2 id="galeria-titulo">Conheça cada detalhe da interface antes de instalar.</h2>
+          <p class="section-lead">Capturas oficiais em português do Brasil (<span lang="pt-BR">pt-BR</span>) preparadas para a Google Play Store e Apple App Store. Alterne entre as visualizações de <strong>Smartphone</strong> e <strong>Tablet / iPad</strong>.</p>
+        </div>
+
+        <div class="gallery-tabs" role="tablist" aria-label="Filtrar galeria por dispositivo">
+          <button type="button" role="tab" id="tab-phone" aria-selected="true" aria-controls="galeria-phone" tabindex="0">Smartphone</button>
+          <button type="button" role="tab" id="tab-tablet" aria-selected="false" aria-controls="galeria-tablet" tabindex="-1">Tablet &amp; iPad</button>
+        </div>
+
+        <div role="tabpanel" id="galeria-phone" aria-labelledby="tab-phone">
+          <div class="gallery-grid gallery-grid-phone">
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-phone/google-play-1080x1920/01-proposta-principal-tabuleiro.png" width="1080" height="1920" alt="Captura de tela de smartphone mostrando uma partida ativa do jogo Pontinhos em tabuleiro 3x3, com placar 03 a 02 para o Jogador 1 (Azul Cobalto com símbolo de círculo) contra o Computador (Laranja com símbolo de triângulo) e banner de captura dupla com turno extra." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>1. Tabuleiro em Partida &amp; Turno Extra</h3>
+                <p>Feche caixas no tabuleiro 3×3, conquiste capturas duplas (+2) e acompanhe a última jogada pelo destaque Verde Esmeralda.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-phone/google-play-1080x1920/02-bot-facil-e-dificil.png" width="1080" height="1920" alt="Captura de tela de smartphone destacando os modos de Inteligência Artificial do Pontinhos: Bot Fácil para partidas rápidas e Bot Difícil com estratégia de controle de cadeias." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>2. Bot Fácil e Bot Difícil</h3>
+                <p>Escolha entre partidas casuais no nível Fácil ou enfrente a heurística de controle de cadeias no nível Difícil.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-phone/google-play-1080x1920/03-dois-jogadores-passa-e-joga.png" width="1080" height="1920" alt="Captura de tela de smartphone exibindo o modo Passa e Joga para 2 jogadores locais disputando um tabuleiro 5x5 clássico de 25 caixas." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>3. Modo 2 Jogadores Local</h3>
+                <p>Divirta-se com amigos no mesmo aparelho em tabuleiros 3×3 ou 5×5, com alternância automática do 1º turno na revanche.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-phone/google-play-1080x1920/04-temas-claro-escuro-acessibilidade.png" width="1080" height="1920" alt="Captura de tela dividida comparando o Tema Claro e o Tema Escuro do Pontinhos, evidenciando a dupla codificação por cor, forma geométrica e textura hachurada nas caixas." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>4. Temas Claro &amp; Escuro + Dupla Codificação</h3>
+                <p>Comparativo lado a lado entre o Tema Claro (#F8FAFC) e o Tema Escuro (#0F172A) com símbolos geométricos e hachuras para daltônicos.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-phone/google-play-1080x1920/05-estatisticas-e-100-offline.png" width="1080" height="1920" alt="Captura de tela de smartphone apresentando o painel de Estatísticas Locais do Pontinhos com 24 partidas, 71% de aproveitamento e modal de vitória com botão de revanche imediata." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>5. Estatísticas Locais 100% Offline</h3>
+                <p>Acompanhe partidas concluídas, vitórias, derrotas, empates e taxa de aproveitamento por dificuldade — tudo salvo no seu aparelho.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="galeria-tablet" aria-labelledby="tab-tablet" hidden>
+          <div class="gallery-grid gallery-grid-tablet">
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-tablet/tablet-10-1600x2560/01-tablet-tabuleiro-5x5.png" width="1600" height="2560" alt="Captura de tela de tablet mostrando o tabuleiro 5x5 do Pontinhos perfeitamente centralizado no frame de 600 dp com margens responsivas." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>Tablet 1. Tabuleiro 5×5 em Escala Proporcional</h3>
+                <p>Container central contido em 600 dp com cálculo automático de BoardMetrics para máxima nitidez em telas grandes.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-tablet/tablet-10-1600x2560/02-tablet-modo-2-jogadores.png" width="1600" height="2560" alt="Captura de tela de tablet destacando o modo 2 Jogadores Local com áreas de toque amplas para jogar em dupla sobre a mesa." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>Tablet 2. Experiência de Mesa para 2 Jogadores</h3>
+                <p>Ideal para apoiar sobre a mesa e jogar em dupla com áreas de toque generosas (&gt;= 44 dp) e leitura limpa.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-tablet/tablet-10-1600x2560/03-tablet-tema-escuro-hd.png" width="1600" height="2560" alt="Captura de tela de tablet exibindo o Tema Escuro em alta definição do Pontinhos com linhas luminosas em azul céu, âmbar e verde esmeralda." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>Tablet 3. Tema Escuro em Alta Definição</h3>
+                <p>Fundo Midnight Slate (#0F172A) com contraste calibrado e halo Esmeralda luminoso para sessões noturnas confortáveis.</p>
+              </figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="store-assets/screenshots-tablet/tablet-10-1600x2560/04-tablet-config-e-estatisticas.png" width="1600" height="2560" alt="Captura de tela de tablet demonstrando as telas de Nova Partida e Estatísticas Locais contidas em 600 dp para leitura ergonômica." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <h3>Tablet 4. Configuração Rápida &amp; Estatísticas Organizadas</h3>
+                <p>Telas de Nova Partida (UX-02) e Estatísticas Locais (UX-05) centralizadas em 600 dp sem estiramento horizontal.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidade" class="band band-alt" aria-labelledby="privacidade-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PRIVACIDADE POR DESIGN • CONFORMIDADE DATA SAFETY</p>
+          <h2 id="privacidade-titulo">O que acontece no seu tabuleiro fica exclusivamente no seu aparelho.</h2>
+          <p class="section-lead">O Pontinhos foi construído sob o princípio estrito de <strong>Zero Coleta de Dados</strong>. Não operamos servidores de rastreamento, não pedimos cadastro e não incluímos SDKs de publicidade.</p>
+        </div>
+        <div class="cards-4">
+          <article class="card">
+            <h3>Armazenamento 100% Local (SharedPreferences)</h3>
+            <p>Apenas suas preferências (<code>soundEnabled</code>, <code>vibrationEnabled</code>, <code>themeMode</code>, <code>hasSeenTutorial</code>) e suas estatísticas contra o computador (<code>botStats</code>) ficam gravadas no armazenamento privado do sistema operacional.</p>
+          </article>
+          <article class="card">
+            <h3>Zero Permissões Sensíveis em Produção</h3>
+            <p>O manifesto de release não solicita acesso a câmera, microfone, contatos, localização, fotos nem ao identificador de publicidade (<code>AD_ID</code> / <code>IDFA</code>). E o pacote de produção não requer sequer permissão de internet.</p>
+          </article>
+          <article class="card">
+            <h3>Sem Anúncios, Sem Rastreadores, Sem Conta</h3>
+            <p>Não exibimos anúncios de nenhum formato e não compartilhamos dados com terceiros, redes de anúncios ou serviços de analytics em nuvem.</p>
+          </article>
+          <article class="card">
+            <h3>Controle Total pelo Usuário</h3>
+            <p>Você pode apagar todas as estatísticas e preferências a qualquer momento limpando os dados do aplicativo ou desinstalando o jogo nas configurações do seu dispositivo.</p>
+          </article>
+        </div>
+        <aside class="privacy-callout">
+          <h3>Documento Público Oficial para Google Play Store e Apple App Store</h3>
+          <p>Consulte a especificação técnica completa das chaves locais gravadas no dispositivo e os termos formais de privacidade da versão 0.1.0.</p>
+          <div class="privacy-actions">
+            <a class="btn btn-primary" href="privacy-policy.html">Ler a Política de Privacidade Completa (privacy-policy.html) →</a>
+            <a class="btn btn-text" href="PRIVACY_POLICY.md">Ver texto-fonte em Markdown (PRIVACY_POLICY.md)</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="band" aria-labelledby="faq-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TIRE SUAS DÚVIDAS</p>
+          <h2 id="faq-titulo">Perguntas Frequentes (FAQ)</h2>
+          <p class="section-lead">Tudo o que você precisa saber sobre funcionamento offline, modos de jogo, acessibilidade e instalação da versão beta.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>O Pontinhos precisa de internet para funcionar?</summary>
+            <p>Não. O Pontinhos é <strong>100% offline-first</strong>. Todas as partidas contra o computador (Fácil ou Difícil), o modo 2 Jogadores Local, o tutorial interativo e o painel de estatísticas funcionam integralmente no seu aparelho, sem exigir conexão Wi-Fi ou dados móveis.</p>
+          </details>
+          <details>
+            <summary>O jogo exibe anúncios ou possui compras dentro do aplicativo?</summary>
+            <p>Não. O jogo é totalmente livre de anúncios (<em>Zero Ads</em>), banners, vídeos recompensados ou microtransações. Nossa proposta é oferecer uma experiência pura de estratégia, sem interrupções comerciais.</p>
+          </details>
+          <details>
+            <summary>Como o jogo garante acessibilidade para pessoas com daltonismo?</summary>
+            <p>Aplicamos <strong>dupla codificação visual (WCAG 2.1 AA+)</strong> em todos os elementos da partida. O Jogador 1 é identificado pela cor Azul Cobalto combinada ao símbolo geométrico <strong>Círculo Sólido (●)</strong>, enquanto o Jogador 2 / Bot utiliza Coral/Âmbar combinado ao símbolo <strong>Losango (◆) / Triângulo (▲)</strong> e preenchimento com <strong>hachura diagonal</strong> nas caixas capturadas. Além disso, a última aresta jogada recebe um halo Verde Esmeralda com marcador circular central.</p>
+          </details>
+          <details>
+            <summary>Qual é a diferença real entre o Bot Fácil e o Bot Difícil?</summary>
+            <p>Ambos os bots fecham imediatamente qualquer caixa que já esteja com 3 lados preenchidos (aproveitando a regra do turno extra). A diferença está no planejamento tático: enquanto o <strong>Bot Fácil</strong> faz escolhas casuais entre as arestas restantes, o <strong>Bot Difícil</strong> analisa o grafo completo do tabuleiro para evitar entregar a 3ª aresta de uma caixa, escolhe a menor cadeia quando forçado a ceder pontos e aplica a técnica avançada <em>Double-Cross</em> nas últimas caixas de uma sequência longa.</p>
+          </details>
+          <details>
+            <summary>O aplicativo funciona bem em tablets Android e iPads?</summary>
+            <p>Sim! A interface conta com suporte responsivo dedicado para <strong>tablets Android de 7" e 10"</strong> e <strong>iPad Pro de 12.9"</strong>. Os menus e placares são centralizados de forma elegante em um container de <code>600 dp</code> (<code>PontinhosContentFrame</code>), enquanto o tabuleiro escala proporcionalmente pontos, linhas e áreas de toque (<code>BoardMetrics</code>) sem distorcer a geometria.</p>
+          </details>
+          <details>
+            <summary>Como faço para instalar a versão Beta (v0.1.0-beta.1) no meu Android?</summary>
+            <p>Basta clicar no botão <strong>"Baixar APK Beta (v0.1.0-beta.1)"</strong> nesta página para baixar o arquivo <code>pontinhos-v0.1.0-release.apk</code> diretamente da release oficial no GitHub. Abra o arquivo baixado no seu smartphone ou tablet Android (6.0 ou superior) e confirme a instalação. Caso queira conferir a integridade do arquivo, o hash SHA-256 oficial é <code class="hash">8d2dbbcf79e516ccd61cf24c8493659832583fa295a94c4325e4e3096dc47e7a</code>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="cta-titulo">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 id="cta-titulo">Pronto para fechar a próxima caixa?</h2>
+          <p>Baixe agora o APK da versão <span class="tabular">v0.1.0-beta.1</span> ou explore o código-fonte completo em Flutter com 150 testes automatizados no GitHub.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk">📲 Baixar APK Beta (v0.1.0-beta.1)</a>
+            <a class="btn btn-secondary" href="https://github.com/regardgames/pontinhos">⭐ Explorar Repositório no GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">Pontinhos (<code>com.regard.pontinhos</code>)</p>
+        <p>O clássico jogo de estratégia Dots and Boxes para Android e iOS. 100% offline, acessível (WCAG 2.1 AA+) e sem coleta de dados.</p>
+        <p>Versão atual: 0.1.0+1 (Release v0.1.0-beta.1)</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navegação Rápida</h3>
+        <ul>
+          <li><a href="#experiencia">Experiência &amp; Benefícios</a></li>
+          <li><a href="#modos-de-jogo">Modos de Jogo &amp; IA</a></li>
+          <li><a href="#acessibilidade">Acessibilidade &amp; Tablets</a></li>
+          <li><a href="#galeria">Galeria de Telas</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Documentação &amp; Conformidade</h3>
+        <ul>
+          <li><a href="privacy-policy.html"><strong>Política de Privacidade (Web)</strong></a></li>
+          <li><a href="PRIVACY_POLICY.md">Política de Privacidade (Markdown)</a></li>
+          <li><a href="DESIGN_SYSTEM_UX.md">Design System &amp; UX (DESIGN_SYSTEM_UX.md)</a></li>
+          <li><a href="PLANEJAMENTO_MVP.md">Planejamento do MVP (PLANEJAMENTO_MVP.md)</a></li>
+          <li><a href="BETA_DISTRIBUTION.md">Distribuição Beta (BETA_DISTRIBUTION.md)</a></li>
+          <li><a href="BETA_VALIDATION_PLAYBOOK.md">Playbook de Validação (BETA_VALIDATION_PLAYBOOK.md)</a></li>
+          <li><a href="store-assets/MANIFEST.md">Manifesto de Ativos (store-assets/MANIFEST.md)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Links do Projeto no GitHub</h3>
+        <ul>
+          <li><a href="https://github.com/regardgames/pontinhos">Repositório Oficial no GitHub</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos-mobile">Repositório Mobile (Flutter)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1">Releases &amp; Downloads (v0.1.0-beta.1)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/issues">Reportar Issue / Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="legal">© 2026 Regard · Fortaleza, Ceará, Brasil · Pontinhos (com.regard.pontinhos) · Feito com Flutter &amp; Design System Tactile Paper &amp; Ink.</p>
+    </div>
+  </footer>
+  <script src="landing.js"></script>
+</body>
+</html>
+
