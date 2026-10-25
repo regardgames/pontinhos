@@ -211,14 +211,14 @@ a:hover {
 .footer-brand-name img {
   flex: 0 0 auto;
   max-width: none;
-  object-fit: cover;
-  box-shadow: var(--shadow-icon);
+  object-fit: contain;
+  border-radius: 22%;
+  background: transparent;
 }
 
 .brand img {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .brand-copy {
@@ -457,7 +457,6 @@ section[id],
 .hero-brand-lockup img {
   width: 64px;
   height: 64px;
-  border-radius: 14px;
 }
 
 .hero-brand-copy {
@@ -1085,7 +1084,6 @@ details p {
 .footer-brand-name img {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
 }
 
 .footer-brand-name span {
