@@ -905,13 +905,33 @@ var I18N = {
     var nav = document.getElementById('site-nav');
     if (!toggle || !nav) return;
     toggle.addEventListener('click', function () {
-      setNavOpen(!nav.classList.contains('is-open'));
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      setNavOpen(!expanded);
     });
-    nav.addEventListener('click', function (event) {
-      if (event.target.closest('a')) setNavOpen(false);
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setNavOpen(false);
+      });
     });
+
+    document.addEventListener('click', function (event) {
+      if (toggle.getAttribute('aria-expanded') !== 'true') return;
+      var header = toggle.closest('.site-header');
+      if (header && !header.contains(event.target)) setNavOpen(false);
+    });
+
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') setNavOpen(false);
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setNavOpen(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1024 && toggle.getAttribute('aria-expanded') === 'true') {
+        setNavOpen(false);
+      }
     });
   }
 
