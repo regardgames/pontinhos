@@ -98,7 +98,7 @@ O **Pontinhos** foi projetado desde a especificação `UX-00` para que **nenhuma
 
 ### Ergonomia de Toque & Responsividade Mobile + Tablet
 
-- **Hit-Testing de Precisão (`hit_test_edge.dart`):** Zona sensível ao toque expandida (`>= 44×44 dp` a `48×48 dp`) para cada aresta horizontal ou vertical, combinada com **zona de exclusão circular de 18% ao redor dos pontos (vértices)** para evitar toques ambíguos nas interseções.
+- **Hit-Testing de Precisão (`hit_test_edge.dart`):** Zona sensível ao toque expandida (`>= 44×44 dp` a `48×48 dp`) para cada aresta horizontal ou vertical, combinada com **zona de exclusão circular de 18% ao redor dos pontos (vértices)** para evitar toques ambíguos nas interseções. No mini-tabuleiro da landing, o gesto principal é **arrastar de um ponto ao ponto vizinho (drag-to-connect)** com linha guia elástica e **snap magnético**, mantendo o toque direto na aresta como alternativa.
 - **Layout Adaptativo para Tablets (`PontinhosContentFrame` + `BoardMetrics`):** Em tablets Android de `7"` e `10"` e no iPad Pro `12.9"`, o miolo de navegação e placares é contido de forma elegante em `maxWidth: 600 dp`, enquanto o tabuleiro `CustomPainter` escala proporcionalmente a espessura das linhas, o raio dos pontos e a tipografia interna sem distorção.
 - **Leitores de Tela (TalkBack & VoiceOver):** Rótulos semânticos em controles, anúncios de mudança de turno e placar tabular (`FontFeature.tabularFigures()`).
 

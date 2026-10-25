@@ -659,7 +659,21 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  touch-action: manipulation;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.dot-hit,
+.board-dot {
+  cursor: grab;
+}
+
+.board-surface svg.is-dragging,
+.board-surface svg.is-dragging .dot-hit,
+.board-surface svg.is-dragging .board-dot,
+.board-surface svg.is-dragging .edge-hit {
+  cursor: grabbing;
 }
 
 .edge-hit {

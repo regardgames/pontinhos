@@ -7,10 +7,11 @@ on:
   pull_request:
   workflow_dispatch:
 
-# pages: write e id-token: write são exigidos pelo deploy.
-# actions: write permite o upload do artefato quando o workflow restringe o GITHUB_TOKEN.
+# O site é servido pela branch gh-pages. A regra de proteção do environment
+# github-pages rejeita jobs disparados a partir de main, então a publicação
+# sincroniza docs/ direto nessa branch (contents: write).
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   actions: write
@@ -21,9 +22,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,57 +48,63 @@ jobs:
           name: github-pages
           path: 'docs'
 
-      # Deploy somente com o site configurado, e apenas a partir da main.
-      # Pull requests validam e empacotam docs/ sem publicar produção.
-      - name: Deploy to GitHub Pages
-        id: deployment
-        if: ${{ success() && steps.configure.outcome == 'success' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
-        uses: actions/deploy-pages@v4
+      # Publica o conteúdo de docs/ na raiz de gh-pages. Pull requests só
+      # validam e empacotam; push em main e workflow_dispatch atualizam o site.
+      - name: Sync docs/ to gh-pages
+        id: sync
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          work=$(mktemp -d)
+          git worktree add --detach "$work" origin/gh-pages
+          find "$work" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a docs/. "$work/"
+          touch "$work/.nojekyll"
+          git -C "$work" add -A
+          if git -C "$work" diff --cached --quiet; then
+            echo "gh-pages já está sincronizado com docs/."
+          else
+            git -C "$work" commit -m "Sync docs/ from main (${GITHUB_SHA::7})"
+            git -C "$work" push origin HEAD:gh-pages
+          fi
 
       - name: Write GitHub Pages job summary
         if: always()
         env:
           CONFIGURE_OUTCOME: ${{ steps.configure.outcome }}
-          DEPLOYMENT_OUTCOME: ${{ steps.deployment.outcome }}
           VALIDATE_OUTCOME: ${{ steps.validate.outcome }}
           UPLOAD_OUTCOME: ${{ steps.upload.outcome }}
-          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          SYNC_OUTCOME: ${{ steps.sync.outcome }}
           ARTIFACT_ID: ${{ steps.upload.outputs.artifact_id }}
         run: |
           set -euo pipefail
           {
             echo "## GitHub Pages"
             echo ""
-            if [ "$CONFIGURE_OUTCOME" = "success" ] && [ "$DEPLOYMENT_OUTCOME" = "success" ]; then
-              echo "Deploy publicado no GitHub Pages."
+            if [ "$VALIDATE_OUTCOME" = "success" ] && [ "$UPLOAD_OUTCOME" = "success" ] && [ "$SYNC_OUTCOME" = "success" ]; then
+              echo "Os arquivos estáticos em \`docs/\` foram validados, empacotados e sincronizados com a branch \`gh-pages\`."
               echo ""
-              if [ -n "$PAGE_URL" ]; then
-                echo "- URL: <$PAGE_URL>"
-              else
-                echo "- URL: indisponível no output \`page_url\`."
+              echo "- Site: <https://regardgames.github.io/pontinhos/>"
+              if [ -n "$ARTIFACT_ID" ]; then
+                echo "- ID do artefato: \`$ARTIFACT_ID\`"
               fi
-            elif [ "$CONFIGURE_OUTCOME" != "success" ] && [ "$VALIDATE_OUTCOME" = "success" ] && [ "$UPLOAD_OUTCOME" = "success" ]; then
+            elif [ "$VALIDATE_OUTCOME" = "success" ] && [ "$UPLOAD_OUTCOME" = "success" ] && [ "$SYNC_OUTCOME" = "skipped" ]; then
               echo "Os arquivos estáticos em \`docs/\` (\`index.html\`, \`privacy-policy.html\`, \`.nojekyll\` e \`store-assets/\`) foram validados e empacotados com sucesso no artefato \`github-pages\`."
               if [ -n "$ARTIFACT_ID" ]; then
                 echo ""
                 echo "- ID do artefato: \`$ARTIFACT_ID\`"
               fi
               echo ""
-              echo "A publicação automática aguarda a ativação do GitHub Pages no repositório:"
-              echo ""
-              echo "- Em **Settings → Pages → Build and deployment → Source: GitHub Actions**"
-              echo "- Ou ao tornar o repositório público, caso a conta utilize o plano GitHub Free"
-            elif [ "$CONFIGURE_OUTCOME" = "success" ] && [ "$DEPLOYMENT_OUTCOME" != "success" ]; then
-              echo "O GitHub Pages foi configurado, mas o deploy não foi publicado neste evento (status: \`$DEPLOYMENT_OUTCOME\`)."
-              echo ""
-              echo "O deploy de produção roda em \`push\` ou \`workflow_dispatch\` na branch \`main\`, depois que \`Configure GitHub Pages\` conclui com sucesso."
+              echo "A sincronização com \`gh-pages\` roda em \`push\` ou \`workflow_dispatch\` na branch \`main\`."
             else
-              echo "A validação ou o empacotamento de \`docs/\` não concluiu com sucesso, então o site não foi publicado."
+              echo "A validação, o empacotamento de \`docs/\` ou a sincronização com \`gh-pages\` não concluiu com sucesso, então o site não foi publicado."
               echo ""
               echo "- Validação: \`$VALIDATE_OUTCOME\`"
               echo "- Upload do artefato \`github-pages\`: \`$UPLOAD_OUTCOME\`"
               echo "- Configure GitHub Pages: \`$CONFIGURE_OUTCOME\`"
-              echo "- Deploy: \`$DEPLOYMENT_OUTCOME\`"
+              echo "- Sync \`gh-pages\`: \`$SYNC_OUTCOME\`"
             fi
           } | tee -a "$GITHUB_STEP_SUMMARY"
-
