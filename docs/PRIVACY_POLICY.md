@@ -7,7 +7,7 @@
 | Versão do aplicativo coberta | `0.1.0` (versionCode / build `1`) |
 | Versão desta política | 1.0 |
 | Vigência | 25 de outubro de 2026 |
-| Responsável | Regard, Fortaleza, Ceará, Brasil |
+| Responsável | Regard, Picos, Piauí, Brasil |
 | Página HTML | [`privacy-policy.html`](privacy-policy.html) |
 
 Esta política descreve o tratamento de dados do aplicativo **Pontinhos** (`com.regard.pontinhos`). A versão HTML publicada para a Google Play Store e para o GitHub Pages está em [`docs/privacy-policy.html`](privacy-policy.html). A entrada do site é [`docs/index.html`](index.html).

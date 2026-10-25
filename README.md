@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/store-assets/play-store-icon-512x512.png" alt="Ícone oficial do jogo Pontinhos — grade 2x2 com pontos conectados em Azul Cobalto e Coral sobre fundo escuro" width="112" height="112" />
+<img src="docs/store-assets/play-store-icon-512x512.png" alt="Ícone oficial do jogo Pontinhos — emblema 2x2 Tactile Paper & Ink com caixa Azul Cobalto (●), caixa Coral hachurada (◆) e destaque Verde Esmeralda" width="112" height="112" />
 
 # Pontinhos
 
@@ -335,7 +335,7 @@ Toda a documentação de engenharia, produto, design e conformidade com as lojas
 <div align="center">
 
 **Pontinhos** (`com.regard.pontinhos`) · Versão `0.1.0+1` (`v0.1.0-beta.1`)  
-Desenvolvido por **Regard** · Fortaleza, Ceará, Brasil  
+Desenvolvido por **Regard** · Picos, Piauí, Brasil  
 [Política de Privacidade](docs/privacy-policy.html) · [Política de Privacidade (Web)](https://regardgames.github.io/pontinhos/privacy-policy.html) · [Vitrine pública](https://github.com/regardgames/pontinhos) · [Releases](https://github.com/regardgames/pontinhos-mobile/releases) · [Issues](https://github.com/regardgames/pontinhos-mobile/issues)
 
 </div>
