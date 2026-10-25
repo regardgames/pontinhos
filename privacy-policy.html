@@ -3,22 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidade — Pontinhos</title>
-  <meta name="description" content="O Pontinhos (com.regard.pontinhos) opera 100% offline-first. Não coleta, não transmite e não compartilha dados pessoais. Não exibe anúncios e não usa AD_ID.">
+  <title>Política de Privacidade — Pontinhos (100% Offline e Zero Coleta de Dados) | Regard Games</title>
+  <meta name="description" content="O Pontinhos funciona 100% offline no seu aparelho e não coleta, não armazena em servidores externos e não compartilha nenhum dado pessoal. Regard Games — Picos, Piauí, Brasil.">
+  <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="store-assets/logo-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="store-assets/favicon-32x32.png">
   <link rel="canonical" href="https://regardgames.github.io/pontinhos/privacy-policy.html">
-  <meta property="og:url" content="https://regardgames.github.io/pontinhos/privacy-policy.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Política de Privacidade — Pontinhos">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Transparência total: o Pontinhos funciona 100% offline e não coleta, não armazena em servidores externos e não compartilha nenhum dado pessoal.">
+  <meta property="og:url" content="https://regardgames.github.io/pontinhos/privacy-policy.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Política de Privacidade — Pontinhos">
+  <meta name="twitter:description" content="Transparência total: o Pontinhos funciona 100% offline e não coleta, não armazena em servidores externos e não compartilha nenhum dado pessoal.">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('pontinhos-web-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (err) {}
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light;
-      --bg: #f8fafc;
+      --bg: #F8F7F4;
       --paper: #ffffff;
-      --text: #0f172a;
+      --text: #0F172A;
       --muted: #475569;
-      --line: #e2e8f0;
-      --accent: #1d4ed8;
-      --soft: #eff6ff;
+      --line: #E2E8F0;
+      --accent: #2563EB;
+      --accent-ink: #ffffff;
+      --soft: #EFF6FF;
+      --border: #CBD5E1;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0F172A;
+      --paper: #1E293B;
+      --text: #F8FAFC;
+      --muted: #CBD5E1;
+      --line: #334155;
+      --accent: #60A5FA;
+      --accent-ink: #0F172A;
+      --soft: rgba(37, 99, 235, 0.22);
+      --border: #475569;
     }
     * { box-sizing: border-box; }
     body {
@@ -27,149 +61,190 @@
       color: var(--text);
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 1.05rem;
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    header, main, footer { width: min(44rem, calc(100% - 2rem)); margin-inline: auto; }
-    header { padding: 2.5rem 0 1rem; }
+    a { color: var(--accent); }
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 14px;
+      padding: 12px 18px;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: auto;
+      color: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .brand img { width: 36px; height: 36px; }
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 3px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--paper);
+    }
+    .lang-switch button,
+    .theme-toggle {
+      min-height: 36px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+    .lang-switch button { min-width: 42px; padding: 0 8px; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+    .theme-toggle {
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      background: var(--paper);
+      color: var(--text);
+      letter-spacing: 0;
+      font-size: 0.92rem;
+    }
+    .lang-switch button:focus-visible,
+    .theme-toggle:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+    }
+    header.intro, main, footer {
+      width: min(46rem, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+    header.intro { padding: 2.2rem 0 0.4rem; }
+    .badge {
+      display: inline-block;
+      margin: 0 0 0.8rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+    h1 { margin: 0 0 0.7rem; font-size: clamp(1.8rem, 4vw, 2.35rem); line-height: 1.15; letter-spacing: -0.03em; }
+    h2 { margin: 2rem 0 0.55rem; font-size: 1.22rem; letter-spacing: -0.02em; }
+    .lead { font-size: 1.08rem; }
     main {
       background: var(--paper);
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 1.5rem 1.35rem 2rem;
+      border-radius: 18px;
+      padding: 0.4rem 1.3rem 1.6rem;
+      margin-top: 1rem;
     }
-    footer { color: var(--muted); font-size: 0.92rem; padding: 1.25rem 0 2.5rem; }
-    p, li { color: var(--text); }
-    .eyebrow {
-      margin: 0 0 0.35rem;
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    h1 { margin: 0 0 0.6rem; font-size: 2rem; line-height: 1.15; }
-    h2 { margin: 2rem 0 0.6rem; font-size: 1.25rem; }
-    h3 { margin: 1.25rem 0 0.4rem; font-size: 1.05rem; }
-    a { color: var(--accent); }
-    .lead { font-size: 1.08rem; }
-    .meta, .callout {
+    .meta {
       background: var(--soft);
       border-radius: 12px;
       padding: 0.9rem 1rem;
+      margin: 0.2rem 0 0.4rem;
     }
-    .meta { margin: 1.2rem 0 0; }
-    .meta p, .callout p { margin: 0.2rem 0; }
-    .callout { margin: 1rem 0; }
-    table { width: 100%; border-collapse: collapse; margin: 0.6rem 0 1rem; font-size: 0.98rem; }
-    th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.45rem; border-bottom: 1px solid var(--line); }
-    th { color: var(--muted); font-weight: 650; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; }
+    .meta p { margin: 0.25rem 0; }
     ul { padding-left: 1.2rem; }
-    @media (max-width: 640px) {
-      h1 { font-size: 1.7rem; }
-      main { padding: 1.1rem 0.95rem 1.5rem; }
-      table, thead, tbody, th, td, tr { display: block; }
-      thead { display: none; }
-      td { border-bottom: 0; padding: 0.2rem 0; }
-      tr { border-bottom: 1px solid var(--line); padding: 0.55rem 0; }
+    footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 1.2rem 0 2.4rem;
     }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; }
   </style>
 </head>
 <body>
-  <header>
-    <p class="eyebrow">Pontinhos · com.regard.pontinhos</p>
-    <h1>Política de Privacidade</h1>
-    <p class="lead">O Pontinhos opera 100% offline-first. Estatísticas de jogo e preferências de áudio, tema e vibração ficam só no aparelho. O aplicativo não coleta, não transmite e não compartilha dados pessoais.</p>
+  <div class="top">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="store-assets/logo-mark-light.svg" width="36" height="36" alt="Pontinhos">
+      <span>Pontinhos</span>
+    </a>
+    <div class="lang-switch" role="group" data-i18n-aria="langAria" aria-label="Selecionar idioma da página">
+      <button type="button" data-lang="pt-BR" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <button type="button" id="theme-toggle" class="theme-toggle" data-i18n-aria="themeAria" aria-label="Alternar entre tema claro e escuro" aria-pressed="false">
+      <span class="theme-label" data-i18n="themeLight">Claro</span>
+    </button>
+  </div>
+  <header class="intro">
+    <p class="badge" data-i18n="badge">100% Offline • Zero Coleta de Dados • LGPD, GDPR &amp; COPPA Compliant</p>
+    <h1 data-i18n="title">Política de Privacidade — Pontinhos</h1>
+    <p class="lead" data-i18n="subtitle">Transparência total para você jogar com tranquilidade: o Pontinhos funciona 100% offline no seu aparelho e não coleta, não armazena em servidores externos e não compartilha nenhum dado pessoal.</p>
   </header>
   <main>
     <div class="meta">
-      <p><strong>Aplicativo:</strong> Pontinhos</p>
-      <p><strong>Identificador:</strong> <code>com.regard.pontinhos</code></p>
-      <p><strong>Versão coberta:</strong> 0.1.0 (versionCode / build 1)</p>
-      <p><strong>Política:</strong> versão 1.0, vigente em 25 de outubro de 2026</p>
-      <p><strong>Responsável:</strong> Regard, Picos, Piauí, Brasil</p>
+      <p><strong data-i18n="appLabel">Aplicativo:</strong> <span data-i18n="appValue">Pontinhos (com.regard.pontinhos)</span></p>
+      <p><strong data-i18n="studioLabel">Desenvolvedor / Estúdio:</strong> <span data-i18n="studioValue">Regard Games — Picos, Piauí, Brasil</span></p>
+      <p><strong data-i18n="dateLabel">Data de vigência:</strong> <span data-i18n="dateValue">25 de outubro de 2026 (America/Fortaleza, BRT / UTC-3)</span></p>
+      <p><strong data-i18n="statusLabel">Status de Coleta de Dados:</strong> <span data-i18n="statusValue">Zero Coleta de Dados Pessoais (100% Offline)</span></p>
     </div>
 
-    <h2>1. Resumo</h2>
-    <p>O Pontinhos é um jogo de Dots and Boxes para Android e iOS. Partida, tutorial, configurações e estatísticas funcionam sem conta, sem servidor e sem conexão com a internet.</p>
+    <h2 data-i18n="s1t">1. Compromisso de Privacidade em Primeiro Lugar (Resumo Rápido)</h2>
+    <p data-i18n="s1p1">O Pontinhos é um jogo clássico de tabuleiro e estratégia desenvolvido pela Regard Games em Picos, Piauí, Brasil. Nossa filosofia de privacidade é simples e absoluta: nós não coletamos, não transmitimos, não armazenamos em servidores externos, não vendemos e não compartilhamos nenhum dado pessoal ou informação do seu dispositivo.</p>
+    <p data-i18n="s1p2">O jogo funciona 100% offline (sem necessidade de conexão com a internet), não exige criação de conta ou login, não exibe anúncios e não utiliza ferramentas externas de rastreamento.</p>
+
+    <h2 data-i18n="s2t">2. Informações que NÃO Coletamos</h2>
+    <p data-i18n="s2lead">Ao baixar e jogar o Pontinhos, garantimos que o aplicativo jamais solicita, acessa ou coleta:</p>
     <ul>
-      <li>Armazena apenas estatísticas de jogo e preferências de áudio, tema e vibração localmente no dispositivo, com <code>SharedPreferences</code> no Android e o armazenamento local equivalente no iOS.</li>
-      <li>Guarda também, no mesmo armazenamento local, se o tutorial já foi concluído ou pulado.</li>
-      <li>Não solicita permissões sensíveis no pacote publicado.</li>
-      <li>Não exibe anúncios.</li>
-      <li>Não utiliza o identificador de publicidade (<code>AD_ID</code>).</li>
-      <li>Não coleta, não transmite e não compartilha dados pessoais com terceiros.</li>
+      <li data-i18n="s2a">Dados de identificação pessoal: nome, endereço de e-mail, número de telefone, documento, endereço físico ou data de nascimento.</li>
+      <li data-i18n="s2b">Dados de localização: localização aproximada (rede) ou precisa (GPS).</li>
+      <li data-i18n="s2c">Arquivos, mídia e sensores privados: fotos, vídeos, contatos da agenda, microfone, câmera ou histórico de navegação.</li>
+      <li data-i18n="s2d">Identificadores de publicidade ou perfilamento: o aplicativo não utiliza identificadores de anúncios nem realiza rastreamento entre aplicativos ou sites.</li>
+      <li data-i18n="s2e">Dados financeiros: o jogo é gratuito, não possui compras internas e não solicita dados de cartão ou pagamento.</li>
     </ul>
-    <div class="callout">
-      <p>Nenhum dado do jogador sai do aparelho.</p>
-    </div>
 
-    <h2>2. O que fica gravado no aparelho</h2>
-    <p>O armazenamento persistente é o espaço privado do aplicativo. A Regard não recebe cópia desses dados. Eles permanecem no aparelho até a pessoa limpar os dados do Pontinhos ou desinstalar o aplicativo.</p>
+    <h2 data-i18n="s3t">3. Preferências Salvas Apenas no Seu Próprio Aparelho</h2>
+    <p data-i18n="s3lead">Para que você tenha uma ótima experiência entre uma partida e outra, o Pontinhos guarda apenas as suas preferências de jogo na memória interna do seu próprio celular ou tablet:</p>
+    <ol>
+      <li data-i18n="s3a">Opções de conforto e acessibilidade: se os efeitos sonoros e a vibração estão ativados ou desativados, o tema visual escolhido (Claro, Escuro ou Automático) e o idioma selecionado (Português, Inglês ou Espanhol).</li>
+      <li data-i18n="s3b">Status do tutorial inicial: um lembrete simples de que você já concluiu ou pulou a introdução de como jogar, evitando que ela reapareça toda vez que você abrir o aplicativo.</li>
+      <li data-i18n="s3c">Histórico local de partidas contra o Computador: a quantidade de partidas jogadas, vitórias, derrotas e empates para que você acompanhe suas estatísticas na tela do jogo.</li>
+    </ol>
+    <p data-i18n="s3control">Controle total nas suas mãos: todas essas informações permanecem exclusivamente no seu aparelho e nunca são enviadas pela internet. Você pode apagar o histórico de estatísticas a qualquer momento dentro do próprio jogo (Configurações → Zerar estatísticas) ou limpar os dados do aplicativo nas configurações do seu sistema Android ou iOS.</p>
 
-    <h3>2.1 Preferências</h3>
-    <table>
-      <thead>
-        <tr><th>Chave local</th><th>Conteúdo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><code>soundEnabled</code></td><td>Efeitos sonoros ligados ou desligados</td></tr>
-        <tr><td><code>vibrationEnabled</code></td><td>Vibração ligada ou desligada</td></tr>
-        <tr><td><code>themeMode</code></td><td>Tema claro, escuro ou o do sistema</td></tr>
-        <tr><td><code>hasSeenTutorial</code></td><td>Se o tutorial já foi concluído ou pulado</td></tr>
-      </tbody>
-    </table>
+    <h2 data-i18n="s4t">4. Uso 100% Offline e Ausência de Serviços de Terceiros</h2>
+    <p data-i18n="s4p">O Pontinhos não se conecta a servidores próprios nem incorpora serviços externos de análise de dados, redes de publicidade, login social ou telemetria na nuvem. Todas as partidas — tanto contra a Inteligência Artificial do Computador quanto no modo para 2 Jogadores Local — acontecem integralmente dentro do seu aparelho.</p>
 
-    <h3>2.2 Estatísticas de jogo</h3>
-    <table>
-      <thead>
-        <tr><th>Chave local</th><th>Conteúdo</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><code>botStats</code></td><td>Vitórias, derrotas, empates e partidas contra o computador, por tamanho de tabuleiro e dificuldade</td></tr>
-        <tr><td><code>botStats.gamesPlayed</code>, <code>botStats.wins</code>, <code>botStats.losses</code>, <code>botStats.draws</code></td><td>Totais agregados dessas partidas</td></tr>
-        <tr><td><code>botStats.recordedMatchIds</code></td><td>Identificadores locais de partidas já contabilizadas, usados só para não registrar o mesmo resultado duas vezes</td></tr>
-      </tbody>
-    </table>
-    <p>Partidas locais entre duas pessoas no mesmo aparelho não entram nessa estatística. Não há nome, e-mail, telefone, conta, foto, contatos, localização, identificador do aparelho nem conteúdo digitado pelo jogador.</p>
+    <h2 data-i18n="s5t">5. Segurança e Privacidade de Crianças e Famílias</h2>
+    <p data-i18n="s5p">Por ser um jogo livre de violência, sem coleta de dados pessoais, sem chat online, sem links de compras e sem publicidade comportamental, o Pontinhos é seguro para jogadores de todas as idades e atende integralmente às normas de proteção infantil e familiar (incluindo o ECA e a LGPD no Brasil, a COPPA nos Estados Unidos e o GDPR na Europa).</p>
 
-    <h3>2.3 Eventos da sessão (somente em memória)</h3>
-    <p>Enquanto o aplicativo está aberto, eventos da sessão podem ficar na memória do processo: abertura, tutorial, início, conclusão, abandono e revanche de partida, mudança de preferência e um código curto de erro. Esses eventos não são gravados para envio, não atravessam a rede e somem quando o processo termina. O relatório da sessão, na tela de Estatísticas, é só para leitura no próprio aparelho.</p>
-    <p>O filtro interno descarta chaves que pareceriam dado pessoal (<code>email</code>, <code>name</code>, <code>phone</code>, <code>user_id</code>, <code>device_id</code>, <code>ip</code> e variações) e valores com formato de e-mail, IP ou número longo. Erros guardam apenas um código curto, nunca a mensagem da exceção.</p>
+    <h2 data-i18n="s6t">6. Seus Direitos (LGPD, GDPR e CCPA)</h2>
+    <p data-i18n="s6p">Como a Regard Games não coleta nem mantém nenhum dado pessoal seu em servidores ou bancos de dados, não há registros externos vinculados a você para consultar, corrigir, portar ou excluir em nossos sistemas. Todo o controle sobre as preferências locais do jogo está diretamente no seu próprio aparelho.</p>
 
-    <h2>3. Permissões</h2>
-    <p>O manifesto de release do Android não declara permissões sensíveis. Não há câmera, microfone, localização, contatos, telefone, SMS, armazenamento amplo nem a permissão <code>com.google.android.gms.permission.AD_ID</code>.</p>
-    <p>A permissão <code>INTERNET</code> existe apenas nos manifestos de desenvolvimento (<code>debug</code> e <code>profile</code>), porque a ferramenta do Flutter precisa dela para o hot reload. Ela não entra no Android App Bundle publicado na Google Play.</p>
-    <p>No iOS, o <code>Info.plist</code> não declara chaves de uso de câmera, fotos, microfone, localização, contatos ou rastreamento.</p>
+    <h2 data-i18n="s7t">7. Atualizações desta Política</h2>
+    <p data-i18n="s7p">Caso o Pontinhos receba novos recursos no futuro, esta Política de Privacidade será atualizada nesta página pública com a nova data de revisão no topo. Nosso compromisso com a transparência e o respeito ao jogador permanecerá sempre inalterado.</p>
 
-    <h2>4. Anúncios e identificador de publicidade</h2>
-    <p>O Pontinhos não exibe anúncios e não incorpora SDK de publicidade, mediação ou atribuição. O aplicativo não lê, não gera e não transmite o identificador de publicidade do Android (<code>AD_ID</code>) nem o identificador de anunciantes da Apple (IDFA). Não há rastreamento entre aplicativos.</p>
-
-    <h2>5. Coleta, transmissão e compartilhamento</h2>
-    <p>O Pontinhos não coleta dados pessoais, não os transmite e não os compartilha com a Regard, com afiliadas, com redes de anúncio, com ferramentas de analytics em nuvem ou com qualquer terceiro. Não há venda de dados. Não há conta, login, backend nem analytics de rede.</p>
-    <p>Na ficha Data safety da Google Play, a resposta correspondente a este comportamento é: o aplicativo não coleta nem compartilha dados do usuário. Dados que nunca saem do aparelho não são tratados como coletados.</p>
-
-    <h2>6. Crianças</h2>
-    <p>O aplicativo não pede cadastro e não coleta dados pessoais de crianças nem de adultos. Não há chat, compra nem perfil.</p>
-
-    <h2>7. Segurança</h2>
-    <p>Os dados locais ficam no armazenamento privado do aplicativo, protegido pelo sistema operacional. A Regard não opera servidor para esse conteúdo e não tem como recuperá-lo.</p>
-    <p>Para apagar o que estiver no aparelho: nas configurações do sistema, limpe os dados do Pontinhos ou desinstale o aplicativo.</p>
-
-    <h2>8. Bibliotecas</h2>
-    <p>O aplicativo é feito em Flutter. As dependências de produto são interface, navegação e armazenamento local (<code>shared_preferences</code>). Nenhuma delas é usada para enviar dados do jogador a um servidor.</p>
-
-    <h2>9. Alterações desta política</h2>
-    <p>Se o tratamento de dados mudar, esta página será atualizada neste repositório antes da publicação da versão correspondente na loja. A data de vigência no topo é a referência.</p>
-
-    <h2>10. Contato</h2>
-    <p>Dúvidas sobre esta política: abra uma issue no repositório público <a href="https://github.com/regardgames/pontinhos">regardgames/pontinhos</a> ou no repositório do aplicativo <a href="https://github.com/regardgames/pontinhos-mobile">regardgames/pontinhos-mobile</a>.</p>
-    <p>Landing Page: <a href="https://regardgames.github.io/pontinhos/">https://regardgames.github.io/pontinhos/</a>.</p>
-    <p>Texto-fonte em Markdown: <a href="PRIVACY_POLICY.md">PRIVACY_POLICY.md</a>. Entrada do GitHub Pages: <a href="index.html">index.html</a>.</p>
+    <h2 data-i18n="s8t">8. Contato e Identificação do Estúdio</h2>
+    <ul>
+      <li><strong data-i18n="s8studioL">Estúdio:</strong> <span data-i18n="s8studio">Regard Games</span></li>
+      <li><strong data-i18n="s8cityL">Cidade / Origem:</strong> <span data-i18n="s8city">Picos, Piauí, Brasil (America/Fortaleza, UTC-3)</span></li>
+      <li><strong data-i18n="s8siteL">Página Oficial:</strong> <a href="https://regardgames.github.io/pontinhos/">https://regardgames.github.io/pontinhos/</a></li>
+      <li><strong data-i18n="s8supportL">Canal de Suporte e Feedback:</strong> <a href="https://github.com/regardgames/pontinhos/issues">https://github.com/regardgames/pontinhos/issues</a></li>
+    </ul>
+    <p><a href="index.html" data-i18n="back">Voltar para a página do Pontinhos</a></p>
   </main>
   <footer>
-    <p>Regard · Picos, Piauí, Brasil · Pontinhos <code>com.regard.pontinhos</code> · política vigente em 25 de outubro de 2026.</p>
+    <p data-i18n="footer">© 2026 Regard Games — Picos, Piauí, Brasil. 100% Offline • Zero Coleta de Dados • Sem Anúncios.</p>
   </footer>
+  <script src="privacy.js"></script>
 </body>
 </html>
-
