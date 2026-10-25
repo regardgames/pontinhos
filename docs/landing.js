@@ -677,7 +677,8 @@ var I18N = {
   var state = null;
   var botTimer = 0;
   var statusKey = 'demo.msgInitial';
-  var drag = null;
+  var dragState = null;
+  var suppressEdgeClick = false;
   var navOpen = false;
 
   function t(key) {
@@ -1005,6 +1006,9 @@ var I18N = {
     claimBox(0, 2, 'bot');
     v[1][0] = 'bot';
     v[1][1] = 'bot';
+    // Fundo da caixa (1, 1) já traçado: o arraste (1, 2) → (2, 2)
+    // fecha essa caixa pela aresta vertical livre v-1-2.
+    h[2][1] = 'p1';
     h[2][2] = 'p1';
     h[3][1] = 'p1';
     fresh.last = { type: 'v', r: 1, c: 1, who: 'bot' };
@@ -1196,6 +1200,10 @@ var I18N = {
     return 36 + index * 82;
   }
 
+  function dot(index) {
+    return dotCoord(index);
+  }
+
   function edgeGeometry(move) {
     var x1 = dotCoord(move.c);
     var y1 = dotCoord(move.r);
@@ -1296,187 +1304,323 @@ var I18N = {
     return base + (closes ? t('demo.edgeCloses') : t('demo.edgeTap'));
   }
 
-  function openNeighbors(r, c) {
+
+  function clientToSvg(svg, clientX, clientY) {
+    var rect = svg.getBoundingClientRect();
+    var width = rect.width || 320;
+    var height = rect.height || 320;
+    return {
+      x: ((clientX - rect.left) / width) * 320,
+      y: ((clientY - rect.top) / height) * 320,
+    };
+  }
+
+  function clampSvg(value) {
+    return Math.max(0, Math.min(320, value));
+  }
+
+  function distance(x1, y1, x2, y2) {
+    var dx = x1 - x2;
+    var dy = y1 - y2;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function orthogonalNeighbors(r, c) {
     var list = [];
-    function add(nr, nc, move) {
-      if (nr < 0 || nc < 0 || nr > 3 || nc > 3) return;
-      if (move.type === 'h') {
-        if (move.c < 0 || move.c > 2 || state.h[move.r][move.c]) return;
-      } else if (move.r < 0 || move.r > 2 || move.c < 0 || move.c > 3 || state.v[move.r][move.c]) {
-        return;
-      }
-      list.push({ r: nr, c: nc, move: move });
-    }
-    add(r, c + 1, { type: 'h', r: r, c: c });
-    add(r, c - 1, { type: 'h', r: r, c: c - 1 });
-    add(r + 1, c, { type: 'v', r: r, c: c });
-    add(r - 1, c, { type: 'v', r: r - 1, c: c });
+    if (r > 0) list.push({ r: r - 1, c: c });
+    if (r < 3) list.push({ r: r + 1, c: c });
+    if (c > 0) list.push({ r: r, c: c - 1 });
+    if (c < 3) list.push({ r: r, c: c + 1 });
     return list;
   }
 
-  function svgPoint(svg, event) {
-    var point = svg.createSVGPoint();
-    point.x = event.clientX;
-    point.y = event.clientY;
-    var matrix = svg.getScreenCTM();
-    if (!matrix) return { x: 0, y: 0 };
-    var local = point.matrixTransform(matrix.inverse());
-    return { x: local.x, y: local.y };
+  function edgeBetween(r1, c1, r2, c2) {
+    if (r1 === r2 && Math.abs(c1 - c2) === 1) {
+      return { type: 'h', r: r1, c: Math.min(c1, c2) };
+    }
+    if (c1 === c2 && Math.abs(r1 - r2) === 1) {
+      return { type: 'v', r: Math.min(r1, r2), c: c1 };
+    }
+    return null;
   }
 
-  function paintDrag(layer) {
-    if (!drag) return;
-    layer.textContent = '';
-    var origin = { x: dotCoord(drag.c), y: dotCoord(drag.r) };
+  function edgeIsFree(move) {
+    if (!move) return false;
+    if (move.type === 'h') return !state.h[move.r][move.c];
+    return !state.v[move.r][move.c];
+  }
+
+  function freeNeighbors(r, c) {
+    return orthogonalNeighbors(r, c).filter(function (neighbor) {
+      return edgeIsFree(edgeBetween(r, c, neighbor.r, neighbor.c));
+    });
+  }
+
+  function nearestDot(x, y) {
+    var best = null;
+    var bestDistance = Infinity;
+    var r;
+    var c;
+    for (r = 0; r < 4; r += 1) {
+      for (c = 0; c < 4; c += 1) {
+        var gap = distance(x, y, dot(c), dot(r));
+        if (gap < bestDistance) {
+          bestDistance = gap;
+          best = { r: r, c: c, distance: gap };
+        }
+      }
+    }
+    return best;
+  }
+
+  function canDrag() {
+    return state.turn === 'p1' && !state.over && !state.lock;
+  }
+
+  function evaluateSnap(x, y, r1, c1) {
+    var originX = dot(c1);
+    var originY = dot(r1);
+    if (distance(x, y, originX, originY) <= 18) return null;
+    var best = null;
+    var bestDistance = Infinity;
+    freeNeighbors(r1, c1).forEach(function (neighbor) {
+      var targetX = dot(neighbor.c);
+      var targetY = dot(neighbor.r);
+      var nearTarget = distance(x, y, targetX, targetY) <= 32;
+      var dx = targetX - originX;
+      var dy = targetY - originY;
+      var length = Math.sqrt(dx * dx + dy * dy) || 1;
+      var ux = dx / length;
+      var uy = dy / length;
+      var px = x - originX;
+      var py = y - originY;
+      var projection = px * ux + py * uy;
+      var perpendicular = Math.abs(px * uy - py * ux);
+      var inCorridor = projection >= 24 && projection <= 96 && perpendicular <= 24;
+      if (!nearTarget && !inCorridor) return;
+      var gap = distance(x, y, targetX, targetY);
+      if (gap < bestDistance) {
+        bestDistance = gap;
+        best = {
+          neighbor: neighbor,
+          move: edgeBetween(r1, c1, neighbor.r, neighbor.c),
+        };
+      }
+    });
+    return best;
+  }
+
+  function ensureDragLayer(svg) {
+    var layer = svg.querySelector('[data-role="drag-layer"]');
+    if (!layer) {
+      layer = svgEl('g', {
+        'data-role': 'drag-layer',
+        'pointer-events': 'none',
+        'aria-hidden': 'true',
+      });
+    }
+    svg.appendChild(layer);
+    return layer;
+  }
+
+  function clearDragOverlay(svg) {
+    if (!svg) return;
+    var layer = svg.querySelector('[data-role="drag-layer"]');
+    if (layer && layer.parentNode) layer.parentNode.removeChild(layer);
+    svg.classList.remove('is-dragging');
+  }
+
+  function renderDragFeedback(svg) {
+    var session = dragState;
+    if (!session) {
+      clearDragOverlay(svg);
+      return;
+    }
+    var layer = ensureDragLayer(svg);
+    while (layer.firstChild) layer.removeChild(layer.firstChild);
+    var x1 = dot(session.c1);
+    var y1 = dot(session.r1);
+    var x2 = session.x;
+    var y2 = session.y;
+    if (session.snappedNeighbor) {
+      x2 = dot(session.snappedNeighbor.c);
+      y2 = dot(session.snappedNeighbor.r);
+      layer.appendChild(
+        svgEl('line', {
+          x1: x1,
+          y1: y1,
+          x2: x2,
+          y2: y2,
+          stroke: 'var(--color-p1)',
+          'stroke-width': '14',
+          'stroke-linecap': 'round',
+          'stroke-opacity': '0.22',
+          'data-role': 'drag-snap-halo',
+        }),
+      );
+    }
     layer.appendChild(
-      svgEl('circle', {
-        class: 'drag-origin-halo',
-        'data-role': 'drag-origin-halo',
-        cx: origin.x,
-        cy: origin.y,
-        r: '18',
-        fill: 'var(--color-p1-tint)',
+      svgEl('line', {
+        x1: x1,
+        y1: y1,
+        x2: x2,
+        y2: y2,
         stroke: 'var(--color-p1)',
-        'stroke-width': '2',
+        'stroke-width': '6',
+        'stroke-linecap': 'round',
+        'stroke-opacity': '0.9',
+        'data-role': 'drag-preview-line',
       }),
     );
-    layer.appendChild(
-      svgEl('circle', {
-        class: 'drag-origin-dot',
-        'data-role': 'drag-origin-dot',
-        cx: origin.x,
-        cy: origin.y,
-        r: '7',
-        fill: 'var(--color-p1)',
-      }),
-    );
-    drag.neighbors.forEach(function (neighbor) {
-      var snapped = drag.snap && drag.snap.r === neighbor.r && drag.snap.c === neighbor.c;
-      if (snapped) return;
+    session.neighbors.forEach(function (neighbor) {
       layer.appendChild(
         svgEl('circle', {
-          class: 'drag-neighbor-ring',
-          'data-role': 'drag-neighbor-ring',
-          cx: dotCoord(neighbor.c),
-          cy: dotCoord(neighbor.r),
-          r: '12',
-          fill: 'transparent',
+          cx: dot(neighbor.c),
+          cy: dot(neighbor.r),
+          r: '11',
+          fill: 'var(--color-p1-tint)',
           stroke: 'var(--color-p1)',
           'stroke-width': '2',
-          'stroke-dasharray': '3 3',
+          'stroke-dasharray': '3 2',
+          'data-role': 'drag-neighbor-ring',
         }),
       );
     });
-    var end = drag.snap
-      ? { x: dotCoord(drag.snap.c), y: dotCoord(drag.snap.r) }
-      : drag.point;
     layer.appendChild(
-      svgEl('line', {
-        class: 'drag-preview-line',
-        'data-role': 'drag-preview-line',
-        x1: origin.x,
-        y1: origin.y,
-        x2: end.x,
-        y2: end.y,
+      svgEl('circle', {
+        cx: x1,
+        cy: y1,
+        r: '14',
+        fill: 'var(--color-p1-tint)',
         stroke: 'var(--color-p1)',
-        'stroke-width': '5',
-        'stroke-linecap': 'round',
-        'stroke-dasharray': drag.snap ? '0' : '7 6',
+        'stroke-width': '2.5',
+        'data-role': 'drag-origin-halo',
       }),
     );
-    if (drag.snap) {
+    layer.appendChild(
+      svgEl('circle', {
+        cx: x1,
+        cy: y1,
+        r: '8',
+        fill: 'var(--color-p1)',
+        'data-role': 'drag-origin-dot',
+      }),
+    );
+    if (session.snappedNeighbor) {
       layer.appendChild(
         svgEl('circle', {
-          class: 'drag-snap-halo',
-          'data-role': 'drag-snap-halo',
-          cx: end.x,
-          cy: end.y,
-          r: '16',
-          fill: 'var(--color-last-move-tint)',
-          stroke: 'var(--color-last-move)',
+          cx: x2,
+          cy: y2,
+          r: '13',
+          fill: 'var(--color-p1-tint)',
+          stroke: 'var(--color-p1)',
           'stroke-width': '3',
-        }),
-      );
-      layer.appendChild(
-        svgEl('circle', {
-          class: 'drag-snap-dot',
           'data-role': 'drag-snap-dot',
-          cx: end.x,
-          cy: end.y,
-          r: '6',
-          fill: 'var(--color-last-move)',
         }),
       );
     }
   }
 
-  function bindDrag(svg, layer) {
-    function clearDrag() {
-      drag = null;
-      layer.textContent = '';
-    }
-
-    svg.addEventListener('pointerdown', function (event) {
-      var target = event.target;
-      if (!target || !target.getAttribute || !target.getAttribute('data-dot')) return;
-      if (!state || state.lock || state.over || state.turn !== 'p1') return;
-      var parts = target.getAttribute('data-dot').split('-');
-      var r = Number(parts[0]);
-      var c = Number(parts[1]);
-      var neighbors = openNeighbors(r, c);
-      if (!neighbors.length) return;
+  function armEdgeClickSuppression() {
+    suppressEdgeClick = true;
+    function swallow(event) {
+      if (!suppressEdgeClick) return;
       event.preventDefault();
-      drag = {
-        r: r,
-        c: c,
-        neighbors: neighbors,
-        point: svgPoint(svg, event),
-        snap: null,
+      event.stopPropagation();
+      release();
+    }
+    function release() {
+      suppressEdgeClick = false;
+      window.removeEventListener('click', swallow, true);
+      window.removeEventListener('pointerdown', release, true);
+    }
+    window.addEventListener('click', swallow, true);
+    window.addEventListener('pointerdown', release, true);
+  }
+
+  function finishDrag(svg, playMove) {
+    var session = dragState;
+    dragState = null;
+    clearDragOverlay(svg);
+    if (!session) return;
+    if (session.moved) armEdgeClickSuppression();
+    if (playMove && session.snappedMove) onPlayerMove(session.snappedMove);
+  }
+
+  function bindBoardPointer(svg) {
+    svg.addEventListener('pointerdown', function (event) {
+      if (dragState || !canDrag()) return;
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      var point = clientToSvg(svg, event.clientX, event.clientY);
+      var nearest = nearestDot(point.x, point.y);
+      if (!nearest || nearest.distance > 28) return;
+      var neighbors = freeNeighbors(nearest.r, nearest.c);
+      if (!neighbors.length) return;
+      dragState = {
         pointerId: event.pointerId,
+        r1: nearest.r,
+        c1: nearest.c,
+        x: clampSvg(point.x),
+        y: clampSvg(point.y),
         moved: false,
+        snappedMove: null,
+        snappedNeighbor: null,
+        neighbors: neighbors,
       };
-      if (svg.setPointerCapture) svg.setPointerCapture(event.pointerId);
-      paintDrag(layer);
+      try {
+        svg.setPointerCapture(event.pointerId);
+      } catch (err) {
+        /* captura indisponível: o arraste ainda segue enquanto o ponteiro estiver no SVG */
+      }
+      svg.classList.add('is-dragging');
+      renderDragFeedback(svg);
     });
 
     svg.addEventListener('pointermove', function (event) {
-      if (!drag || drag.pointerId !== event.pointerId) return;
-      var point = svgPoint(svg, event);
-      drag.point = point;
-      drag.moved = true;
-      var best = null;
-      var bestDistance = 28;
-      drag.neighbors.forEach(function (neighbor) {
-        var dx = dotCoord(neighbor.c) - point.x;
-        var dy = dotCoord(neighbor.r) - point.y;
-        var distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < bestDistance) {
-          bestDistance = distance;
-          best = neighbor;
-        }
-      });
-      drag.snap = best;
-      paintDrag(layer);
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      var point = clientToSvg(svg, event.clientX, event.clientY);
+      var originX = dot(dragState.c1);
+      var originY = dot(dragState.r1);
+      if (distance(point.x, point.y, originX, originY) > 4) dragState.moved = true;
+      var snap = evaluateSnap(point.x, point.y, dragState.r1, dragState.c1);
+      if (snap) {
+        dragState.snappedMove = snap.move;
+        dragState.snappedNeighbor = snap.neighbor;
+        dragState.x = dot(snap.neighbor.c);
+        dragState.y = dot(snap.neighbor.r);
+      } else {
+        dragState.snappedMove = null;
+        dragState.snappedNeighbor = null;
+        dragState.x = clampSvg(point.x);
+        dragState.y = clampSvg(point.y);
+      }
+      renderDragFeedback(svg);
     });
 
-    function finishPointer(event) {
-      if (!drag || drag.pointerId !== event.pointerId) return;
-      var chosen = drag.snap;
-      clearDrag();
-      if (chosen) onPlayerMove(chosen.move);
-    }
+    svg.addEventListener('pointerup', function (event) {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      finishDrag(svg, true);
+    });
 
-    svg.addEventListener('pointerup', finishPointer);
     svg.addEventListener('pointercancel', function (event) {
-      if (!drag || drag.pointerId !== event.pointerId) return;
-      clearDrag();
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      finishDrag(svg, false);
+    });
+
+    svg.addEventListener('lostpointercapture', function (event) {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      var session = dragState;
+      window.setTimeout(function () {
+        if (dragState !== session) return;
+        finishDrag(svg, false);
+      }, 0);
     });
   }
 
   function renderBoard() {
+    dragState = null;
     var mount = document.getElementById('board-mount');
     if (!mount) return;
-    drag = null;
     mount.textContent = '';
     var svg = svgEl('svg', {
       viewBox: '0 0 320 320',
@@ -1576,6 +1720,8 @@ var I18N = {
             cy: dotCoord(r),
             r: '6.5',
             fill: 'var(--line-ink)',
+            class: 'board-dot',
+            'data-dot': r + '-' + c,
           }),
         );
       }
@@ -1604,7 +1750,12 @@ var I18N = {
             'data-edge': move.type + '-' + move.r + '-' + move.c,
             'data-closes': closes ? 'true' : 'false',
           });
-          hit.addEventListener('click', function () {
+          hit.addEventListener('click', function (event) {
+            if (suppressEdgeClick) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
             onPlayerMove(move);
           });
           hit.addEventListener('keydown', function (event) {
@@ -1617,22 +1768,23 @@ var I18N = {
         });
       for (r = 0; r < 4; r += 1) {
         for (c = 0; c < 4; c += 1) {
+          if (!freeNeighbors(r, c).length) continue;
           svg.appendChild(
             svgEl('circle', {
-              class: 'board-dot-hit',
               cx: dotCoord(c),
               cy: dotCoord(r),
               r: '16',
+              fill: 'transparent',
+              class: 'dot-hit board-dot-hit',
               'data-dot': r + '-' + c,
+              'pointer-events': 'all',
             }),
           );
         }
       }
     }
 
-    var dragLayer = svgEl('g', { 'data-role': 'drag-layer' });
-    svg.appendChild(dragLayer);
-    bindDrag(svg, dragLayer);
+    bindBoardPointer(svg);
     mount.appendChild(svg);
     document.getElementById('score-p1').textContent = pad(state.scores.p1);
     document.getElementById('score-bot').textContent = pad(state.scores.bot);

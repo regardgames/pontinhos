@@ -534,6 +534,8 @@ a:hover {
 
 .board-surface svg {
   touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
   cursor: crosshair;
 }
 
@@ -546,9 +548,22 @@ a:hover {
   pointer-events: none;
 }
 
+.dot-hit,
+.board-dot,
+.board-dot-hit {
+  cursor: grab;
+}
+
 .board-dot-hit {
   fill: transparent;
-  cursor: pointer;
+}
+
+.board-surface svg.is-dragging,
+.board-surface svg.is-dragging .dot-hit,
+.board-surface svg.is-dragging .board-dot,
+.board-surface svg.is-dragging .board-dot-hit,
+.board-surface svg.is-dragging .edge-hit {
+  cursor: grabbing;
 }
 
 main {
@@ -806,6 +821,8 @@ h1 {
   height: auto;
   display: block;
   touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
   cursor: crosshair;
 }
 
