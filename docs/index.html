@@ -176,11 +176,11 @@
               <span class="turn-badge" id="turn-bot" hidden>JOGANDO</span>
             </div>
           </div>
-          <p class="board-status" id="board-status" role="status" aria-live="polite">Toque em uma aresta tracejada com 3 lados prontos para fechar a caixa e ganhar turno extra!</p>
-          <p class="visually-hidden" id="board-help">Use Tab para chegar a uma aresta tracejada e Enter ou Espaço para jogar. A aresta destacada em azul fecha uma caixa imediatamente.</p>
+          <p class="board-status" id="board-status" role="status" aria-live="polite">Clique (ou toque) em um ponto e arraste até o ponto vizinho para fechar a caixa e ganhar turno extra!</p>
+          <p class="visually-hidden" id="board-help">Clique ou toque em um ponto e arraste até o ponto vizinho para traçar sua linha, ou use Tab até uma aresta tracejada e pressione Enter ou Espaço. A aresta destacada em azul fecha uma caixa imediatamente.</p>
           <div class="board-surface" id="board-mount"></div>
           <button type="button" class="btn btn-secondary board-reset" id="reset-board" aria-label="Reiniciar demonstração interativa do tabuleiro">↻ Reiniciar Tabuleiro</button>
-          <p class="board-legend">Dupla codificação ativa: ● Azul Cobalto (J1) · ◆ Coral com hachura (Bot) · Halo Esmeralda na última jogada.</p>
+          <p class="board-legend">Arraste de um ponto ao ponto vizinho (ou toque na aresta) · ● Azul Cobalto (J1) · ◆ Coral com hachura (Bot) · Halo Esmeralda na última jogada.</p>
         </div>
       </div>
     </section>
@@ -201,7 +201,7 @@
           <article class="card">
             <p class="seal">HITBOX &gt;= 44 DP</p>
             <h3>Nunca erre um traço por acidente</h3>
-            <p>O motor geométrico (<code>BoardGeometry</code> + <code>hitTestEdge</code>) cria áreas de toque generosas ao redor de cada aresta e aplica uma zona de exclusão circular de 18% nos vértices. O resultado é uma resposta tátil imediata, sem toques ambíguos nas quinas do tabuleiro.</p>
+            <p>O motor geométrico (<code>BoardGeometry</code> + <code>hitTestEdge</code>) cria áreas de toque generosas ao redor de cada aresta e aplica uma zona de exclusão circular de 18% nos vértices. Clique ou toque em um ponto e arraste até o ponto vizinho com linha guia elástica e snap magnético — ou toque diretamente na aresta. O resultado é uma resposta tátil imediata, sem toques ambíguos nas quinas do tabuleiro.</p>
           </article>
           <article class="card">
             <p class="seal">FEEDBACK MULTISSENSORIAL</p>
