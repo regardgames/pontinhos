@@ -63,7 +63,13 @@
       font-size: 1.05rem;
       line-height: 1.65;
     }
-    a { color: var(--accent); }
+    a,
+    .card a,
+    .content a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
     .top {
       position: sticky;
       top: 0;
