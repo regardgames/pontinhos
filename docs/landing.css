@@ -225,21 +225,12 @@ a:hover {
   height: 40px;
 }
 
-.brand-copy {
+.brand-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  gap: 1px;
+  line-height: 1.15;
   min-width: 0;
-}
-
-.brand-title-row {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
 }
 
 .brand-name {
@@ -259,7 +250,6 @@ a:hover {
   white-space: nowrap;
 }
 
-.version-badge,
 .seal,
 .mode-badge,
 .turn-badge {
@@ -269,16 +259,6 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.2;
-}
-
-.version-badge {
-  padding: 0.18rem 0.5rem;
-  background: var(--color-p1-badge-bg);
-  color: var(--color-p1);
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
 
 .site-nav {
@@ -638,6 +618,13 @@ section[id],
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.85fr);
   gap: 36px 40px;
   align-items: center;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -1385,7 +1372,6 @@ code {
 
 /* Tier 1 — monitor compacto: esconde o texto do tema para o espanhol e o português caberem. */
 @media (min-width: 1360px) and (max-width: 1520px) {
-  .version-badge,
   .theme-toggle .theme-label {
     display: none;
   }
@@ -1404,8 +1390,6 @@ code {
 
 /* Tier 2 — notebook: os 6 links permanecem em uma linha em PT, EN e ES. */
 @media (min-width: 1024px) and (max-width: 1359px) {
-  .brand-tagline,
-  .version-badge,
   .theme-toggle .theme-label {
     display: none;
   }
@@ -1422,7 +1406,7 @@ code {
 
   .site-nav a:not(.site-nav-cta) {
     font-size: clamp(0.79rem, 0.78vw, 0.85rem);
-    padding: 0.38rem clamp(0.32rem, 0.42vw, 0.48rem);
+    padding: 0.38rem clamp(0.22rem, 0.42vw, 0.48rem);
   }
 
   .lang-switch button {
@@ -1434,6 +1418,17 @@ code {
   .header-actions .btn-compact {
     padding: 0.42rem 0.7rem;
     font-size: 0.83rem;
+  }
+}
+
+/* 1024px em espanhol: a tagline empilhada cabe se o menu aperta um pouco. */
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .site-nav {
+    gap: 1px;
+  }
+
+  .site-nav a:not(.site-nav-cta) {
+    padding-inline: 0.2rem;
   }
 }
 
@@ -1479,10 +1474,6 @@ code {
   .brand {
     order: 1;
     margin-right: auto;
-  }
-
-  .brand-tagline {
-    display: none;
   }
 
   .header-actions {
@@ -1608,7 +1599,6 @@ code {
     font-size: 1.02rem;
   }
 
-  .version-badge,
   .brand-tagline {
     display: none;
   }

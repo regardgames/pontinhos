@@ -104,6 +104,18 @@
       letter-spacing: -0.03em;
     }
     .brand img { width: 36px; height: 36px; }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.15;
+    }
+    .brand-tagline {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
     .lang-switch {
       display: inline-flex;
       align-items: center;
@@ -214,6 +226,9 @@
       .brand span {
         font-size: 0.88rem;
       }
+      .brand-tagline {
+        display: none;
+      }
       .lang-switch button {
         min-width: 26px;
         padding: 0 4px;
@@ -225,7 +240,10 @@
   <div class="top">
     <a class="brand" href="index.html">
       <img class="brand-logo" src="store-assets/logo-mark-light.svg" width="36" height="36" alt="Pontinhos">
-      <span>Pontinhos</span>
+      <span class="brand-text">
+        <span class="brand-name">Pontinhos</span>
+        <span class="brand-tagline" data-i18n="brandTagline">Estratégia ponto a ponto</span>
+      </span>
     </a>
     <div class="top-actions">
     <div class="lang-switch" role="group" data-i18n-aria="langAria" aria-label="Selecionar idioma da página">
