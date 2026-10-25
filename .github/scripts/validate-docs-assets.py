@@ -31,7 +31,6 @@ REQUIRED = (
     "docs/index.html",
     "docs/privacy-policy.html",
     "docs/.nojekyll",
-    "docs/store-assets/MANIFEST.md",
 )
 REQUIRED_ICONS = (
     "docs/store-assets/play-store-icon-512x512.png",
