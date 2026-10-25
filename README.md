@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/store-assets/play-store-icon-512x512.png" alt="Ícone oficial do jogo Pontinhos — emblema 2x2 Tactile Paper & Ink com caixa Azul Cobalto (●), caixa Coral hachurada (◆) e destaque Verde Esmeralda" width="112" height="112" />
+<img src="docs/store-assets/play-store-icon-512x512.png" alt="Ícone e Logomarca oficial unificada do jogo Pontinhos — grade 3x3 de pontos (2x2 caixas) com caixa Azul Cobalto (●) e caixa Coral com hachura (◆) e halo Verde Esmeralda sobre superfície Tactile Paper (#F8F7F4 / #FFFFFF)" width="112" height="112" />
 
 # Pontinhos
 

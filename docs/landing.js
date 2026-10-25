@@ -30,6 +30,19 @@
     button.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
 
+  function brandLogoSrc(theme) {
+    return theme === 'dark'
+      ? 'store-assets/logo-mark-dark.svg'
+      : 'store-assets/logo-mark-light.svg';
+  }
+
+  function syncBrandLogos(theme) {
+    var src = brandLogoSrc(theme);
+    document.querySelectorAll('.brand-logo').forEach(function (img) {
+      if (img.getAttribute('src') !== src) img.setAttribute('src', src);
+    });
+  }
+
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -37,6 +50,7 @@
       document.documentElement.removeAttribute('data-theme');
     }
     syncThemeButton(theme);
+    syncBrandLogos(theme);
   }
 
   function initTheme() {
@@ -168,7 +182,31 @@
     h[2][2] = 'p1';
     h[3][1] = 'p1';
     fresh.last = { type: 'v', r: 1, c: 1, who: 'bot' };
+    fresh.lastMove = fresh.last;
+    indexEdgeOwners(fresh);
     return fresh;
+  }
+
+  function edgeKey(move) {
+    return move.type + '-' + move.r + '-' + move.c;
+  }
+
+  function indexEdgeOwners(board) {
+    var owners = {};
+    var r;
+    var c;
+    for (r = 0; r < 4; r += 1) {
+      for (c = 0; c < 3; c += 1) {
+        if (board.h[r][c]) owners['h-' + r + '-' + c] = board.h[r][c];
+      }
+    }
+    for (r = 0; r < 3; r += 1) {
+      for (c = 0; c < 4; c += 1) {
+        if (board.v[r][c]) owners['v-' + r + '-' + c] = board.v[r][c];
+      }
+    }
+    board.edgeOwners = owners;
+    return owners;
   }
 
   function pad(value) {
@@ -223,6 +261,9 @@
       board.v[move.r][move.c] = who;
     }
     board.last = { type: move.type, r: move.r, c: move.c, who: who };
+    board.lastMove = board.last;
+    if (!board.edgeOwners) indexEdgeOwners(board);
+    board.edgeOwners[edgeKey(move)] = who;
     var captured = 0;
     adjacentBoxes(move).forEach(function (box) {
       if (!inside(box) || board.boxes[box.r][box.c]) return;
@@ -367,17 +408,26 @@
   }
 
   function isLast(move) {
+    var last = state.lastMove || state.last;
     return (
-      state.last &&
-      state.last.type === move.type &&
-      state.last.r === move.r &&
-      state.last.c === move.c
+      last &&
+      last.type === move.type &&
+      last.r === move.r &&
+      last.c === move.c
     );
+  }
+
+  function claimedStroke(move) {
+    var owner = state.edgeOwners && state.edgeOwners[edgeKey(move)];
+    if (owner === 'p1') return 'var(--color-p1)';
+    if (owner === 'p2' || owner === 'bot') return 'var(--color-p2)';
+    return 'var(--line-ink)';
   }
 
   function drawLine(parent, move, claimed) {
     var geo = edgeGeometry(move);
-    if (claimed && isLast(move)) {
+    var last = claimed && isLast(move);
+    if (last) {
       parent.appendChild(
         svgEl('line', {
           x1: geo.x1,
@@ -388,6 +438,7 @@
           'stroke-width': '14',
           'stroke-linecap': 'round',
           'stroke-opacity': '0.35',
+          'data-role': 'last-move-halo',
         }),
       );
     }
@@ -397,18 +448,15 @@
         y1: geo.y1,
         x2: geo.x2,
         y2: geo.y2,
-        stroke: claimed
-          ? isLast(move)
-            ? 'var(--color-last-move)'
-            : 'var(--line-ink)'
-          : 'var(--text-muted)',
+        stroke: claimed ? claimedStroke(move) : 'var(--text-muted)',
         'stroke-width': claimed ? '6' : '4',
         'stroke-linecap': 'round',
         'stroke-dasharray': claimed ? '0' : '8 7',
         'stroke-opacity': claimed ? '1' : '0.9',
+        'data-owner': claimed ? state.edgeOwners[edgeKey(move)] || '' : '',
       }),
     );
-    if (claimed && isLast(move)) {
+    if (last) {
       var cx = (geo.x1 + geo.x2) / 2;
       var cy = (geo.y1 + geo.y2) / 2;
       parent.appendChild(
@@ -419,6 +467,16 @@
           fill: 'var(--bg-surface)',
           stroke: 'var(--color-last-move)',
           'stroke-width': '3.5',
+          'data-role': 'last-move-ring',
+        }),
+      );
+      parent.appendChild(
+        svgEl('circle', {
+          cx: cx,
+          cy: cy,
+          r: '3.6',
+          fill: 'var(--color-last-move)',
+          'data-role': 'last-move-dot',
         }),
       );
     }
