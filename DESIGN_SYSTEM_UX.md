@@ -12,7 +12,7 @@
 - **Issue #11 (`[PON-10]`):** Criar placar, pausa e resultado (`UX-03`, `UX-04`, `UX-08`)  
 - **Sprint 4 (`[PON-15]` a `[PON-18]`):** Tutorial (`UX-06`), Estatísticas (`UX-05`), Configurações (`UX-07`) e Polimento  
 
-**Última atualização:** 24 de outubro de 2026 (Horário de Fortaleza, UTC-3)
+**Última atualização:** 24 de outubro de 2026 (Picos, Piauí, UTC-3)
 
 ---
 
