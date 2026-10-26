@@ -65,10 +65,16 @@
     }
     a,
     .card a,
-    .content a {
-      color: var(--accent);
+    .content a,
+    main p,
+    main li {
       overflow-wrap: anywhere;
       word-break: break-word;
+    }
+    a,
+    .card a,
+    .content a {
+      color: var(--accent);
     }
     .top {
       position: sticky;
@@ -263,9 +269,9 @@
   </header>
   <main>
     <div class="meta">
-      <p><strong data-i18n="appLabel">Aplicativo:</strong> <span data-i18n="appValue">Pontinhos (com.regard.pontinhos)</span></p>
+      <p><strong data-i18n="appLabel">Aplicativo e Plataformas:</strong> <span data-i18n="appValue">Pontinhos (com.regard.pontinhos / RegardGames.Pontinhos) — Android, iOS, Windows e Ubuntu/Linux</span></p>
       <p><strong data-i18n="studioLabel">Desenvolvedor / Estúdio:</strong> <span data-i18n="studioValue">Regard Games — Picos, Piauí, Brasil</span></p>
-      <p><strong data-i18n="dateLabel">Data de vigência:</strong> <span data-i18n="dateValue">25 de outubro de 2026 (America/Fortaleza, BRT / UTC-3)</span></p>
+      <p><strong data-i18n="dateLabel">Data de vigência:</strong> <span data-i18n="dateValue">26 de outubro de 2026 (America/Fortaleza, BRT / UTC-3)</span></p>
       <p><strong data-i18n="statusLabel">Status de Coleta de Dados:</strong> <span data-i18n="statusValue">Zero Coleta de Dados Pessoais (100% Offline)</span></p>
     </div>
 
@@ -284,16 +290,17 @@
     </ul>
 
     <h2 data-i18n="s3t">3. Preferências Salvas Apenas no Seu Próprio Aparelho</h2>
-    <p data-i18n="s3lead">Para que você tenha uma ótima experiência entre uma partida e outra, o Pontinhos guarda apenas as suas preferências de jogo na memória interna do seu próprio celular ou tablet:</p>
+    <p data-i18n="s3lead">Para que você tenha uma ótima experiência entre uma partida e outra, o Pontinhos guarda apenas as suas preferências de jogo no armazenamento local do seu próprio dispositivo (celular, tablet ou computador Windows e Linux):</p>
     <ol>
-      <li data-i18n="s3a">Opções de conforto e acessibilidade: se os efeitos sonoros e a vibração estão ativados ou desativados, o tema visual escolhido (Claro, Escuro ou Automático) e o idioma selecionado (Português, Inglês ou Espanhol).</li>
+      <li data-i18n="s3a">Opções de conforto e acessibilidade: se os efeitos sonoros e a vibração (em dispositivos compatíveis) estão ativados ou desativados, o tema visual escolhido (Claro, Escuro ou Automático) e o idioma selecionado (Português, Inglês ou Espanhol).</li>
       <li data-i18n="s3b">Status do tutorial inicial: um lembrete simples de que você já concluiu ou pulou a introdução de como jogar, evitando que ela reapareça toda vez que você abrir o aplicativo.</li>
       <li data-i18n="s3c">Histórico local de partidas contra o Computador: a quantidade de partidas jogadas, vitórias, derrotas e empates para que você acompanhe suas estatísticas na tela do jogo.</li>
     </ol>
-    <p data-i18n="s3control">Controle total nas suas mãos: todas essas informações permanecem exclusivamente no seu aparelho e nunca são enviadas pela internet. Você pode apagar o histórico de estatísticas a qualquer momento dentro do próprio jogo (Configurações → Zerar estatísticas) ou limpar os dados do aplicativo nas configurações do seu sistema Android ou iOS.</p>
+    <p data-i18n="s3control">Controle total nas suas mãos: todas essas informações permanecem exclusivamente no seu dispositivo e nunca são enviadas pela internet. Você pode apagar o histórico de estatísticas a qualquer momento dentro do próprio jogo (Configurações → Zerar estatísticas) ou limpar os dados locais e desinstalar o aplicativo nas configurações do seu sistema (Android, iOS, Windows ou Ubuntu/Linux).</p>
 
-    <h2 data-i18n="s4t">4. Uso 100% Offline e Ausência de Serviços de Terceiros</h2>
-    <p data-i18n="s4p">O Pontinhos não se conecta a servidores próprios nem incorpora serviços externos de análise de dados, redes de publicidade, login social ou telemetria na nuvem. Todas as partidas — tanto contra a Inteligência Artificial do Computador quanto no modo para 2 Jogadores Local — acontecem integralmente dentro do seu aparelho.</p>
+    <h2 data-i18n="s4t">4. Uso 100% Offline no Jogo e Transparência da Página Web Oficial</h2>
+    <p data-i18n="s4p">O aplicativo Pontinhos (em Android, iOS, Windows e Ubuntu/Linux) não solicita permissão de internet, não se conecta a servidores próprios nem incorpora SDKs de análise de dados, redes de publicidade, login social ou telemetria na nuvem. Todas as partidas — tanto contra a Inteligência Artificial do Computador quanto no modo para 2 Jogadores Local — acontecem integralmente dentro do seu aparelho.</p>
+    <p data-i18n="s4web">Transparência na Página Web Oficial e Downloads Diretos: nosso site institucional (regardgames.github.io/pontinhos) e os pacotes oficiais de instalação são hospedados na infraestrutura pública do GitHub Pages e do GitHub Releases (GitHub, Inc.). Ao visitar o site ou baixar um instalador, seu navegador realiza requisições HTTPS padrão aos servidores do GitHub (incluindo uma consulta pública de leitura à API oficial api.github.com/repos/regardgames/pontinhos/releases para exibir a versão atual e o contador numérico agregado e anônimo de downloads download_count). Essa comunicação técnica ocorre sem cookies de rastreamento, sem criação de perfis e com base no legítimo interesse e na execução de funcionalidades solicitadas pelo visitante (Art. 7º, V e IX da LGPD; Art. 6(1)(b) e (f) do GDPR; CCPA). O site utiliza apenas o armazenamento local do navegador (localStorage para guardar seu tema e idioma, e sessionStorage temporário por 5 minutos para cache da contagem pública da API do GitHub) e leitura local do sistema operacional no navegador apenas para destacar o pacote de download compatível com seu aparelho, sem jamais transmitir dados pessoais à Regard Games.</p>
 
     <h2 data-i18n="s5t">5. Segurança e Privacidade de Crianças e Famílias</h2>
     <p data-i18n="s5p">Por ser um jogo livre de violência, sem coleta de dados pessoais, sem chat online, sem links de compras e sem publicidade comportamental, o Pontinhos é seguro para jogadores de todas as idades e atende integralmente às normas de proteção infantil e familiar (incluindo o ECA e a LGPD no Brasil, a COPPA nos Estados Unidos e o GDPR na Europa).</p>
@@ -311,6 +318,13 @@
       <li><strong data-i18n="s8siteL">Página Oficial:</strong> <a href="https://regardgames.github.io/pontinhos/">https://regardgames.github.io/pontinhos/</a></li>
       <li><strong data-i18n="s8supportL">Canal de Suporte e Feedback:</strong> <a href="https://github.com/regardgames/pontinhos/issues">https://github.com/regardgames/pontinhos/issues</a></li>
     </ul>
+
+    <section class="policy-card" id="termos">
+      <h2 data-i18n="s9t">9. Termos de Uso e Licença de Uso do Software (EULA)</h2>
+      <p data-i18n="s9p1">Licença de Uso Pessoal e Gratuito: A Regard Games concede a você uma licença pessoal, gratuita, mundial, não exclusiva, intransferível e revogável para baixar, instalar e executar o jogo Pontinhos em seus dispositivos pessoais (Android, iOS, Windows e Ubuntu/Linux) para fins de entretenimento próprio.</p>
+      <p data-i18n="s9p2">Propriedade Intelectual e Restrições: O software Pontinhos, seu código-fonte, identidade visual Tactile Paper &amp; Ink, logomarcas, textos e ativos gráficos são de titularidade exclusiva da Regard Games (protegidos pela Lei de Software nº 9.609/1998, Lei de Direitos Autorais nº 9.610/1998 e tratados internacionais). É vedado redistribuir comercialmente, vender, alugar, sublicenciar, remover avisos de autoria ou distribuir versões adulteradas dos pacotes oficiais.</p>
+      <p data-i18n="s9p3">Integridade dos Pacotes e Isenção de Garantias: Baixe o Pontinhos exclusivamente por esta página oficial, pelo GitHub Releases oficial (github.com/regardgames/pontinhos) ou pelas lojas oficiais de aplicativos, conferindo o código de verificação SHA-256 disponibilizado na seção de downloads. O software é fornecido de forma gratuita "no estado em que se encontra" ("as is"), sem garantias adicionais além daquelas previstas na legislação aplicável de defesa do consumidor. Estes Termos são regidos pelas leis da República Federativa do Brasil, ressalvados os direitos irrenunciáveis do consumidor em sua jurisdição.</p>
+    </section>
     <p><a href="index.html" data-i18n="back">Voltar para a página do Pontinhos</a></p>
   </main>
   <footer>

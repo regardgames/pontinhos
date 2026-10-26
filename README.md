@@ -10,6 +10,9 @@
 
 [![Página Oficial](https://img.shields.io/badge/Página_Oficial-Jogar_Demo_Web-2563EB?style=for-the-badge)](https://regardgames.github.io/pontinhos/)
 [![Baixar APK Android](https://img.shields.io/badge/Android_APK-v0.1.0--beta.1-D97706?style=for-the-badge)](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk)
+[![Downloads Públicos](https://img.shields.io/github/downloads/regardgames/pontinhos/total?style=for-the-badge&logo=github&label=Downloads%20P%C3%BAblicos&color=1D4ED8)](https://github.com/regardgames/pontinhos/releases)
+[![Downloads v0.1.0-beta.1](https://img.shields.io/github/downloads/regardgames/pontinhos/v0.1.0-beta.1/total?style=for-the-badge&logo=github&label=v0.1.0-beta.1&color=15803D)](https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1)
+[![Versão Atual](https://img.shields.io/github/v/release/regardgames/pontinhos?include_prereleases&style=for-the-badge&logo=github&label=Release&color=15803D)](https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1)
 [![100% Offline](https://img.shields.io/badge/100%25_Offline-Jogue_Sem_Internet-10B981?style=for-the-badge)](#privacidade-e-uso-100-offline)
 [![Zero Coleta de Dados](https://img.shields.io/badge/Privacidade-Zero_Coleta_de_Dados-0F172A?style=for-the-badge)](https://regardgames.github.io/pontinhos/privacy-policy.html)
 
@@ -33,7 +36,7 @@
 
 ### ✨ Por que jogar Pontinhos?
 
-- **👆 Gesto Intuitivo de Toque e Arraste:** Toque em um ponto do tabuleiro e arraste o dedo até o ponto vizinho para desenhar seu traço com encaixe magnético suave — exatamente como puxar uma linha no papel (ou toque diretamente entre dois pontos).
+- **👆 Gesto Intuitivo de Toque ou Clique e Arraste:** Toque ou clique em um ponto do tabuleiro e arraste até o ponto vizinho para desenhar seu traço com encaixe magnético suave — exatamente como puxar uma linha no papel (ou toque diretamente entre dois pontos).
 - **🤖 Desafio Solo contra o Computador (IA):** Enfrente o Computador em dois níveis de dificuldade:
   - **Fácil (Casual):** ideal para partidas relaxantes ou para aprender a dinâmica do tabuleiro.
   - **Difícil (Estrategista):** evita entregar o 3º lado de um quadrado, conquista cadeias completas e calcula o menor sacrifício nas viradas de turno.
@@ -72,7 +75,27 @@ O **Pontinhos** foi projetado desde a origem para respeitar você:
 - **Zero anúncios e zero rastreadores:** sua partida nunca é interrompida por propagandas.
 - **Armazenamento 100% local:** suas opções de som, vibração, idioma, tema visual e histórico de partidas ficam guardadas exclusivamente no seu próprio celular ou tablet.
 
-📄 **[Leia nossa Política de Privacidade completa](https://regardgames.github.io/pontinhos/privacy-policy.html)**
+📄 **[Leia nossa Política de Privacidade completa](https://regardgames.github.io/pontinhos/privacy-policy.html)** • **[Termos de Uso e Licença (EULA)](https://regardgames.github.io/pontinhos/privacy-policy.html#termos)**
+
+### 📥 Downloads Oficiais (`v1.0.0` / `v0.1.0-beta.1`)
+
+| Plataforma | Formato | Tamanho | Requisitos | Download Direto | Checksum `SHA-256` |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Android** | APK Assinado (`.apk`) | `50,7 MB` | Android 8.0+ | [**Baixar `.apk`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk) | `01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk.sha256)) |
+| **Windows** | Pacote Portátil (`.zip`) | `11,7 MB` | Windows 10/11 (64-bit) | [**Baixar `.zip`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip) | `ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip.sha256)) |
+| **Ubuntu / Linux** | Pacote Portátil (`.tar.gz`) | `9,5 MB` | Ubuntu 22.04+ / Linux x64 (GTK3) | [**Baixar `.tar.gz`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz) | `3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz.sha256)) |
+
+- **Android:** Baixe o `.apk`, autorize a instalação caso solicitado pelo sistema e jogue **100% offline**.
+- **Windows:** Extraia o arquivo `.zip` em qualquer pasta e dê dois cliques em `pontinhos.exe` (sem instalador e sem precisar de permissão de administrador).
+- **Ubuntu / Linux:** Extraia o arquivo `.tar.gz` (`tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz`) e execute `./pontinhos`.
+
+### Métricas públicas de download
+
+Os totais exibidos no site vêm do campo público `download_count` da API do GitHub Releases (`https://api.github.com/repos/regardgames/pontinhos/releases`). A consulta é anônima: sem cookies, sem rastreadores e sem coleta de dados pessoais. No terminal:
+
+```bash
+gh api repos/regardgames/pontinhos/releases/tags/v0.1.0-beta.1 --jq '.assets[] | select(.name | endswith(".sha256") | not) | {name, size, download_count}'
+```
 
 ---
 
@@ -84,7 +107,7 @@ O **Pontinhos** foi projetado desde a origem para respeitar você:
 
 ### ✨ Highlights
 
-- **👆 Intuitive Touch & Drag Gesture:** Touch any dot on the board and drag your finger to a neighboring dot to draw your line with smooth magnetic snapping — or tap directly between two dots.
+- **👆 Intuitive Tap or Click & Drag Gesture:** Tap or click any dot on the board and drag to a neighboring dot to draw your line with smooth magnetic snapping — or tap directly between two dots.
 - **🤖 Solo Challenge vs. Computer (AI):** Play against the Computer across two difficulty levels:
   - **Easy (Casual):** great for relaxing matches or learning the board dynamics.
   - **Hard (Strategist):** avoids giving away the 3rd side of a box, claims full chains, and calculates the smallest sacrifice when turns get tight.
@@ -101,7 +124,23 @@ O **Pontinhos** foi projetado desde a origem para respeitar você:
 3. **Earn a Bonus Turn (Combo!):** Closed a box? You get an **immediate bonus move**! Chain boxes together to turn the match around.
 4. **Win the Match:** When all boxes are claimed, the player with the highest score wins!
 
-📄 **[Play the interactive web demo](https://regardgames.github.io/pontinhos/?lang=en)** • **[Read the Privacy Policy](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=en)**
+📄 **[Play the interactive web demo](https://regardgames.github.io/pontinhos/?lang=en)** • **[Read the Privacy Policy](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=en)** • **[Terms of Use & License (EULA)](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=en#termos)**
+
+### 📥 Official Downloads (`v1.0.0` / `v0.1.0-beta.1`)
+
+| Platform | Format | Size | Requirements | Direct Download | `SHA-256` Checksum |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Android** | Signed APK (`.apk`) | `50.7 MB` | Android 8.0+ | [**Download `.apk`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk) | `01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk.sha256)) |
+| **Windows** | Portable Package (`.zip`) | `11.7 MB` | Windows 10/11 (64-bit) | [**Download `.zip`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip) | `ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip.sha256)) |
+| **Ubuntu / Linux** | Portable Package (`.tar.gz`) | `9.5 MB` | Ubuntu 22.04+ / Linux x64 (GTK3) | [**Download `.tar.gz`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz) | `3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz.sha256)) |
+
+- **Android:** Download the `.apk`, allow installation if prompted by Android, and play **100% offline**.
+- **Windows:** Extract the `.zip` archive into any folder and double-click `pontinhos.exe` (no installer or administrator privileges required).
+- **Ubuntu / Linux:** Extract the `.tar.gz` archive (`tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz`) and run `./pontinhos`.
+
+### Public download metrics
+
+The totals on the website come from the public `download_count` field of the GitHub Releases API (`https://api.github.com/repos/regardgames/pontinhos/releases`). The request is anonymous: no cookies, no trackers, and no personal data collection.
 
 ---
 
@@ -113,7 +152,7 @@ O **Pontinhos** foi projetado desde a origem para respeitar você:
 
 ### ✨ Características Principales
 
-- **👆 Gesto Intuitivo de Tocar y Arrastrar:** Toca un punto del tablero y arrastra el dedo hasta un punto vecino para trazar tu línea con ajuste magnético suave — o toca directamente entre dos puntos.
+- **👆 Gesto Intuitivo de Tocar o Hacer Clic y Arrastrar:** Toca o haz clic en un punto del tablero y arrastra hasta un punto vecino para trazar tu línea con ajuste magnético suave — o toca directamente entre dos puntos.
 - **🤖 Desafío Individual contra la Computadora (IA):** Enfréntate a la Computadora en dos niveles de dificultad (**Fácil** para partidas casuales y **Difícil** para duelos estratégicos de cadenas).
 - **👥 2 Jugadores Local (Pasa y Juega):** Comparte la pantalla con un amigo o familiar en el mismo dispositivo, alternando automáticamente quién empieza en cada revancha.
 - **📐 Dos Tamaños de Tablero:** **3×3 Rápido** (16 puntos • 9 cajas • 1 a 2 min) y **5×5 Clásico** (36 puntos • 25 cajas • 3 a 6 min).
@@ -128,14 +167,32 @@ O **Pontinhos** foi projetado desde a origem para respeitar você:
 3. **Gana un Turno Extra (¡Combo!):** ¿Cerraste una caja? ¡Obtienes una **jugada extra inmediata**! Conecta cadenas de cajas para asegurar la victoria.
 4. **Gana la Partida:** Cuando se conquistan todas las cajas, ¡gana quien tenga más puntos en el marcador!
 
-📄 **[Juega en el minitablero interactivo web](https://regardgames.github.io/pontinhos/?lang=es)** • **[Lee la Política de Privacidad](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=es)**
+📄 **[Juega en el minitablero interactivo web](https://regardgames.github.io/pontinhos/?lang=es)** • **[Lee la Política de Privacidad](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=es)** • **[Términos de Uso y Licencia (EULA)](https://regardgames.github.io/pontinhos/privacy-policy.html?lang=es#termos)**
+
+### 📥 Descargas Oficiales (`v1.0.0` / `v0.1.0-beta.1`)
+
+| Plataforma | Formato | Tamaño | Requisitos | Descarga Directa | Suma `SHA-256` |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Android** | APK Firmado (`.apk`) | `50,7 MB` | Android 8.0+ | [**Descargar `.apk`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk) | `01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk.sha256)) |
+| **Windows** | Paquete Portátil (`.zip`) | `11,7 MB` | Windows 10/11 (64 bits) | [**Descargar `.zip`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip) | `ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip.sha256)) |
+| **Ubuntu / Linux** | Paquete Portátil (`.tar.gz`) | `9,5 MB` | Ubuntu 22.04+ / Linux x64 (GTK3) | [**Descargar `.tar.gz`**](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz) | `3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730` ([`.sha256`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz.sha256)) |
+
+- **Android:** Descarga el `.apk`, autoriza la instalación si Android lo solicita y juega **100 % sin conexión**.
+- **Windows:** Extrae el archivo `.zip` en cualquier carpeta y haz doble clic en `pontinhos.exe` (sin instalador ni permisos de administrador).
+- **Ubuntu / Linux:** Extrae el archivo `.tar.gz` (`tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz`) y ejecuta `./pontinhos`.
+
+### Métricas públicas de descarga
+
+Los totales del sitio provienen del campo público `download_count` de la API de GitHub Releases (`https://api.github.com/repos/regardgames/pontinhos/releases`). La consulta es anónima: sin cookies, sin rastreadores y sin recopilación de datos personales.
 
 ---
 
 ## 🔗 Links Oficiais & Downloads
 
 - 🌐 **Página Oficial & Demo Interativa:** [https://regardgames.github.io/pontinhos/](https://regardgames.github.io/pontinhos/)
-- 📦 **Download do APK Android (`v0.1.0-beta.1`):** [Baixar `pontinhos-v0.1.0-release.apk`](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk)
+- 📦 **Android (`.apk`, 50,7 MB):** [pontinhos-v0.1.0-release.apk](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk) • SHA-256 `01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f`
+- 🪟 **Windows 10/11 x64 (`.zip`, 11,7 MB):** [pontinhos-v0.1.0-windows-x64-portable.zip](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip) • SHA-256 `ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f`
+- 🐧 **Ubuntu / Linux x64 (`.tar.gz`, 9,5 MB):** [pontinhos-v0.1.0-linux-x64-portable.tar.gz](https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz) • SHA-256 `3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730`
 - 🔒 **Política de Privacidade (PT / EN / ES):** [https://regardgames.github.io/pontinhos/privacy-policy.html](https://regardgames.github.io/pontinhos/privacy-policy.html)
 - 💬 **Sugestões e Feedback:** [GitHub Issues (`regardgames/pontinhos`)](https://github.com/regardgames/pontinhos/issues)
 
