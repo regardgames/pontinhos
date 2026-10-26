@@ -1,9 +1,9 @@
 var I18N = {
   "pt-BR": {
-    "meta.title": "Pontinhos — Estratégia ponto a ponto | 100% Offline e Privado | Regard Games",
-    "meta.description": "Jogue o clássico Jogo dos Pontinhos no celular ou tablet! Toque e arraste ponto a ponto, desafie o Computador ou jogue com amigos. 100% offline, sem anúncios e zero coleta de dados. Criado pela Regard Games em Picos, Piauí, Brasil.",
-    "meta.ogTitle": "Pontinhos — Estratégia ponto a ponto (100% Offline e Privado)",
-    "meta.ogDescription": "Toque em um ponto e arraste até o vizinho para fechar quadrados! Jogue contra a IA ou com um amigo no mesmo aparelho — 100% offline, sem anúncios e zero coleta de dados.",
+    "meta.title": "Pontinhos — Estratégia ponto a ponto para Android, Windows e Linux | 100% Offline | Regard Games",
+    "meta.description": "Jogue o clássico Jogo dos Pontinhos no Android, Windows e Ubuntu/Linux! Toque ou clique e arraste ponto a ponto, desafie o Computador ou jogue com amigos. 100% offline, sem anúncios e zero coleta de dados. Criado pela Regard Games em Picos, Piauí, Brasil.",
+    "meta.ogTitle": "Pontinhos — Estratégia ponto a ponto (Android, Windows e Ubuntu/Linux • 100% Offline)",
+    "meta.ogDescription": "Toque ou clique em um ponto e arraste até o vizinho para fechar quadrados! Baixe grátis para Android (.apk), Windows (.zip) e Ubuntu/Linux (.tar.gz) — 100% offline, sem anúncios e zero coleta de dados.",
     "meta.ogLocale": "pt_BR",
     "nav.skipLink": "Pular para o conteúdo principal",
     "brand.tagline": "Estratégia ponto a ponto",
@@ -18,7 +18,7 @@ var I18N = {
     "nav.themeToggleAria": "Alternar entre tema claro e escuro",
     "nav.themeLight": "Claro",
     "nav.themeDark": "Escuro",
-    "nav.downloadCta": "Baixar APK",
+    "nav.downloadCta": "Baixar Grátis",
     "nav.menuOpen": "Abrir menu de navegação",
     "nav.menuClose": "Fechar menu de navegação",
     "nav.menuLabel": "Menu",
@@ -28,13 +28,13 @@ var I18N = {
     "hero.eyebrow": "Regard Games - 100% offline & Zero Coleta de Dados",
     "hero.titleLine1": "Estratégia",
     "hero.titleAccent": "ponto a ponto.",
-    "hero.lead": "O clássico Jogo dos Pontinhos de papel e caneta reinventado para celular e tablet com estética Tactile Paper & Ink. Toque em um ponto e arraste até o ponto vizinho para traçar sua linha, feche quadrados em cadeia e vença o Computador ou um amigo no mesmo aparelho — 100% offline, sem anúncios e com privacidade absoluta.",
+    "hero.lead": "O clássico Jogo dos Pontinhos de papel e caneta reinventado para celular, tablet e computador com estética Tactile Paper & Ink. Toque ou clique em um ponto e arraste até o ponto vizinho para traçar sua linha, feche quadrados em cadeia e vença o Computador ou um amigo no mesmo aparelho — 100% offline, sem anúncios e com privacidade absoluta.",
     "hero.ctaDownload": "Baixar APK Android (v0.1.0-beta.1)",
     "hero.ctaPlayDemo": "Experimentar no Navegador",
     "hero.ctaReleaseNotes": "Ver Notas da Versão",
     "hero.badgeOffline": "100% Offline (Jogue sem internet)",
     "hero.badgePrivacy": "Zero Coleta de Dados • Zero Anúncios",
-    "hero.badgeDrag": "Gesto Intuitivo: Toque e Arraste",
+    "hero.badgeDrag": "Toque ou Clique e Arraste Ponto a Ponto",
     "hero.badgeModes": "Solo vs. IA ou 2 Jogadores Local",
     "hero.badgeWcag": "Acessível (Alto Contraste & Símbolos)",
     "demo.kicker": "Experimente agora",
@@ -47,28 +47,28 @@ var I18N = {
     "demo.boxOwnerBot": "▲ BOT",
     "demo.badgeYou": "SUA VEZ",
     "demo.badgeBot": "VEZ DO BOT",
-    "demo.msgInitial": "Toque em um ponto e arraste até o ponto vizinho para fechar a 1ª caixa!",
+    "demo.msgInitial": "Toque ou clique em um ponto e arraste até o ponto vizinho para fechar o 1º quadrado!",
     "demo.msgSingleCapture": "✨ +1 ponto! Fechou uma caixa, ganhou turno extra — jogue novamente!",
     "demo.msgDoubleCapture": "🔥 Captura dupla (+2)! Turno extra — continue jogando!",
     "demo.msgBotThinking": "🤖 Computador pensando...",
-    "demo.msgYourTurnAfterBot": "Sua vez! Toque em um ponto e arraste até o ponto vizinho.",
+    "demo.msgYourTurnAfterBot": "Sua vez! Toque ou clique em um ponto e arraste até o ponto vizinho.",
     "demo.msgFinishedYouWon": "🏆 Você venceu ({p1} a {p2})! Clique em Reiniciar para jogar de novo.",
     "demo.msgFinishedBotWon": "🤖 O Bot venceu ({p2} a {p1})! Clique em Reiniciar para a revanche.",
     "demo.msgFinishedDraw": "🤝 Empate ({p1} a {p2})! Clique em Reiniciar para desempatar.",
-    "demo.help": "Use Tab para chegar a uma linha tracejada e Enter ou Espaço para jogar. Você também pode tocar em um ponto e arrastar até o ponto vizinho.",
-    "demo.legend": "Toque em um ponto e arraste até o vizinho, ou toque entre dois pontos. ● J1 em azul · ▲ BOT em âmbar · destaque verde na última linha.",
-    "demo.svgAria": "Mini-tabuleiro interativo. Toque em um ponto e arraste até o ponto vizinho, ou toque entre dois pontos. As linhas tracejadas também funcionam com teclado.",
+    "demo.help": "Use Tab para navegar até uma linha tracejada e pressione Enter ou Espaço para jogar. Você também pode tocar ou clicar em um ponto e arrastar até o ponto vizinho.",
+    "demo.legend": "Toque ou clique em um ponto e arraste até o vizinho (ou clique entre dois pontos). ● J1 em azul · ▲ BOT em âmbar · destaque verde na última linha.",
+    "demo.svgAria": "Mini-tabuleiro interativo. Toque ou clique em um ponto e arraste até o ponto vizinho, ou clique entre dois pontos. As linhas tracejadas também funcionam pelo teclado.",
     "demo.axisH": "horizontal",
     "demo.axisV": "vertical",
     "demo.edgeFree": "Linha {axis} livre, fileira {row}, coluna {col}.",
     "demo.edgeCloses": " Fecha uma caixa, soma um ponto e mantém o turno.",
-    "demo.edgeTap": " Toque para traçar ou arraste a partir de um ponto.",
+    "demo.edgeTap": " Toque ou clique para traçar, ou arraste a partir de um ponto.",
     "exp.kicker": "Tactile Paper & Ink",
     "exp.title": "A nostalgia do caderno escolar com precisão digital",
     "exp.subtitle": "Sem menus confusos, sem propagandas interrompendo sua partida e sem precisar de internet. Cada detalhe foi desenhado para que o tabuleiro seja o centro da sua diversão.",
-    "exp.card1Badge": "Gesto Natural • Toque e Arraste",
-    "exp.card1Title": "Toque em um ponto e arraste até o vizinho",
-    "exp.card1Body": "Desenhe suas linhas como se estivesse com a caneta no papel: basta tocar em um ponto e deslizar o dedo até o ponto vizinho para visualizar o traço antes de soltar — ou tocar direto entre dois pontos.",
+    "exp.card1Badge": "Gesto Natural • Toque ou Clique e Arraste",
+    "exp.card1Title": "Toque ou clique em um ponto e arraste até o vizinho",
+    "exp.card1Body": "Desenhe suas linhas como se estivesse com a caneta no papel: no celular, tablet ou PC, basta tocar ou clicar em um ponto e arrastar até o ponto vizinho para ver o traço antes de soltar — ou tocar/clicar diretamente entre dois pontos.",
     "exp.card2Badge": "100% Offline • Sempre Pronto",
     "exp.card2Title": "Jogue onde e quando quiser, sem internet",
     "exp.card2Body": "No avião, no ônibus, na estrada ou no sofá: o Pontinhos roda 100% no seu aparelho, sem telas de carregamento, sem depender de sinal Wi-Fi e sem consumir seu pacote de dados.",
@@ -118,16 +118,16 @@ var I18N = {
     "a11y.botDesc": "Triângulo + Rótulo BOT + Âmbar Queimado",
     "a11y.lastMoveRole": "Última Jogada",
     "a11y.lastMoveDesc": "Destaque Verde Esmeralda no traço recém-marcado",
-    "a11y.card1Title": "Leitores de Tela e Fontes Ampliadas",
-    "a11y.card1Body": "Compatível com TalkBack (Android) e VoiceOver (iOS), anunciando turnos, placares e coordenadas do tabuleiro, além de se adaptar perfeitamente a fontes ampliadas do sistema.",
-    "a11y.card2Title": "Perfeito no Celular e no Tablet",
-    "a11y.card2Body": "Seja em smartphones compactos ou em tablets grandes e iPad, o tabuleiro mantém proporções confortáveis e áreas de toque generosas para jogar sem cliques acidentais.",
+    "a11y.card1Title": "Leitores de Tela, Teclado e Texto Ampliado",
+    "a11y.card1Body": "Compatível com leitores de tela e atalhos de teclado no desktop (Esc, R, setas), anunciando turnos, placar e coordenadas do tabuleiro, além de se adaptar perfeitamente a fontes ampliadas do sistema.",
+    "a11y.card2Title": "Perfeito no Celular, Tablet e Computador",
+    "a11y.card2Body": "Seja em smartphones compactos, tablets ou monitores widescreen no Windows e Ubuntu/Linux, o tabuleiro mantém proporções confortáveis e áreas generosas para jogar no toque ou no mouse sem cliques acidentais.",
     "how.kicker": "Regras Simples, Estratégia Profunda",
     "how.title": "Como jogar Pontinhos em 4 passos",
     "how.subtitle": "Aprenda em 15 segundos e descubra por que cada linha traçada pode mudar o destino da partida.",
     "how.step1Num": "Passo 1",
-    "how.step1Title": "Toque em um ponto e arraste",
-    "how.step1Body": "Na sua vez, toque em qualquer ponto do tabuleiro e arraste o dedo até um ponto vizinho (horizontal ou vertical) para traçar sua linha.",
+    "how.step1Title": "Toque ou clique em um ponto e arraste",
+    "how.step1Body": "Na sua vez, toque ou clique em qualquer ponto do tabuleiro e arraste até um ponto vizinho (horizontal ou vertical) para traçar sua linha.",
     "how.step2Num": "Passo 2",
     "how.step2Title": "Feche o 4º lado do quadrado",
     "how.step2Body": "O jogador que desenhar a quarta e última linha ao redor de um quadrado conquista esse território com sua cor e símbolo, marcando 1 ponto.",
@@ -198,17 +198,17 @@ var I18N = {
     "faq.a1": "Sim! O Pontinhos funciona 100% offline desde o primeiro segundo. Você pode jogar no modo avião, no metrô, em viagens ou em locais sem sinal de celular, tanto contra o Computador quanto no modo para 2 Jogadores no mesmo aparelho.",
     "faq.q2": "O aplicativo coleta meus dados pessoais ou exibe anúncios?",
     "faq.a2": "Não. Temos compromisso de Zero Coleta de Dados e Zero Anúncios. O jogo não pede cadastro, não acessa sua localização, contatos ou câmera, e não compartilha nada com terceiros. Suas estatísticas e preferências ficam guardadas somente no seu próprio aparelho.",
-    "faq.q3": "Como funciona o gesto de tocar e arrastar para desenhar linhas?",
-    "faq.a3": "É super intuitivo: basta tocar em um ponto do tabuleiro e arrastar o dedo até um ponto vizinho (na horizontal ou vertical). O jogo mostra uma prévia da linha enquanto você desliza e confirma a jogada ao soltar o dedo. Se preferir, você também pode tocar diretamente no espaço entre dois pontos.",
+    "faq.q3": "Como funciona para desenhar linhas no celular, tablet ou computador?",
+    "faq.a3": "É super intuitivo tanto no toque quanto no mouse: basta tocar ou clicar em um ponto do tabuleiro e arrastar até um ponto vizinho (na horizontal ou vertical). O jogo mostra uma prévia da linha enquanto você desliza e confirma a jogada ao soltar. Se preferir, você também pode tocar ou clicar diretamente no espaço entre dois pontos.",
     "faq.q4": "Em quais idiomas o Pontinhos está disponível?",
     "faq.a4": "O aplicativo e o site oficial estão totalmente disponíveis em três idiomas: Português (Brasil), Inglês (English) e Espanhol (Español). Você pode trocar o idioma a qualquer momento nas Configurações do jogo ou no topo desta página.",
-    "faq.q5": "O jogo é gratuito? Em quais aparelhos posso jogar?",
-    "faq.a5": "Sim, o Pontinhos é gratuito e livre de propagandas ou cobranças. Ele foi desenhado para celulares e tablets Android e iOS, e você já pode baixar o instalador oficial (APK) para Android gratuitamente nesta página.",
+    "faq.q5": "O jogo é gratuito? Em quais plataformas posso baixar e jogar?",
+    "faq.a5": "Sim! O Pontinhos é 100% gratuito, livre de anúncios e sem cobranças. Você pode baixar gratuitamente nesta página os pacotes oficiais para Android (.apk assinado, 50,7 MB), Windows 10/11 64-bit (.zip portátil, 11,7 MB) e Ubuntu / Linux 64-bit (.tar.gz portátil, 9,5 MB), ou jogar a demonstração direto no navegador.",
     "cta.title": "Pronto para dominar o tabuleiro ponto a ponto?",
-    "cta.subtitle": "Baixe agora o APK gratuito para Android, desafie o Computador ou chame um amigo para uma partida rápida — 100% offline, sem anúncios e com privacidade total.",
-    "cta.btnDownload": "Baixar APK Android (v0.1.0-beta.1)",
+    "cta.subtitle": "Baixe grátis para Android, Windows ou Ubuntu/Linux, desafie o Computador ou chame um amigo para uma partida rápida — 100% offline, sem anúncios e com privacidade total.",
+    "cta.btnDownload": "Escolher Minha Plataforma (Android, Windows e Linux)",
     "cta.btnPlayTop": "Jogar no Mini-Tabuleiro Acima",
-    "footer.brandDesc": "O clássico Jogo dos Pontinhos reinventado para celulares e tablets com estética Tactile Paper & Ink. 100% offline, acessível e com zero coleta de dados. Criado com orgulho pela Regard Games em Picos, Piauí, Brasil.",
+    "footer.brandDesc": "O clássico Jogo dos Pontinhos reinventado para celulares, tablets e computadores (Android, Windows e Ubuntu/Linux) com estética Tactile Paper & Ink. 100% offline, acessível e com zero coleta de dados. Criado com orgulho pela Regard Games em Picos, Piauí, Brasil.",
     "footer.colExplore": "Explorar",
     "footer.colPrivacy": "Transparência & Privacidade",
     "footer.colDownloads": "Downloads & Suporte",
@@ -216,17 +216,149 @@ var I18N = {
     "footer.linkA11y": "Acessibilidade",
     "footer.linkPrivacyPolicy": "Política de Privacidade",
     "footer.linkOfflineCommitment": "Compromisso 100% Offline",
-    "footer.linkDownloadApk": "Baixar APK Android (v0.1.0-beta.1)",
+    "footer.linkDownloadApk": "Baixar APK Android (50,7 MB)",
     "footer.linkReleases": "Notas de Lançamento (Releases)",
     "footer.linkFeedback": "Enviar Sugestão ou Feedback",
     "footer.copyright": "© 2026 Regard Games — Picos, Piauí, Brasil. Todos os direitos reservados.",
-    "footer.privacySummary": "100% Offline • Zero Coleta de Dados • Sem Anúncios"
+    "footer.privacySummary": "100% Offline • Zero Coleta de Dados • Sem Anúncios",
+    "nav.download": "Downloads",
+    "nav.downloadCtaApk": "Baixar APK",
+    "hero.platformBanner": "Disponível para Android, Windows e Ubuntu / Linux",
+    "hero.badgePlatforms": "Android • Windows 10/11 • Ubuntu / Linux",
+    "hero.ctaDownloadSection": "Baixar Grátis (Android, Windows e Linux)",
+    "hero.ctaDownloadAndroid": "Baixar para Android (.apk • 50,7 MB)",
+    "hero.ctaDownloadWindows": "Baixar para Windows (.zip • 11,7 MB)",
+    "hero.ctaDownloadLinux": "Baixar para Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "hero.ctaAllPlatforms": "Ver todas as plataformas e checksums SHA-256",
+    "osDetect.recommendedBadge": "Recomendado para seu dispositivo",
+    "osDetect.detectedAndroid": "Sistema Android detectado • Baixe o APK assinado (50,7 MB) ou escolha outra plataforma abaixo.",
+    "osDetect.detectedWindows": "Windows detectado • Baixe o pacote portátil .zip (11,7 MB) ou escolha outra plataforma abaixo.",
+    "osDetect.detectedLinux": "Linux / Ubuntu detectado • Baixe o pacote portátil .tar.gz (9,5 MB) ou escolha outra plataforma abaixo.",
+    "osDetect.detectedApple": "Dispositivo Apple detectado • Jogue agora no mini-tabuleiro web ou baixe para Android, Windows e Linux (versão iOS em breve na App Store).",
+    "osDetect.detectedGeneric": "Escolha sua plataforma: pacotes oficiais 100% offline para Android, Windows e Ubuntu / Linux.",
+    "download.kicker": "Downloads Oficiais • 100% Offline & Sem Anúncios",
+    "download.title": "Jogue Pontinhos no Android, Windows ou Ubuntu / Linux",
+    "download.subtitle": "Escolha sua plataforma abaixo. Todos os pacotes são gratuitos, verificados com hash SHA-256 e funcionam 100% offline sem coletar nenhum dado pessoal.",
+    "download.versionBadgeV1": "v1.0.0",
+    "download.versionBadgeRelease": "v0.1.0-beta.1",
+    "download.versionLabel": "Versão",
+    "download.formatLabel": "Formato",
+    "download.sizeLabel": "Tamanho",
+    "download.reqLabel": "Requisitos",
+    "download.sha256Label": "Checksum SHA-256",
+    "download.sha256CopyBtn": "Copiar SHA-256",
+    "download.sha256Copied": "Copiado!",
+    "download.sha256FileLink": "Baixar arquivo .sha256",
+    "download.quickInstallTitle": "Como instalar e jogar (3 passos rápidos)",
+    "download.allReleasesLink": "Ver todas as versões e notas de lançamento no GitHub Releases",
+    "download.android.title": "Android",
+    "download.android.subtitle": "Celulares e Tablets",
+    "download.android.versionBadge": "v1.0.0",
+    "download.android.releaseTag": "v0.1.0-beta.1",
+    "download.android.format": "APK Assinado (.apk)",
+    "download.android.size": "50,7 MB",
+    "download.android.req": "Android 8.0+ (ARM / x64)",
+    "download.android.btnText": "Baixar APK Android (50,7 MB)",
+    "download.android.btnAria": "Baixar pacote APK assinado do Pontinhos para Android (50,7 megabytes)",
+    "download.android.fileName": "pontinhos-v0.1.0-release.apk",
+    "download.android.step1": "1. Baixe o arquivo pontinhos-v0.1.0-release.apk no seu celular ou tablet Android.",
+    "download.android.step2": "2. Toque no arquivo baixado e, se o Android solicitar, autorize a instalação desta fonte.",
+    "download.android.step3": "3. Abra o Pontinhos e divirta-se 100% offline — sem cadastro e sem anúncios!",
+    "download.android.sha256Aria": "Copiar hash SHA-256 do APK de Android",
+    "download.windows.title": "Windows",
+    "download.windows.subtitle": "PC e Notebook (64-bit)",
+    "download.windows.versionBadge": "v1.0.0",
+    "download.windows.releaseTag": "v0.1.0-beta.1",
+    "download.windows.format": "Pacote Portátil (.zip)",
+    "download.windows.size": "11,7 MB",
+    "download.windows.req": "Windows 10/11 (64-bit)",
+    "download.windows.btnText": "Baixar para Windows (.zip • 11,7 MB)",
+    "download.windows.btnAria": "Baixar pacote portátil ZIP do Pontinhos para Windows 10 e 11 de 64 bits (11,7 megabytes)",
+    "download.windows.fileName": "pontinhos-v0.1.0-windows-x64-portable.zip",
+    "download.windows.step1": "1. Baixe o arquivo pontinhos-v0.1.0-windows-x64-portable.zip no seu computador.",
+    "download.windows.step2": "2. Extraia todo o conteúdo do arquivo .zip em qualquer pasta de sua preferência.",
+    "download.windows.step3": "3. Dê dois cliques em pontinhos.exe para jogar — sem instalador e sem precisar de permissão de administrador!",
+    "download.windows.sha256Aria": "Copiar hash SHA-256 do pacote portátil de Windows",
+    "download.linux.title": "Ubuntu / Linux",
+    "download.linux.subtitle": "PC e Notebook Linux x64",
+    "download.linux.versionBadge": "v1.0.0",
+    "download.linux.releaseTag": "v0.1.0-beta.1",
+    "download.linux.format": "Pacote Portátil (.tar.gz)",
+    "download.linux.size": "9,5 MB",
+    "download.linux.req": "Ubuntu 22.04+ / Linux x64 (GTK3)",
+    "download.linux.btnText": "Baixar para Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "download.linux.btnAria": "Baixar pacote portátil TAR.GZ do Pontinhos para Ubuntu e Linux de 64 bits (9,5 megabytes)",
+    "download.linux.fileName": "pontinhos-v0.1.0-linux-x64-portable.tar.gz",
+    "download.linux.step1": "1. Baixe o arquivo pontinhos-v0.1.0-linux-x64-portable.tar.gz no seu sistema Linux.",
+    "download.linux.step2": "2. Extraia o pacote pelo gerenciador de arquivos ou terminal (tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz).",
+    "download.linux.step3": "3. Execute ./pontinhos na pasta extraída — pronto para jogar 100% offline, sem instalação complexa!",
+    "download.linux.sha256Aria": "Copiar hash SHA-256 do pacote portátil de Linux",
+    "metrics.kicker": "Comunidade Aberta • GitHub Releases",
+    "metrics.title": "Métricas Públicas de Download em Tempo Real",
+    "metrics.subtitle": "Acompanhe quantas vezes os pacotes oficiais do Pontinhos foram baixados diretamente pelo repositório público da Regard Games.",
+    "metrics.panelAria": "Painel de métricas públicas de downloads do Pontinhos via GitHub Releases",
+    "metrics.totalLabel": "Total de Downloads",
+    "metrics.totalSub": "Todas as versões e plataformas",
+    "metrics.androidLabel": "Downloads Android",
+    "metrics.androidSub": "Pacote .apk assinado",
+    "metrics.windowsLabel": "Downloads Windows",
+    "metrics.windowsSub": "Pacote portátil .zip (x64)",
+    "metrics.linuxLabel": "Downloads Ubuntu / Linux",
+    "metrics.linuxSub": "Pacote portátil .tar.gz (x64)",
+    "metrics.cardBadgeCount": "{count} downloads",
+    "metrics.cardBadgeCountSingular": "1 download",
+    "metrics.latestReleaseLabel": "Versão atual:",
+    "metrics.lastUpdatedLabel": "Publicado em:",
+    "metrics.sourceLinkText": "Fonte verificável: API pública do GitHub Releases",
+    "metrics.privacySealBadge": "Contagem pública agregada via GitHub Releases — Zero Rastreamento Pessoal",
+    "metrics.privacySealDetail": "Estes números vêm exclusivamente do contador público de arquivos do GitHub. O jogo Pontinhos permanece 100% offline, sem telemetria e sem coletar nenhum dado pessoal.",
+    "metrics.statusLoading": "Consultando GitHub Releases...",
+    "metrics.statusLive": "Contagem pública sincronizada com o GitHub Releases.",
+    "metrics.statusCached": "Contagem pública recente (cache local da sessão) • Zero rastreamento.",
+    "metrics.statusFallback": "Contagem em tempo real indisponível no momento • Downloads diretos funcionando normalmente.",
+    "metrics.valuePlaceholder": "—",
+    "metrics.fallbackLinkText": "Conferir estatísticas diretamente no GitHub Releases",
+    "metrics.totalAria": "Total acumulado de downloads em todas as plataformas: {count}",
+    "metrics.androidAria": "Downloads do pacote Android APK: {count}",
+    "metrics.windowsAria": "Downloads do pacote portátil para Windows: {count}",
+    "metrics.linuxAria": "Downloads do pacote portátil para Ubuntu e Linux: {count}",
+    "stores.kicker": "Lojas Oficiais • Em Breve",
+    "stores.title": "Também chegando às lojas oficiais de cada sistema",
+    "stores.subtitle": "Prefere instalar pelas lojas integradas ao seu sistema? Nossos pacotes oficiais estão em preparação para publicação automática — enquanto isso, baixe gratuitamente os arquivos verificados acima.",
+    "stores.gridAria": "Lojas oficiais de aplicativos com lançamento em breve",
+    "stores.googlePlay.name": "Google Play",
+    "stores.googlePlay.platform": "Android (Celulares e Tablets)",
+    "stores.googlePlay.badge": "Em breve • Em preparação",
+    "stores.googlePlay.desc": "Instalação e atualização automática em aparelhos Android. Já disponível hoje via APK assinado acima.",
+    "stores.googlePlay.aria": "Google Play para Android: em breve. Hoje você já pode baixar o APK assinado nesta página.",
+    "stores.appStore.name": "App Store",
+    "stores.appStore.platform": "iOS (iPhone e iPad)",
+    "stores.appStore.badge": "Em breve • Planejado",
+    "stores.appStore.desc": "Versão nativa para iPhone e iPad com suporte a VoiceOver. Enquanto isso, jogue no mini-tabuleiro interativo pelo Safari!",
+    "stores.appStore.aria": "App Store para iPhone e iPad: planejado em breve. Experimente o mini-tabuleiro interativo no navegador.",
+    "stores.msStore.name": "Microsoft Store",
+    "stores.msStore.platform": "Windows 10 e Windows 11 (64-bit)",
+    "stores.msStore.badge": "Em breve",
+    "stores.msStore.desc": "Instalação integrada ao Windows 10/11. Você já pode jogar agora baixando o pacote portátil .zip acima!",
+    "stores.msStore.aria": "Microsoft Store para Windows 10 e 11: em breve. Hoje você já pode baixar o pacote portátil ZIP nesta página.",
+    "stores.snapStore.name": "Snap Store / Ubuntu App Center",
+    "stores.snapStore.platform": "Ubuntu 22.04+ e Distribuições Linux",
+    "stores.snapStore.badge": "Em breve",
+    "stores.snapStore.desc": "Distribuição em 1 clique para Ubuntu e Linux. Você já pode jogar agora baixando o pacote portátil .tar.gz acima!",
+    "stores.snapStore.aria": "Snap Store e Ubuntu App Center para Linux: em breve. Hoje você já pode baixar o pacote portátil TAR.GZ nesta página.",
+    "faq.q6": "Como funcionam os pacotes portáteis de Windows (.zip) e Ubuntu/Linux (.tar.gz)? Preciso de instalador?",
+    "faq.a6": "Não precisa de instalador nem de permissão de administrador! No Windows 10/11, basta extrair o arquivo .zip em qualquer pasta e abrir pontinhos.exe. No Ubuntu 22.04+ / Linux x64, basta extrair o arquivo .tar.gz e executar ./pontinhos. Todos os downloads contam com código SHA-256 público para verificação de segurança.",
+    "footer.linkDownloadSection": "Downloads (Android, Windows e Linux)",
+    "footer.linkDownloadWin": "Baixar Windows Portátil (.zip • 11,7 MB)",
+    "footer.linkDownloadLinux": "Baixar Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "footer.termsLink": "Termos de Uso e Licença (EULA)",
+    "download.directGroupAria": "Downloads diretos por plataforma"
   },
   "en": {
-    "meta.title": "Pontinhos — Dot-to-dot Strategy | 100% Offline & Private | Regard Games",
-    "meta.description": "Play the classic Dots and Boxes game on your phone or tablet! Touch and drag dot to dot, challenge the AI or pass and play with friends. 100% offline, no ads, and zero data collection. Created by Regard Games in Picos, Piauí, Brazil.",
-    "meta.ogTitle": "Pontinhos — Dot-to-dot Strategy (100% Offline & Private)",
-    "meta.ogDescription": "Touch a dot and drag to a neighbor to claim boxes! Play against the AI or with a friend on the same device — 100% offline, no ads, and zero data collection.",
+    "meta.title": "Pontinhos — Dot-to-dot Strategy for Android, Windows & Linux | 100% Offline | Regard Games",
+    "meta.description": "Play the classic Dots and Boxes game on Android, Windows, and Ubuntu/Linux! Tap or click and drag dot to dot, challenge the AI or pass and play with friends. 100% offline, no ads, and zero data collection. Created by Regard Games in Picos, Piauí, Brazil.",
+    "meta.ogTitle": "Pontinhos — Dot-to-dot Strategy (Android, Windows & Ubuntu/Linux • 100% Offline)",
+    "meta.ogDescription": "Tap or click a dot and drag to a neighbor to claim boxes! Free download for Android (.apk), Windows (.zip), and Ubuntu/Linux (.tar.gz) — 100% offline, no ads, and zero data collection.",
     "meta.ogLocale": "en_US",
     "nav.skipLink": "Skip to main content",
     "brand.tagline": "Dot-by-dot strategy",
@@ -241,7 +373,7 @@ var I18N = {
     "nav.themeToggleAria": "Toggle between light and dark theme",
     "nav.themeLight": "Light",
     "nav.themeDark": "Dark",
-    "nav.downloadCta": "Download APK",
+    "nav.downloadCta": "Free Download",
     "nav.menuOpen": "Open navigation menu",
     "nav.menuClose": "Close navigation menu",
     "nav.menuLabel": "Menu",
@@ -251,13 +383,13 @@ var I18N = {
     "hero.eyebrow": "Regard Games - 100% offline & Zero Data Collection",
     "hero.titleLine1": "Dot-to-dot",
     "hero.titleAccent": "strategy.",
-    "hero.lead": "The classic pen-and-paper Dots and Boxes game reimagined for phone and tablet with a Tactile Paper & Ink aesthetic. Touch a dot and drag to a neighboring dot to draw your line, claim box chains, and beat the Computer or a friend on the same device — 100% offline, ad-free, and with total privacy.",
+    "hero.lead": "The classic pen-and-paper Dots and Boxes game reimagined for phone, tablet, and desktop PC with a Tactile Paper & Ink aesthetic. Tap or click a dot and drag to a neighboring dot to draw your line, claim box chains, and beat the Computer or a friend on the same device — 100% offline, ad-free, and with total privacy.",
     "hero.ctaDownload": "Download Android APK (v0.1.0-beta.1)",
     "hero.ctaPlayDemo": "Try in Browser",
     "hero.ctaReleaseNotes": "View Release Notes",
     "hero.badgeOffline": "100% Offline (Play without internet)",
     "hero.badgePrivacy": "Zero Data Collection • Zero Ads",
-    "hero.badgeDrag": "Intuitive Gesture: Touch & Drag",
+    "hero.badgeDrag": "Tap or Click & Drag Dot to Dot",
     "hero.badgeModes": "Solo vs. AI or 2 Players Local",
     "hero.badgeWcag": "Accessible (High Contrast & Symbols)",
     "demo.kicker": "Try it right now",
@@ -270,28 +402,28 @@ var I18N = {
     "demo.boxOwnerBot": "▲ BOT",
     "demo.badgeYou": "YOUR TURN",
     "demo.badgeBot": "BOT'S TURN",
-    "demo.msgInitial": "Touch a dot and drag to a neighboring dot to claim the 1st box!",
+    "demo.msgInitial": "Tap or click a dot and drag to a neighboring dot to claim the 1st box!",
     "demo.msgSingleCapture": "✨ +1 point! You claimed a box and earned a bonus turn — play again!",
     "demo.msgDoubleCapture": "🔥 Double capture (+2)! Bonus turn — keep playing!",
     "demo.msgBotThinking": "🤖 Computer thinking...",
-    "demo.msgYourTurnAfterBot": "Your turn! Touch a dot and drag to a neighboring dot.",
+    "demo.msgYourTurnAfterBot": "Your turn! Tap or click a dot and drag to a neighboring dot.",
     "demo.msgFinishedYouWon": "🏆 You won ({p1} to {p2})! Click Reset to play again.",
     "demo.msgFinishedBotWon": "🤖 The Bot won ({p2} to {p1})! Click Reset for a rematch.",
     "demo.msgFinishedDraw": "🤝 It's a draw ({p1} to {p2})! Click Reset for a tiebreaker.",
-    "demo.help": "Use Tab to reach a dashed line and press Enter or Space to play. You can also touch a dot and drag to a neighboring dot.",
-    "demo.legend": "Touch a dot and drag to a neighbor, or tap between two dots. ● P1 in blue · ▲ BOT in amber · green highlight on the last line.",
-    "demo.svgAria": "Interactive mini-board. Touch a dot and drag to a neighboring dot, or tap between two dots. Dashed lines also work with the keyboard.",
+    "demo.help": "Use Tab to reach a dashed line and press Enter or Space to play. You can also tap or click a dot and drag to a neighboring dot.",
+    "demo.legend": "Tap or click a dot and drag to a neighbor, or click between two dots. ● P1 in blue · ▲ BOT in amber · green highlight on the last line.",
+    "demo.svgAria": "Interactive mini-board. Tap or click a dot and drag to a neighboring dot, or click between two dots. Dashed lines also work with the keyboard.",
     "demo.axisH": "horizontal",
     "demo.axisV": "vertical",
     "demo.edgeFree": "Open {axis} line, row {row}, column {col}.",
     "demo.edgeCloses": " Claims a box, scores one point, and keeps the turn.",
-    "demo.edgeTap": " Tap to draw, or drag from a dot.",
+    "demo.edgeTap": " Tap or click to draw, or drag from a dot.",
     "exp.kicker": "Tactile Paper & Ink",
     "exp.title": "School-notebook nostalgia with digital precision",
     "exp.subtitle": "No cluttered menus, no ads interrupting your match, and no internet required. Every detail is crafted so the board stays at the heart of your fun.",
-    "exp.card1Badge": "Natural Gesture • Touch & Drag",
-    "exp.card1Title": "Touch a dot and drag to its neighbor",
-    "exp.card1Body": "Draw your lines just like pen on paper: simply touch a dot and slide your finger to a neighboring dot to preview the line before releasing — or tap directly between two dots.",
+    "exp.card1Badge": "Natural Gesture • Tap or Click & Drag",
+    "exp.card1Title": "Tap or click a dot and drag to its neighbor",
+    "exp.card1Body": "Draw your lines just like pen on paper: on phone, tablet, or PC, simply tap or click a dot and drag to a neighboring dot to preview the line before releasing — or tap/click directly between two dots.",
     "exp.card2Badge": "100% Offline • Always Ready",
     "exp.card2Title": "Play anywhere, anytime, with no internet",
     "exp.card2Body": "On a plane, on a bus, on a road trip, or on the couch: Pontinhos runs 100% on your device with no loading screens, no Wi-Fi required, and zero mobile data usage.",
@@ -341,16 +473,16 @@ var I18N = {
     "a11y.botDesc": "Triangle + BOT Label + Burnt Amber",
     "a11y.lastMoveRole": "Last Move",
     "a11y.lastMoveDesc": "Emerald Green highlight on the newly drawn line",
-    "a11y.card1Title": "Screen Readers & Larger Text",
-    "a11y.card1Body": "Compatible with TalkBack (Android) and VoiceOver (iOS), announcing turns, scores, and board coordinates while adapting smoothly to larger system font sizes.",
-    "a11y.card2Title": "Great on Phones and Tablets",
-    "a11y.card2Body": "Whether on compact smartphones or large tablets and iPads, the board keeps comfortable proportions and generous touch areas so you never misclick.",
+    "a11y.card1Title": "Screen Readers, Keyboard & Larger Text",
+    "a11y.card1Body": "Compatible with screen readers and desktop keyboard shortcuts (Esc, R, arrow keys), announcing turns, scores, and board coordinates while adapting smoothly to larger system font sizes.",
+    "a11y.card2Title": "Great on Phones, Tablets & Desktop PCs",
+    "a11y.card2Body": "Whether on compact smartphones, tablets, or widescreen monitors on Windows and Ubuntu/Linux, the board keeps comfortable proportions and generous hit areas so you never misclick with touch or mouse.",
     "how.kicker": "Simple Rules, Deep Strategy",
     "how.title": "How to play Pontinhos in 4 steps",
     "how.subtitle": "Learn in 15 seconds and discover why every line you draw can turn the match around.",
     "how.step1Num": "Step 1",
-    "how.step1Title": "Touch a dot and drag",
-    "how.step1Body": "On your turn, touch any dot on the board and drag your finger to a neighboring dot (horizontal or vertical) to draw your line.",
+    "how.step1Title": "Tap or click a dot and drag",
+    "how.step1Body": "On your turn, tap or click any dot on the board and drag to a neighboring dot (horizontal or vertical) to draw your line.",
     "how.step2Num": "Step 2",
     "how.step2Title": "Close the 4th side of a box",
     "how.step2Body": "The player who draws the fourth and final line around a box claims that territory with their color and symbol, scoring 1 point.",
@@ -421,17 +553,17 @@ var I18N = {
     "faq.a1": "Yes! Pontinhos works 100% offline from the very first second. You can play in airplane mode, on the subway, while traveling, or anywhere without cell service — both against the Computer and in 2-Player mode on the same device.",
     "faq.q2": "Does the app collect my personal data or show ads?",
     "faq.a2": "No. We are committed to Zero Data Collection and Zero Ads. The game asks for no sign-up, does not access your location, contacts, or camera, and shares nothing with third parties. Your stats and preferences stay stored solely on your own device.",
-    "faq.q3": "How does the touch-and-drag gesture work to draw lines?",
-    "faq.a3": "It's super intuitive: just touch a dot on the board and drag your finger to a neighboring dot (horizontally or vertically). The game previews the line as you slide and confirms the move when you lift your finger. If you prefer, you can also tap directly between two dots.",
+    "faq.q3": "How do I draw lines on a phone, tablet, or computer?",
+    "faq.a3": "It's super intuitive with both touch and mouse: just tap or click a dot on the board and drag to a neighboring dot (horizontally or vertically). The game previews the line as you slide and confirms the move when you release. If you prefer, you can also tap or click directly between two dots.",
     "faq.q4": "Which languages is Pontinhos available in?",
     "faq.a4": "Both the app and the official website are fully available in three languages: Brazilian Portuguese (Português), English, and Spanish (Español). You can switch languages anytime in the game's Settings or at the top of this page.",
-    "faq.q5": "Is the game free? Which devices can I play on?",
-    "faq.a5": "Yes, Pontinhos is free with no ads or hidden charges. It is designed for Android and iOS phones and tablets, and you can download the official Android installer (APK) for free right on this page.",
+    "faq.q5": "Is the game free? Which platforms can I download and play on?",
+    "faq.a5": "Yes! Pontinhos is 100% free with no ads or charges. Right on this page, you can download the official packages for Android (signed .apk, 50.7 MB), Windows 10/11 64-bit (portable .zip, 11.7 MB), and Ubuntu / Linux 64-bit (portable .tar.gz, 9.5 MB) for free, or play the demo right in your browser.",
     "cta.title": "Ready to master the board dot by dot?",
-    "cta.subtitle": "Download the free Android APK now, challenge the Computer, or invite a friend for a quick match — 100% offline, ad-free, and with total privacy.",
-    "cta.btnDownload": "Download Android APK (v0.1.0-beta.1)",
+    "cta.subtitle": "Download free for Android, Windows, or Ubuntu/Linux, challenge the Computer, or invite a friend for a quick match — 100% offline, ad-free, and with total privacy.",
+    "cta.btnDownload": "Choose My Platform (Android, Windows & Linux)",
     "cta.btnPlayTop": "Play on the Mini-Board Above",
-    "footer.brandDesc": "The classic Dots and Boxes game reimagined for phones and tablets with a Tactile Paper & Ink aesthetic. 100% offline, accessible, and with zero data collection. Proudly created by Regard Games in Picos, Piauí, Brazil.",
+    "footer.brandDesc": "The classic Dots and Boxes game reimagined for phones, tablets, and desktop PCs (Android, Windows & Ubuntu/Linux) with a Tactile Paper & Ink aesthetic. 100% offline, accessible, and with zero data collection. Proudly created by Regard Games in Picos, Piauí, Brazil.",
     "footer.colExplore": "Explore",
     "footer.colPrivacy": "Transparency & Privacy",
     "footer.colDownloads": "Downloads & Support",
@@ -439,17 +571,149 @@ var I18N = {
     "footer.linkA11y": "Accessibility",
     "footer.linkPrivacyPolicy": "Privacy Policy",
     "footer.linkOfflineCommitment": "100% Offline Commitment",
-    "footer.linkDownloadApk": "Download Android APK (v0.1.0-beta.1)",
+    "footer.linkDownloadApk": "Download Android APK (50.7 MB)",
     "footer.linkReleases": "Release Notes (Releases)",
     "footer.linkFeedback": "Send Suggestion or Feedback",
     "footer.copyright": "© 2026 Regard Games — Picos, Piauí, Brazil. All rights reserved.",
-    "footer.privacySummary": "100% Offline • Zero Data Collection • No Ads"
+    "footer.privacySummary": "100% Offline • Zero Data Collection • No Ads",
+    "nav.download": "Downloads",
+    "nav.downloadCtaApk": "Download APK",
+    "hero.platformBanner": "Available for Android, Windows & Ubuntu / Linux",
+    "hero.badgePlatforms": "Android • Windows 10/11 • Ubuntu / Linux",
+    "hero.ctaDownloadSection": "Free Download (Android, Windows & Linux)",
+    "hero.ctaDownloadAndroid": "Download for Android (.apk • 50.7 MB)",
+    "hero.ctaDownloadWindows": "Download for Windows (.zip • 11.7 MB)",
+    "hero.ctaDownloadLinux": "Download for Ubuntu / Linux (.tar.gz • 9.5 MB)",
+    "hero.ctaAllPlatforms": "View all platforms & SHA-256 checksums",
+    "osDetect.recommendedBadge": "Recommended for your device",
+    "osDetect.detectedAndroid": "Android system detected • Download the signed APK (50.7 MB) or pick another platform below.",
+    "osDetect.detectedWindows": "Windows detected • Download the portable .zip package (11.7 MB) or pick another platform below.",
+    "osDetect.detectedLinux": "Linux / Ubuntu detected • Download the portable .tar.gz package (9.5 MB) or pick another platform below.",
+    "osDetect.detectedApple": "Apple device detected • Play right now on the web mini-board or download for Android, Windows, and Linux (iOS version coming soon to the App Store).",
+    "osDetect.detectedGeneric": "Choose your platform: official 100% offline packages for Android, Windows, and Ubuntu / Linux.",
+    "download.kicker": "Official Downloads • 100% Offline & Ad-Free",
+    "download.title": "Play Pontinhos on Android, Windows, or Ubuntu / Linux",
+    "download.subtitle": "Choose your platform below. Every package is free, verified with a SHA-256 hash, and runs 100% offline with zero personal data collection.",
+    "download.versionBadgeV1": "v1.0.0",
+    "download.versionBadgeRelease": "v0.1.0-beta.1",
+    "download.versionLabel": "Version",
+    "download.formatLabel": "Format",
+    "download.sizeLabel": "Size",
+    "download.reqLabel": "Requirements",
+    "download.sha256Label": "SHA-256 Checksum",
+    "download.sha256CopyBtn": "Copy SHA-256",
+    "download.sha256Copied": "Copied!",
+    "download.sha256FileLink": "Download .sha256 file",
+    "download.quickInstallTitle": "How to install & play (3 quick steps)",
+    "download.allReleasesLink": "View all versions and release notes on GitHub Releases",
+    "download.android.title": "Android",
+    "download.android.subtitle": "Phones & Tablets",
+    "download.android.versionBadge": "v1.0.0",
+    "download.android.releaseTag": "v0.1.0-beta.1",
+    "download.android.format": "Signed APK (.apk)",
+    "download.android.size": "50.7 MB",
+    "download.android.req": "Android 8.0+ (ARM / x64)",
+    "download.android.btnText": "Download Android APK (50.7 MB)",
+    "download.android.btnAria": "Download signed Pontinhos APK package for Android (50.7 megabytes)",
+    "download.android.fileName": "pontinhos-v0.1.0-release.apk",
+    "download.android.step1": "1. Download the pontinhos-v0.1.0-release.apk file on your Android phone or tablet.",
+    "download.android.step2": "2. Tap the downloaded file and, if prompted by Android, allow installation from this source.",
+    "download.android.step3": "3. Open Pontinhos and enjoy playing 100% offline — no sign-up and no ads!",
+    "download.android.sha256Aria": "Copy SHA-256 hash for the Android APK",
+    "download.windows.title": "Windows",
+    "download.windows.subtitle": "Desktop & Laptop PC (64-bit)",
+    "download.windows.versionBadge": "v1.0.0",
+    "download.windows.releaseTag": "v0.1.0-beta.1",
+    "download.windows.format": "Portable Package (.zip)",
+    "download.windows.size": "11.7 MB",
+    "download.windows.req": "Windows 10/11 (64-bit)",
+    "download.windows.btnText": "Download for Windows (.zip • 11.7 MB)",
+    "download.windows.btnAria": "Download portable ZIP package of Pontinhos for 64-bit Windows 10 and 11 (11.7 megabytes)",
+    "download.windows.fileName": "pontinhos-v0.1.0-windows-x64-portable.zip",
+    "download.windows.step1": "1. Download the pontinhos-v0.1.0-windows-x64-portable.zip file on your computer.",
+    "download.windows.step2": "2. Extract all contents of the .zip archive into any folder you like.",
+    "download.windows.step3": "3. Double-click pontinhos.exe to play — no installer and no administrator privileges required!",
+    "download.windows.sha256Aria": "Copy SHA-256 hash for the Windows portable package",
+    "download.linux.title": "Ubuntu / Linux",
+    "download.linux.subtitle": "Linux x64 Desktop & Laptop",
+    "download.linux.versionBadge": "v1.0.0",
+    "download.linux.releaseTag": "v0.1.0-beta.1",
+    "download.linux.format": "Portable Package (.tar.gz)",
+    "download.linux.size": "9.5 MB",
+    "download.linux.req": "Ubuntu 22.04+ / Linux x64 (GTK3)",
+    "download.linux.btnText": "Download for Ubuntu / Linux (.tar.gz • 9.5 MB)",
+    "download.linux.btnAria": "Download portable TAR.GZ package of Pontinhos for 64-bit Ubuntu and Linux (9.5 megabytes)",
+    "download.linux.fileName": "pontinhos-v0.1.0-linux-x64-portable.tar.gz",
+    "download.linux.step1": "1. Download the pontinhos-v0.1.0-linux-x64-portable.tar.gz file on your Linux system.",
+    "download.linux.step2": "2. Extract the archive via your file manager or terminal (tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz).",
+    "download.linux.step3": "3. Run ./pontinhos inside the extracted folder — ready to play 100% offline with no complex setup!",
+    "download.linux.sha256Aria": "Copy SHA-256 hash for the Linux portable package",
+    "metrics.kicker": "Open Community • GitHub Releases",
+    "metrics.title": "Real-Time Public Download Metrics",
+    "metrics.subtitle": "See how many times the official Pontinhos packages have been downloaded directly from the public Regard Games repository.",
+    "metrics.panelAria": "Public download metrics panel for Pontinhos via GitHub Releases",
+    "metrics.totalLabel": "Total Downloads",
+    "metrics.totalSub": "All versions & platforms",
+    "metrics.androidLabel": "Android Downloads",
+    "metrics.androidSub": "Signed .apk package",
+    "metrics.windowsLabel": "Windows Downloads",
+    "metrics.windowsSub": "Portable .zip package (x64)",
+    "metrics.linuxLabel": "Ubuntu / Linux Downloads",
+    "metrics.linuxSub": "Portable .tar.gz package (x64)",
+    "metrics.cardBadgeCount": "{count} downloads",
+    "metrics.cardBadgeCountSingular": "1 download",
+    "metrics.latestReleaseLabel": "Current release:",
+    "metrics.lastUpdatedLabel": "Published on:",
+    "metrics.sourceLinkText": "Verifiable source: GitHub Releases public API",
+    "metrics.privacySealBadge": "Public aggregated count via GitHub Releases — Zero Personal Tracking",
+    "metrics.privacySealDetail": "These numbers come exclusively from GitHub's public file counter. The Pontinhos game itself stays 100% offline, with no telemetry and zero personal data collection.",
+    "metrics.statusLoading": "Querying GitHub Releases...",
+    "metrics.statusLive": "Public count synced with GitHub Releases.",
+    "metrics.statusCached": "Recent public count (local session cache) • Zero tracking.",
+    "metrics.statusFallback": "Real-time count currently unavailable • Direct downloads are working normally.",
+    "metrics.valuePlaceholder": "—",
+    "metrics.fallbackLinkText": "Check statistics directly on GitHub Releases",
+    "metrics.totalAria": "Cumulative total downloads across all platforms: {count}",
+    "metrics.androidAria": "Android APK package downloads: {count}",
+    "metrics.windowsAria": "Windows portable package downloads: {count}",
+    "metrics.linuxAria": "Ubuntu and Linux portable package downloads: {count}",
+    "stores.kicker": "Official App Stores • Coming Soon",
+    "stores.title": "Also coming to each platform's official store",
+    "stores.subtitle": "Prefer installing from your system's built-in store? Our official packages are being prepared for store publication — meanwhile, download the verified files above for free.",
+    "stores.gridAria": "Official application stores launching soon",
+    "stores.googlePlay.name": "Google Play",
+    "stores.googlePlay.platform": "Android (Phones & Tablets)",
+    "stores.googlePlay.badge": "Coming Soon • In Preparation",
+    "stores.googlePlay.desc": "Automatic installation and updates on Android devices. Already available today via the signed APK above.",
+    "stores.googlePlay.aria": "Google Play for Android: coming soon. Today you can already download the signed APK on this page.",
+    "stores.appStore.name": "App Store",
+    "stores.appStore.platform": "iOS (iPhone & iPad)",
+    "stores.appStore.badge": "Coming Soon • Planned",
+    "stores.appStore.desc": "Native version for iPhone and iPad with VoiceOver support. Meanwhile, play on the interactive mini-board right in Safari!",
+    "stores.appStore.aria": "App Store for iPhone and iPad: planned coming soon. Try the interactive mini-board in your browser.",
+    "stores.msStore.name": "Microsoft Store",
+    "stores.msStore.platform": "Windows 10 & Windows 11 (64-bit)",
+    "stores.msStore.badge": "Coming Soon",
+    "stores.msStore.desc": "Integrated Windows 10/11 installation. You can already play right now by downloading the portable .zip package above!",
+    "stores.msStore.aria": "Microsoft Store for Windows 10 and 11: coming soon. Today you can already download the portable ZIP package on this page.",
+    "stores.snapStore.name": "Snap Store / Ubuntu App Center",
+    "stores.snapStore.platform": "Ubuntu 22.04+ & Linux Distros",
+    "stores.snapStore.badge": "Coming Soon",
+    "stores.snapStore.desc": "1-click distribution for Ubuntu and Linux. You can already play right now by downloading the portable .tar.gz package above!",
+    "stores.snapStore.aria": "Snap Store and Ubuntu App Center for Linux: coming soon. Today you can already download the portable TAR.GZ package on this page.",
+    "faq.q6": "How do the Windows (.zip) and Ubuntu/Linux (.tar.gz) portable packages work? Do I need an installer?",
+    "faq.a6": "No installer or administrator privileges needed! On Windows 10/11, simply extract the .zip archive into any folder and run pontinhos.exe. On Ubuntu 22.04+ / Linux x64, extract the .tar.gz archive and run ./pontinhos. Every download includes a public SHA-256 checksum for security verification.",
+    "footer.linkDownloadSection": "Downloads (Android, Windows & Linux)",
+    "footer.linkDownloadWin": "Download Windows Portable (.zip • 11.7 MB)",
+    "footer.linkDownloadLinux": "Download Ubuntu / Linux (.tar.gz • 9.5 MB)",
+    "footer.termsLink": "Terms of Use & License (EULA)",
+    "download.directGroupAria": "Direct downloads by platform"
   },
   "es": {
-    "meta.title": "Pontinhos — Estrategia punto a punto | 100 % sin conexión y privado | Regard Games",
-    "meta.description": "¡Juega al clásico juego de Puntos y Cajas en tu celular o tablet! Toca y arrastra punto a punto, desafía a la IA o juega con amigos. 100 % sin conexión, sin anuncios y cero recopilación de datos. Creado por Regard Games en Picos, Piauí, Brasil.",
-    "meta.ogTitle": "Pontinhos — Estrategia punto a punto (100 % sin conexión y privado)",
-    "meta.ogDescription": "¡Toca un punto y arrastra hasta el vecino para cerrar cajas! Juega contra la IA o con un amigo en el mismo dispositivo — 100 % sin conexión, sin anuncios y cero datos recopilados.",
+    "meta.title": "Pontinhos — Estrategia punto a punto para Android, Windows y Linux | 100 % sin conexión | Regard Games",
+    "meta.description": "¡Juega al clásico juego de Puntos y Cajas en Android, Windows y Ubuntu/Linux! Toca o haz clic y arrastra punto a punto, desafía a la IA o juega con amigos. 100 % sin conexión, sin anuncios y cero recopilación de datos. Creado por Regard Games en Picos, Piauí, Brasil.",
+    "meta.ogTitle": "Pontinhos — Estrategia punto a punto (Android, Windows y Ubuntu/Linux • 100 % sin conexión)",
+    "meta.ogDescription": "¡Toca o haz clic en un punto y arrastra hasta el vecino para cerrar cajas! Descarga gratis para Android (.apk), Windows (.zip) y Ubuntu/Linux (.tar.gz) — 100 % sin conexión, sin anuncios y cero datos recopilados.",
     "meta.ogLocale": "es_ES",
     "nav.skipLink": "Saltar al contenido principal",
     "brand.tagline": "Estrategia punto a punto",
@@ -464,7 +728,7 @@ var I18N = {
     "nav.themeToggleAria": "Alternar entre tema claro y oscuro",
     "nav.themeLight": "Claro",
     "nav.themeDark": "Oscuro",
-    "nav.downloadCta": "Descargar APK",
+    "nav.downloadCta": "Descargar Gratis",
     "nav.menuOpen": "Abrir menú de navegación",
     "nav.menuClose": "Cerrar menú de navegación",
     "nav.menuLabel": "Menú",
@@ -474,13 +738,13 @@ var I18N = {
     "hero.eyebrow": "Regard Games - 100% sin conexión & Cero Recopilación de Datos",
     "hero.titleLine1": "Estrategia",
     "hero.titleAccent": "punto a punto.",
-    "hero.lead": "El clásico juego de Puntos y Cajas de papel y lápiz reinventado para celular y tablet con estética Tactile Paper & Ink. Toca un punto y arrastra hasta el punto vecino para trazar tu línea, cierra cajas en cadena y vence a la Computadora o a un amigo en el mismo dispositivo — 100 % sin conexión, sin anuncios y con privacidad total.",
+    "hero.lead": "El clásico juego de Puntos y Cajas de papel y lápiz reinventado para celular, tablet y computadora con estética Tactile Paper & Ink. Toca o haz clic en un punto y arrastra hasta el punto vecino para trazar tu línea, cierra cajas en cadena y vence a la Computadora o a un amigo en el mismo dispositivo — 100 % sin conexión, sin anuncios y con privacidad total.",
     "hero.ctaDownload": "Descargar APK Android (v0.1.0-beta.1)",
     "hero.ctaPlayDemo": "Probar en el Navegador",
     "hero.ctaReleaseNotes": "Ver Notas de la Versión",
     "hero.badgeOffline": "100 % sin conexión (Juega sin internet)",
     "hero.badgePrivacy": "Cero recopilación de datos • Cero anuncios",
-    "hero.badgeDrag": "Gesto intuitivo: Toca y arrastra",
+    "hero.badgeDrag": "Toca o Haz Clic y Arrastra Punto a Punto",
     "hero.badgeModes": "Solo vs. IA o 2 Jugadores Local",
     "hero.badgeWcag": "Accesible (Alto contraste y símbolos)",
     "demo.kicker": "Pruébalo ahora",
@@ -493,28 +757,28 @@ var I18N = {
     "demo.boxOwnerBot": "▲ BOT",
     "demo.badgeYou": "TU TURNO",
     "demo.badgeBot": "TURNO DEL BOT",
-    "demo.msgInitial": "¡Toca un punto y arrastra hasta el punto vecino para cerrar la 1.ª caja!",
+    "demo.msgInitial": "¡Toca o haz clic en un punto y arrastra hasta el punto vecino para cerrar la 1.ª caja!",
     "demo.msgSingleCapture": "✨ ¡+1 punto! Cerraste una caja y ganaste un turno extra: ¡juega de nuevo!",
     "demo.msgDoubleCapture": "🔥 ¡Captura doble (+2)! Turno extra: ¡sigue jugando!",
     "demo.msgBotThinking": "🤖 Computadora pensando...",
-    "demo.msgYourTurnAfterBot": "¡Tu turno! Toca un punto y arrastra hasta el punto vecino.",
+    "demo.msgYourTurnAfterBot": "¡Tu turno! Toca o haz clic en un punto y arrastra hasta el punto vecino.",
     "demo.msgFinishedYouWon": "🏆 ¡Ganaste ({p1} a {p2})! Haz clic en Reiniciar para jugar otra vez.",
     "demo.msgFinishedBotWon": "🤖 ¡El Bot ganó ({p2} a {p1})! Haz clic en Reiniciar para la revancha.",
     "demo.msgFinishedDraw": "🤝 ¡Empate ({p1} a {p2})! Haz clic en Reiniciar para desempatar.",
-    "demo.help": "Usa el tabulador para llegar a una línea punteada y pulsa Enter o Espacio para jugar. También puedes tocar un punto y arrastrar hasta el punto vecino.",
-    "demo.legend": "Toca un punto y arrastra hasta el vecino, o toca entre dos puntos. ● J1 en azul · ▲ BOT en ámbar · destaque verde en la última línea.",
-    "demo.svgAria": "Minitablero interactivo. Toca un punto y arrastra hasta el punto vecino, o toca entre dos puntos. Las líneas punteadas también funcionan con el teclado.",
+    "demo.help": "Usa el tabulador para llegar a una línea punteada y pulsa Enter o Espacio para jugar. También puedes tocar o hacer clic en un punto y arrastrar hasta el punto vecino.",
+    "demo.legend": "Toca o haz clic en un punto y arrastra hasta el vecino, o toca entre dos puntos. ● J1 en azul · ▲ BOT en ámbar · destaque verde en la última línea.",
+    "demo.svgAria": "Minitablero interactivo. Toca o haz clic en un punto y arrastra hasta el punto vecino, o haz clic entre dos puntos. Las líneas punteadas también funcionan con el teclado.",
     "demo.axisH": "horizontal",
     "demo.axisV": "vertical",
     "demo.edgeFree": "Línea {axis} libre, fila {row}, columna {col}.",
     "demo.edgeCloses": " Cierra una caja, suma un punto y mantiene el turno.",
-    "demo.edgeTap": " Toca para trazar o arrastra desde un punto.",
+    "demo.edgeTap": " Toca o haz clic para trazar, o arrastra desde un punto.",
     "exp.kicker": "Tactile Paper & Ink",
     "exp.title": "La nostalgia del cuaderno escolar con precisión digital",
     "exp.subtitle": "Sin menús confusos, sin anuncios que interrumpan tu partida y sin necesitar internet. Cada detalle fue diseñado para que el tablero sea el centro de tu diversión.",
-    "exp.card1Badge": "Gesto Natural • Toca y Arrastra",
-    "exp.card1Title": "Toca un punto y arrastra hasta el vecino",
-    "exp.card1Body": "Dibuja tus líneas como si tuvieras el lápiz sobre el papel: basta con tocar un punto y deslizar el dedo hasta el punto vecino para ver el trazo antes de soltar — o tocar directamente entre dos puntos.",
+    "exp.card1Badge": "Gesto Natural • Toca o Haz Clic y Arrastra",
+    "exp.card1Title": "Toca o haz clic en un punto y arrastra hasta el vecino",
+    "exp.card1Body": "Dibuja tus líneas como si tuvieras el lápiz sobre el papel: en celular, tablet o PC, basta con tocar o hacer clic en un punto y arrastrar hasta el punto vecino para ver el trazo antes de soltar — o tocar/hacer clic directamente entre dos puntos.",
     "exp.card2Badge": "100 % sin conexión • Siempre listo",
     "exp.card2Title": "Juega donde y cuando quieras, sin internet",
     "exp.card2Body": "En el avión, en el autobús, en la carretera o en el sofá: Pontinhos funciona al 100 % en tu dispositivo, sin pantallas de carga, sin depender de Wi-Fi y sin consumir tus datos móviles.",
@@ -564,16 +828,16 @@ var I18N = {
     "a11y.botDesc": "Triángulo + Etiqueta BOT + Ámbar Tostado",
     "a11y.lastMoveRole": "Última Jugada",
     "a11y.lastMoveDesc": "Destaque Verde Esmeralda en el trazo recién dibujado",
-    "a11y.card1Title": "Lectores de Pantalla y Texto Ampliado",
-    "a11y.card1Body": "Compatible con TalkBack (Android) y VoiceOver (iOS), anunciando turnos, marcadores y coordenadas del tablero, además de adaptarse perfectamente a fuentes ampliadas del sistema.",
-    "a11y.card2Title": "Perfecto en Celular y Tablet",
-    "a11y.card2Body": "Ya sea en celulares compactos o en tablets grandes y iPad, el tablero mantiene proporciones cómodas y áreas táctiles amplias para jugar sin toques accidentales.",
+    "a11y.card1Title": "Lectores de Pantalla, Teclado y Texto Ampliado",
+    "a11y.card1Body": "Compatible con lectores de pantalla y atajos de teclado en computadora (Esc, R, flechas), anunciando turnos, marcadores y coordenadas del tablero, además de adaptarse perfectamente a fuentes ampliadas del sistema.",
+    "a11y.card2Title": "Perfecto en Celular, Tablet y Computadora",
+    "a11y.card2Body": "Ya sea en celulares compactos, tablets o monitores panorámicos en Windows y Ubuntu/Linux, el tablero mantiene proporciones cómodas y áreas amplias para jugar con toque o ratón sin clics accidentales.",
     "how.kicker": "Reglas Simples, Estrategia Profunda",
     "how.title": "Cómo jugar a Pontinhos en 4 pasos",
     "how.subtitle": "Aprende en 15 segundos y descubre por qué cada línea trazada puede cambiar el rumbo de la partida.",
     "how.step1Num": "Paso 1",
-    "how.step1Title": "Toca un punto y arrastra",
-    "how.step1Body": "En tu turno, toca cualquier punto del tablero y arrastra el dedo hasta un punto vecino (horizontal o vertical) para trazar tu línea.",
+    "how.step1Title": "Toca o haz clic en un punto y arrastra",
+    "how.step1Body": "En tu turno, toca o haz clic en cualquier punto del tablero y arrastra hasta un punto vecino (horizontal o vertical) para trazar tu línea.",
     "how.step2Num": "Paso 2",
     "how.step2Title": "Cierra el 4.º lado de la caja",
     "how.step2Body": "El jugador que dibuja la cuarta y última línea alrededor de una caja conquista ese territorio con su color y símbolo, sumando 1 punto.",
@@ -644,17 +908,17 @@ var I18N = {
     "faq.a1": "¡Sí! Pontinhos funciona 100 % sin conexión desde el primer segundo. Puedes jugar en modo avión, en el metro, de viaje o en lugares sin señal móvil, tanto contra la Computadora como en el modo para 2 Jugadores en el mismo dispositivo.",
     "faq.q2": "¿La aplicación recopila mis datos personales o muestra anuncios?",
     "faq.a2": "No. Tenemos el compromiso de Cero Recopilación de Datos y Cero Anuncios. El juego no pide registro, no accede a tu ubicación, contactos ni cámara, y no comparte nada con terceros. Tus estadísticas y preferencias se guardan únicamente en tu propio dispositivo.",
-    "faq.q3": "¿Cómo funciona el gesto de tocar y arrastrar para trazar líneas?",
-    "faq.a3": "Es muy intuitivo: basta con tocar un punto del tablero y arrastrar el dedo hasta un punto vecino (en horizontal o vertical). El juego muestra una vista previa de la línea mientras deslizas y confirma la jugada al levantar el dedo. Si lo prefieres, también puedes tocar directamente entre dos puntos.",
+    "faq.q3": "¿Cómo funciona el trazado de líneas en celular, tablet o computadora?",
+    "faq.a3": "Es muy intuitivo tanto en pantalla táctil como con el ratón: basta con tocar o hacer clic en un punto del tablero y arrastrar hasta un punto vecino (en horizontal o vertical). El juego muestra una vista previa de la línea mientras deslizas y confirma la jugada al soltar. Si lo prefieres, también puedes tocar o hacer clic directamente entre dos puntos.",
     "faq.q4": "¿En qué idiomas está disponible Pontinhos?",
     "faq.a4": "Tanto la aplicación como el sitio web oficial están totalmente disponibles en tres idiomas: Portugués (Brasil), Inglés (English) y Español. Puedes cambiar el idioma en cualquier momento en los Ajustes del juego o en la parte superior de esta página.",
-    "faq.q5": "¿El juego es gratuito? ¿En qué dispositivos puedo jugar?",
-    "faq.a5": "Sí, Pontinhos es gratuito y libre de anuncios o cobros. Fue diseñado para celulares y tablets Android e iOS, y ya puedes descargar gratis el instalador oficial (APK) para Android en esta misma página.",
+    "faq.q5": "¿El juego es gratuito? ¿En qué plataformas puedo descargarlo y jugar?",
+    "faq.a5": "¡Sí! Pontinhos es 100 % gratuito, libre de anuncios y sin cobros. En esta misma página puedes descargar gratis los paquetes oficiales para Android (.apk firmado, 50,7 MB), Windows 10/11 de 64 bits (.zip portátil, 11,7 MB) y Ubuntu / Linux de 64 bits (.tar.gz portátil, 9,5 MB), o jugar la demostración en el navegador.",
     "cta.title": "¿Listo para dominar el tablero punto a punto?",
-    "cta.subtitle": "Descarga ahora el APK gratuito para Android, desafía a la Computadora o invita a un amigo a una partida rápida — 100 % sin conexión, sin anuncios y con privacidad total.",
-    "cta.btnDownload": "Descargar APK Android (v0.1.0-beta.1)",
+    "cta.subtitle": "Descarga gratis para Android, Windows o Ubuntu/Linux, desafía a la Computadora o invita a un amigo a una partida rápida — 100 % sin conexión, sin anuncios y con privacidad total.",
+    "cta.btnDownload": "Elegir Mi Plataforma (Android, Windows y Linux)",
     "cta.btnPlayTop": "Jugar en el Minitablero de Arriba",
-    "footer.brandDesc": "El clásico juego de Puntos y Cajas reinventado para celulares y tablets con estética Tactile Paper & Ink. 100 % sin conexión, accesible y con cero recopilación de datos. Creado con orgullo por Regard Games en Picos, Piauí, Brasil.",
+    "footer.brandDesc": "El clásico juego de Puntos y Cajas reinventado para celulares, tablets y computadoras (Android, Windows y Ubuntu/Linux) con estética Tactile Paper & Ink. 100 % sin conexión, accesible y con cero recopilación de datos. Creado con orgullo por Regard Games en Picos, Piauí, Brasil.",
     "footer.colExplore": "Explorar",
     "footer.colPrivacy": "Transparencia y Privacidad",
     "footer.colDownloads": "Descargas y Soporte",
@@ -662,11 +926,143 @@ var I18N = {
     "footer.linkA11y": "Accesibilidad",
     "footer.linkPrivacyPolicy": "Política de Privacidad",
     "footer.linkOfflineCommitment": "Compromiso 100 % sin conexión",
-    "footer.linkDownloadApk": "Descargar APK Android (v0.1.0-beta.1)",
+    "footer.linkDownloadApk": "Descargar APK Android (50,7 MB)",
     "footer.linkReleases": "Notas de Lanzamiento (Releases)",
     "footer.linkFeedback": "Enviar Sugerencia o Comentario",
     "footer.copyright": "© 2026 Regard Games — Picos, Piauí, Brasil. Todos los derechos reservados.",
-    "footer.privacySummary": "100 % sin conexión • Cero recopilación de datos • Sin anuncios"
+    "footer.privacySummary": "100 % sin conexión • Cero recopilación de datos • Sin anuncios",
+    "nav.download": "Descargas",
+    "nav.downloadCtaApk": "Descargar APK",
+    "hero.platformBanner": "Disponible para Android, Windows y Ubuntu / Linux",
+    "hero.badgePlatforms": "Android • Windows 10/11 • Ubuntu / Linux",
+    "hero.ctaDownloadSection": "Descargar Gratis (Android, Windows y Linux)",
+    "hero.ctaDownloadAndroid": "Descargar para Android (.apk • 50,7 MB)",
+    "hero.ctaDownloadWindows": "Descargar para Windows (.zip • 11,7 MB)",
+    "hero.ctaDownloadLinux": "Descargar para Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "hero.ctaAllPlatforms": "Ver todas las plataformas y sumas SHA-256",
+    "osDetect.recommendedBadge": "Recomendado para tu dispositivo",
+    "osDetect.detectedAndroid": "Sistema Android detectado • Descarga el APK firmado (50,7 MB) o elige otra plataforma abajo.",
+    "osDetect.detectedWindows": "Windows detectado • Descarga el paquete portátil .zip (11,7 MB) o elige otra plataforma abajo.",
+    "osDetect.detectedLinux": "Linux / Ubuntu detectado • Descarga el paquete portátil .tar.gz (9,5 MB) o elige otra plataforma abajo.",
+    "osDetect.detectedApple": "Dispositivo Apple detectado • Juega ahora en el minitablero web o descarga para Android, Windows y Linux (versión iOS próximamente en App Store).",
+    "osDetect.detectedGeneric": "Elige tu plataforma: paquetes oficiales 100 % sin conexión para Android, Windows y Ubuntu / Linux.",
+    "download.kicker": "Descargas Oficiales • 100 % sin conexión y sin anuncios",
+    "download.title": "Juega a Pontinhos en Android, Windows o Ubuntu / Linux",
+    "download.subtitle": "Elige tu plataforma abajo. Todos los paquetes son gratuitos, están verificados con hash SHA-256 y funcionan 100 % sin conexión sin recopilar ningún dato personal.",
+    "download.versionBadgeV1": "v1.0.0",
+    "download.versionBadgeRelease": "v0.1.0-beta.1",
+    "download.versionLabel": "Versión",
+    "download.formatLabel": "Formato",
+    "download.sizeLabel": "Tamaño",
+    "download.reqLabel": "Requisitos",
+    "download.sha256Label": "Suma de verificación SHA-256",
+    "download.sha256CopyBtn": "Copiar SHA-256",
+    "download.sha256Copied": "¡Copiado!",
+    "download.sha256FileLink": "Descargar archivo .sha256",
+    "download.quickInstallTitle": "Cómo instalar y jugar (3 pasos rápidos)",
+    "download.allReleasesLink": "Ver todas las versiones y notas de lanzamiento en GitHub Releases",
+    "download.android.title": "Android",
+    "download.android.subtitle": "Celulares y Tablets",
+    "download.android.versionBadge": "v1.0.0",
+    "download.android.releaseTag": "v0.1.0-beta.1",
+    "download.android.format": "APK Firmado (.apk)",
+    "download.android.size": "50,7 MB",
+    "download.android.req": "Android 8.0+ (ARM / x64)",
+    "download.android.btnText": "Descargar APK Android (50,7 MB)",
+    "download.android.btnAria": "Descargar paquete APK firmado de Pontinhos para Android (50,7 megabytes)",
+    "download.android.fileName": "pontinhos-v0.1.0-release.apk",
+    "download.android.step1": "1. Descarga el archivo pontinhos-v0.1.0-release.apk en tu celular o tablet Android.",
+    "download.android.step2": "2. Toca el archivo descargado y, si Android lo solicita, autoriza la instalación desde esta fuente.",
+    "download.android.step3": "3. ¡Abre Pontinhos y diviértete 100 % sin conexión — sin registro y sin anuncios!",
+    "download.android.sha256Aria": "Copiar suma SHA-256 del APK de Android",
+    "download.windows.title": "Windows",
+    "download.windows.subtitle": "PC y Portátil (64 bits)",
+    "download.windows.versionBadge": "v1.0.0",
+    "download.windows.releaseTag": "v0.1.0-beta.1",
+    "download.windows.format": "Paquete Portátil (.zip)",
+    "download.windows.size": "11,7 MB",
+    "download.windows.req": "Windows 10/11 (64 bits)",
+    "download.windows.btnText": "Descargar para Windows (.zip • 11,7 MB)",
+    "download.windows.btnAria": "Descargar paquete portátil ZIP de Pontinhos para Windows 10 y 11 de 64 bits (11,7 megabytes)",
+    "download.windows.fileName": "pontinhos-v0.1.0-windows-x64-portable.zip",
+    "download.windows.step1": "1. Descarga el archivo pontinhos-v0.1.0-windows-x64-portable.zip en tu computadora.",
+    "download.windows.step2": "2. Extrae todo el contenido del archivo .zip en cualquier carpeta de tu preferencia.",
+    "download.windows.step3": "3. ¡Haz doble clic en pontinhos.exe para jugar — sin instalador y sin necesitar permisos de administrador!",
+    "download.windows.sha256Aria": "Copiar suma SHA-256 del paquete portátil de Windows",
+    "download.linux.title": "Ubuntu / Linux",
+    "download.linux.subtitle": "PC y Portátil Linux x64",
+    "download.linux.versionBadge": "v1.0.0",
+    "download.linux.releaseTag": "v0.1.0-beta.1",
+    "download.linux.format": "Paquete Portátil (.tar.gz)",
+    "download.linux.size": "9,5 MB",
+    "download.linux.req": "Ubuntu 22.04+ / Linux x64 (GTK3)",
+    "download.linux.btnText": "Descargar para Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "download.linux.btnAria": "Descargar paquete portátil TAR.GZ de Pontinhos para Ubuntu y Linux de 64 bits (9,5 megabytes)",
+    "download.linux.fileName": "pontinhos-v0.1.0-linux-x64-portable.tar.gz",
+    "download.linux.step1": "1. Descarga el archivo pontinhos-v0.1.0-linux-x64-portable.tar.gz en tu sistema Linux.",
+    "download.linux.step2": "2. Extrae el paquete con tu gestor de archivos o en la terminal (tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz).",
+    "download.linux.step3": "3. ¡Ejecuta ./pontinhos en la carpeta extraída — listo para jugar 100 % sin conexión y sin instalación compleja!",
+    "download.linux.sha256Aria": "Copiar suma SHA-256 del paquete portátil de Linux",
+    "metrics.kicker": "Comunidad Abierta • GitHub Releases",
+    "metrics.title": "Métricas Públicas de Descarga en Tiempo Real",
+    "metrics.subtitle": "Sigue cuántas veces se han descargado los paquetes oficiales de Pontinhos directamente desde el repositorio público de Regard Games.",
+    "metrics.panelAria": "Panel de métricas públicas de descargas de Pontinhos vía GitHub Releases",
+    "metrics.totalLabel": "Total de Descargas",
+    "metrics.totalSub": "Todas las versiones y plataformas",
+    "metrics.androidLabel": "Descargas Android",
+    "metrics.androidSub": "Paquete .apk firmado",
+    "metrics.windowsLabel": "Descargas Windows",
+    "metrics.windowsSub": "Paquete portátil .zip (x64)",
+    "metrics.linuxLabel": "Descargas Ubuntu / Linux",
+    "metrics.linuxSub": "Paquete portátil .tar.gz (x64)",
+    "metrics.cardBadgeCount": "{count} descargas",
+    "metrics.cardBadgeCountSingular": "1 descarga",
+    "metrics.latestReleaseLabel": "Versión actual:",
+    "metrics.lastUpdatedLabel": "Publicado el:",
+    "metrics.sourceLinkText": "Fuente verificable: API pública de GitHub Releases",
+    "metrics.privacySealBadge": "Conteo público agregado vía GitHub Releases — Cero Rastreo Personal",
+    "metrics.privacySealDetail": "Estas cifras provienen exclusivamente del contador público de archivos de GitHub. El juego Pontinhos sigue siendo 100 % sin conexión, sin telemetría y sin recopilar ningún dato personal.",
+    "metrics.statusLoading": "Consultando GitHub Releases...",
+    "metrics.statusLive": "Conteo público sincronizado con GitHub Releases.",
+    "metrics.statusCached": "Conteo público reciente (caché local de la sesión) • Cero rastreo.",
+    "metrics.statusFallback": "Conteo en tiempo real no disponible en este momento • Las descargas directas funcionan con normalidad.",
+    "metrics.valuePlaceholder": "—",
+    "metrics.fallbackLinkText": "Consultar estadísticas directamente en GitHub Releases",
+    "metrics.totalAria": "Total acumulado de descargas en todas las plataformas: {count}",
+    "metrics.androidAria": "Descargas del paquete Android APK: {count}",
+    "metrics.windowsAria": "Descargas del paquete portátil para Windows: {count}",
+    "metrics.linuxAria": "Descargas del paquete portátil para Ubuntu y Linux: {count}",
+    "stores.kicker": "Tiendas Oficiales • Próximamente",
+    "stores.title": "También llegando a las tiendas oficiales de cada sistema",
+    "stores.subtitle": "¿Prefieres instalar desde la tienda integrada en tu sistema? Nuestros paquetes oficiales están en preparación para su publicación — mientras tanto, descarga gratis los archivos verificados de arriba.",
+    "stores.gridAria": "Tiendas oficiales de aplicaciones con lanzamiento próximamente",
+    "stores.googlePlay.name": "Google Play",
+    "stores.googlePlay.platform": "Android (Celulares y Tablets)",
+    "stores.googlePlay.badge": "Próximamente • En preparación",
+    "stores.googlePlay.desc": "Instalación y actualización automática en dispositivos Android. Ya disponible hoy mediante el APK firmado de arriba.",
+    "stores.googlePlay.aria": "Google Play para Android: próximamente. Hoy ya puedes descargar el APK firmado en esta página.",
+    "stores.appStore.name": "App Store",
+    "stores.appStore.platform": "iOS (iPhone y iPad)",
+    "stores.appStore.badge": "Próximamente • Planificado",
+    "stores.appStore.desc": "Versión nativa para iPhone y iPad con soporte para VoiceOver. ¡Mientras tanto, juega en el minitablero interactivo desde Safari!",
+    "stores.appStore.aria": "App Store para iPhone y iPad: planificado próximamente. Prueba el minitablero interactivo en el navegador.",
+    "stores.msStore.name": "Microsoft Store",
+    "stores.msStore.platform": "Windows 10 y Windows 11 (64 bits)",
+    "stores.msStore.badge": "Próximamente",
+    "stores.msStore.desc": "Instalación integrada en Windows 10/11. ¡Ya puedes jugar ahora mismo descargando el paquete portátil .zip de arriba!",
+    "stores.msStore.aria": "Microsoft Store para Windows 10 y 11: próximamente. Hoy ya puedes descargar el paquete portátil ZIP en esta página.",
+    "stores.snapStore.name": "Snap Store / Ubuntu App Center",
+    "stores.snapStore.platform": "Ubuntu 22.04+ y Distribuciones Linux",
+    "stores.snapStore.badge": "Próximamente",
+    "stores.snapStore.desc": "Distribución en 1 clic para Ubuntu y Linux. ¡Ya puedes jugar ahora mismo descargando el paquete portátil .tar.gz de arriba!",
+    "stores.snapStore.aria": "Snap Store y Ubuntu App Center para Linux: próximamente. Hoy ya puedes descargar el paquete portátil TAR.GZ en esta página.",
+    "faq.q6": "¿Cómo funcionan los paquetes portátiles de Windows (.zip) y Ubuntu/Linux (.tar.gz)? ¿Necesito un instalador?",
+    "faq.a6": "¡No necesitas instalador ni permisos de administrador! En Windows 10/11, basta con extraer el archivo .zip en cualquier carpeta y ejecutar pontinhos.exe. En Ubuntu 22.04+ / Linux x64, extrae el archivo .tar.gz y ejecuta ./pontinhos. Todas las descargas incluyen su suma SHA-256 pública para verificación de seguridad.",
+    "footer.linkDownloadSection": "Descargas (Android, Windows y Linux)",
+    "footer.linkDownloadWin": "Descargar Windows Portátil (.zip • 11,7 MB)",
+    "footer.linkDownloadLinux": "Descargar Ubuntu / Linux (.tar.gz • 9,5 MB)",
+    "footer.termsLink": "Términos de Uso y Licencia (EULA)",
+    "download.directGroupAria": "Descargas directas por plataforma"
   }
 };
 (function () {
@@ -799,8 +1195,9 @@ var I18N = {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       el.textContent = t(el.getAttribute('data-i18n'));
     });
-    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
-      el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
+    document.querySelectorAll('[data-i18n-aria], [data-i18n-aria-label]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria') || el.getAttribute('data-i18n-aria-label');
+      if (key) el.setAttribute('aria-label', t(key));
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       el.setAttribute('alt', t(el.getAttribute('data-i18n-alt')));
@@ -816,6 +1213,8 @@ var I18N = {
       setStatus(statusKey, false);
       renderBoard();
     }
+    applyOsDetect();
+    if (metricsBase) renderMetrics();
   }
 
   function initLang() {
@@ -1865,9 +2264,268 @@ var I18N = {
     reset.addEventListener('click', resetBoard);
   }
 
+  var METRICS_URL = 'https://api.github.com/repos/regardgames/pontinhos/releases';
+  var METRICS_KEY = 'pontinhos-release-metrics-v1';
+  var OPTIMISTIC_KEY = 'pontinhos-release-metrics-optimistic-v1';
+  var METRICS_TTL = 5 * 60 * 1000;
+  var metricsBase = null;
+  var metricsOptimistic = { android: 0, windows: 0, linux: 0 };
+
+  function detectVisitorPlatform() {
+    var parts = [];
+    try {
+      if (navigator.userAgentData && navigator.userAgentData.platform) {
+        parts.push(String(navigator.userAgentData.platform));
+      }
+    } catch (err) {
+      /* a detecção segue com userAgent e platform */
+    }
+    parts.push(String(navigator.userAgent || ''));
+    parts.push(String(navigator.platform || ''));
+    var blob = parts.join(' ').toLowerCase();
+    if (blob.indexOf('android') !== -1) return 'android';
+    if (blob.indexOf('windows') !== -1 || blob.indexOf('win32') !== -1 || blob.indexOf('win64') !== -1) return 'windows';
+    if (blob.indexOf('iphone') !== -1 || blob.indexOf('ipad') !== -1 || blob.indexOf('ipod') !== -1 || blob.indexOf('mac') !== -1) return 'apple';
+    if (blob.indexOf('linux') !== -1 || blob.indexOf('x11') !== -1 || blob.indexOf('cros') !== -1) return 'linux';
+    return 'generic';
+  }
+
+  function applyOsDetect() {
+    var platform = detectVisitorPlatform();
+    var key = 'osDetect.detectedGeneric';
+    if (platform === 'android') key = 'osDetect.detectedAndroid';
+    else if (platform === 'windows') key = 'osDetect.detectedWindows';
+    else if (platform === 'linux') key = 'osDetect.detectedLinux';
+    else if (platform === 'apple') key = 'osDetect.detectedApple';
+    var banner = document.getElementById('os-detect-banner');
+    if (banner) {
+      banner.setAttribute('data-i18n', key);
+      banner.textContent = t(key);
+    }
+    var detected = platform === 'android' || platform === 'windows' || platform === 'linux' ? platform : '';
+    document.querySelectorAll('[data-platform], [data-platform-target]').forEach(function (el) {
+      var name = el.getAttribute('data-platform') || el.getAttribute('data-platform-target');
+      el.classList.toggle('is-detected-os', !!detected && name === detected);
+    });
+  }
+
+  function classifyAsset(name) {
+    var lower = String(name || '').toLowerCase();
+    if (lower.indexOf('.sha256') !== -1) return '';
+    if (lower.slice(-4) === '.apk') return 'android';
+    if (lower.slice(-4) === '.zip') return 'windows';
+    if (lower.slice(-7) === '.tar.gz' || lower.slice(-4) === '.tgz') return 'linux';
+    return '';
+  }
+
+  function aggregateReleases(releases) {
+    var totals = { total: 0, android: 0, windows: 0, linux: 0 };
+    var sizes = { android: 0, windows: 0, linux: 0 };
+    (releases || []).forEach(function (release) {
+      (release.assets || []).forEach(function (asset) {
+        var bucket = classifyAsset(asset.name);
+        if (!bucket) return;
+        totals[bucket] += Number(asset.download_count) || 0;
+        totals.total += Number(asset.download_count) || 0;
+        if (!sizes[bucket] && asset.size) sizes[bucket] = Number(asset.size) || 0;
+      });
+    });
+    return { totals: totals, sizes: sizes };
+  }
+
+  function formatMetricNumber(num, lang) {
+    if (typeof num !== 'number' || !isFinite(num)) return t('metrics.valuePlaceholder') || '—';
+    try {
+      return new Intl.NumberFormat(lang || 'pt-BR').format(num);
+    } catch (err) {
+      return String(num);
+    }
+  }
+
+  function readMetricsCache() {
+    try {
+      var raw = sessionStorage.getItem(METRICS_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (!parsed || !parsed.savedAt || !parsed.payload) return null;
+      if (Date.now() - parsed.savedAt > METRICS_TTL) return null;
+      return parsed.payload;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function writeMetricsCache(payload) {
+    try {
+      sessionStorage.setItem(METRICS_KEY, JSON.stringify({ savedAt: Date.now(), payload: payload }));
+    } catch (err) {
+      /* a contagem ainda aparece nesta visita */
+    }
+  }
+
+  function readOptimistic() {
+    try {
+      var raw = sessionStorage.getItem(OPTIMISTIC_KEY);
+      var parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed) return { android: 0, windows: 0, linux: 0 };
+      return {
+        android: Number(parsed.android) || 0,
+        windows: Number(parsed.windows) || 0,
+        linux: Number(parsed.linux) || 0
+      };
+    } catch (err) {
+      return { android: 0, windows: 0, linux: 0 };
+    }
+  }
+
+  function writeOptimistic() {
+    try {
+      sessionStorage.setItem(OPTIMISTIC_KEY, JSON.stringify(metricsOptimistic));
+    } catch (err) {
+      /* o incremento otimista continua nesta visita */
+    }
+  }
+
+  function displayedCount(platform) {
+    var base = metricsBase && metricsBase.totals ? metricsBase.totals[platform] || 0 : 0;
+    if (platform === 'total') {
+      return base + metricsOptimistic.android + metricsOptimistic.windows + metricsOptimistic.linux;
+    }
+    return base + (metricsOptimistic[platform] || 0);
+  }
+
+  function setMetricsStatus(key) {
+    var el = document.getElementById('metrics-status-text');
+    if (!el) return;
+    el.setAttribute('data-i18n', key);
+    el.textContent = t(key);
+  }
+
+  function renderMetrics() {
+    if (!metricsBase) return;
+    var panel = document.getElementById('download-metrics');
+    if (panel) {
+      panel.classList.remove('is-loading');
+      panel.classList.add('is-live');
+    }
+    var fallback = document.getElementById('metrics-fallback');
+    if (fallback) fallback.hidden = true;
+    ['total', 'android', 'windows', 'linux'].forEach(function (platform) {
+      var node = document.getElementById('metric-' + platform + '-count');
+      if (!node) return;
+      var count = displayedCount(platform);
+      node.textContent = formatMetricNumber(count, currentLang);
+      var ariaKey = 'metrics.' + platform + 'Aria';
+      node.setAttribute('aria-label', t(ariaKey).replace('{count}', formatMetricNumber(count, currentLang)));
+    });
+  }
+
+  function showMetricsFallback() {
+    var panel = document.getElementById('download-metrics');
+    if (panel) {
+      panel.classList.remove('is-loading');
+      panel.classList.add('is-fallback');
+    }
+    setMetricsStatus('metrics.statusFallback');
+    var fallback = document.getElementById('metrics-fallback');
+    if (fallback) fallback.hidden = false;
+    ['total', 'android', 'windows', 'linux'].forEach(function (platform) {
+      var node = document.getElementById('metric-' + platform + '-count');
+      if (node && !metricsBase) node.textContent = t('metrics.valuePlaceholder') || '—';
+    });
+  }
+
+  function loadMetrics(force) {
+    var panel = document.getElementById('download-metrics');
+    if (!panel) return;
+    var cached = force ? null : readMetricsCache();
+    if (cached) {
+      metricsBase = cached;
+      setMetricsStatus('metrics.statusCached');
+      renderMetrics();
+      return;
+    }
+    if (panel) panel.classList.add('is-loading');
+    setMetricsStatus('metrics.statusLoading');
+    fetch(METRICS_URL, {
+      method: 'GET',
+      credentials: 'omit',
+      headers: { Accept: 'application/vnd.github+json' }
+    }).then(function (response) {
+      if (!response.ok) throw new Error('status');
+      return response.json();
+    }).then(function (releases) {
+      if (!releases || !releases.length && !Array.isArray(releases)) throw new Error('payload');
+      metricsBase = aggregateReleases(releases);
+      writeMetricsCache(metricsBase);
+      setMetricsStatus('metrics.statusLive');
+      renderMetrics();
+    }).catch(function () {
+      if (metricsBase) {
+        setMetricsStatus('metrics.statusCached');
+        renderMetrics();
+      } else {
+        showMetricsFallback();
+      }
+    });
+  }
+
+  function fallbackCopy(value) {
+    var area = document.createElement('textarea');
+    area.value = value;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.left = '-9999px';
+    document.body.appendChild(area);
+    area.select();
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      /* o hash continua visível para cópia manual */
+    }
+    document.body.removeChild(area);
+  }
+
+  function initDownloads() {
+    metricsOptimistic = readOptimistic();
+    applyOsDetect();
+    loadMetrics(false);
+    document.querySelectorAll('a[data-direct-download]').forEach(function (anchor) {
+      anchor.addEventListener('click', function () {
+        var platform = anchor.getAttribute('data-direct-download');
+        if (platform !== 'android' && platform !== 'windows' && platform !== 'linux') return;
+        metricsOptimistic[platform] += 1;
+        writeOptimistic();
+        if (metricsBase) renderMetrics();
+      });
+    });
+    document.querySelectorAll('[data-copy-hash]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var value = button.getAttribute('data-copy-hash') || '';
+        var restore = function () {
+          button.textContent = t('download.sha256CopyBtn');
+        };
+        var done = function () {
+          button.textContent = t('download.sha256Copied');
+          window.setTimeout(restore, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(value).then(done).catch(function () {
+            fallbackCopy(value);
+            done();
+          });
+        } else {
+          fallbackCopy(value);
+          done();
+        }
+      });
+    });
+  }
+
   initLang();
   initTheme();
   initNav();
   initGallery();
   initBoard();
+  initDownloads();
 })();
