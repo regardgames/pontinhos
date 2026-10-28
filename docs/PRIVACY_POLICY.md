@@ -45,7 +45,7 @@ Para que você tenha uma ótima experiência entre uma partida e outra, o **Pont
 
 1. **Opções de conforto e acessibilidade:** se os efeitos sonoros e a vibração (em dispositivos compatíveis) estão ativados ou desativados, o tema visual escolhido (Claro, Escuro ou Automático) e o idioma selecionado (Português, Inglês ou Espanhol).
 2. **Status do tutorial inicial:** um lembrete simples de que você já concluiu ou pulou a introdução de como jogar, evitando que ela reapareça toda vez que você abrir o aplicativo.
-3. **Histórico local de partidas contra o Computador:** a quantidade de partidas jogadas, vitórias, derrotas e empates para que você acompanhe suas estatísticas na tela do jogo.
+3. **Progresso de partida em andamento e estatísticas locais:** o estado atual do tabuleiro de uma partida ainda não concluída (chave local pontinhos.active_match.v1, para que você possa retomá-la de onde parou se o aplicativo for fechado, sendo apagado automaticamente assim que a partida termina ou é reiniciada) e a contagem local de partidas jogadas, vitórias, derrotas e empates contra o Computador.
 
 **Controle total nas suas mãos:** todas essas informações permanecem **exclusivamente no seu dispositivo** e nunca são enviadas pela internet. Você pode apagar o histórico de estatísticas a qualquer momento dentro do próprio jogo (**Configurações → Zerar estatísticas**) ou limpar os dados locais e desinstalar o aplicativo nas configurações do seu sistema (Android, iOS, Windows ou Ubuntu/Linux).
 
@@ -119,7 +119,7 @@ To provide a smooth experience from one match to the next, **Pontinhos** saves o
 
 1. **Comfort and accessibility options:** whether sound effects and vibration (on supported devices) are turned on or off, your chosen visual theme (Light, Dark, or Automatic), and your selected language (Portuguese, English, or Spanish).
 2. **Initial tutorial status:** a simple reminder that you already completed or skipped the how-to-play introduction, so it does not appear every time you open the app.
-3. **Local match history against the Computer:** your total matches played, wins, losses, and draws so you can track your statistics on the in-game screen.
+3. **In-progress match state and local statistics:** the current board state of an unfinished match (local key pontinhos.active_match.v1, allowing you to resume right where you left off if the app is closed, and automatically deleted as soon as the match ends or is reset) along with your local count of matches played, wins, losses, and draws against the Computer.
 
 **Full control in your hands:** all of this information stays **exclusively on your device** and is never sent over the internet. You can clear your statistics history anytime right inside the game (**Settings → Reset statistics**) or remove local app data in your operating system settings (Android, iOS, Windows, or Ubuntu/Linux).
 
@@ -193,7 +193,7 @@ Para ofrecerte una experiencia cómoda entre una partida y otra, **Pontinhos** g
 
 1. **Opciones de confort y accesibilidad:** si los efectos de sonido y la vibración (en dispositivos compatibles) están activados o desactivados, el tema visual elegido (Claro, Oscuro o Automático) y el idioma seleccionado (Portugués, Inglés o Español).
 2. **Estado del tutorial inicial:** un recordatorio simple de que ya completaste u omitiste la introducción de cómo jugar, para que no vuelva a aparecer cada vez que abras la aplicación.
-3. **Historial local de partidas contra la Computadora:** la cantidad de partidas jugadas, victorias, derrotas y empates para que consultes tus estadísticas en la pantalla del juego.
+3. **Progreso de partida en curso y estadísticas locales:** el estado actual del tablero de una partida aún no finalizada (clave local pontinhos.active_match.v1, para que puedas retomarla donde la dejaste si se cierra la aplicación, borrándose automáticamente en cuanto termina o se reinicia la partida) junto con el conteo local de partidas jugadas, victorias, derrotas y empates contra la Computadora.
 
 **Control total en tus manos:** toda esta información permanece **exclusivamente en tu dispositivo** y nunca se envía por internet. Puedes borrar el historial de estadísticas en cualquier momento dentro del propio juego (**Ajustes → Reiniciar estadísticas**) o eliminar los datos locales de la aplicación desde tu sistema operativo (Android, iOS, Windows o Ubuntu/Linux).
 
