@@ -50,14 +50,14 @@
     "applicationCategory": "GameApplication",
     "operatingSystem": "Android 8.0+, Windows 10/11 (x64), Ubuntu 22.04+ / Linux (x64), iOS",
     "inLanguage": ["pt-BR", "en", "es"],
-    "softwareVersion": "1.0.0 (v0.1.0-beta.1)",
+    "softwareVersion": "1.0.0 (v0.1.2)",
     "url": "https://regardgames.github.io/pontinhos/",
     "downloadUrl": [
-    "https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk",
-    "https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip",
-    "https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz"
+    "https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-release.apk",
+    "https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-windows-x64-portable.zip",
+    "https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-linux-x64-portable.tar.gz"
   ],
-    "installUrl": "https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1",
+    "installUrl": "https://github.com/regardgames/pontinhos/releases/tag/v0.1.2",
     "image": "https://regardgames.github.io/pontinhos/assets/feature-graphic.png",
     "screenshot": [
       "https://regardgames.github.io/pontinhos/assets/screenshots/phone/01_home_light.png",
@@ -175,15 +175,15 @@
               <a href="#tabuleiro-interativo" class="btn btn-secondary" data-i18n="hero.ctaPlayDemo">Experimentar no Navegador</a>
             </div>
             <div class="hero-platform-pills" role="group" data-i18n-aria="download.directGroupAria" aria-label="Downloads diretos por plataforma">
-              <a class="platform-pill" data-platform-target="android" data-direct-download="android" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk">
+              <a class="platform-pill" data-platform-target="android" data-direct-download="android" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-release.apk">
                 <span class="platform-pill-dot" aria-hidden="true">●</span>
-                <span data-i18n="hero.ctaDownloadAndroid">Baixar para Android (.apk • 50,7 MB)</span>
+                <span data-i18n="hero.ctaDownloadAndroid">Baixar para Android (.apk • 53,5 MB)</span>
               </a>
-              <a class="platform-pill" data-platform-target="windows" data-direct-download="windows" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip">
+              <a class="platform-pill" data-platform-target="windows" data-direct-download="windows" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-windows-x64-portable.zip">
                 <span class="platform-pill-dot" aria-hidden="true">◆</span>
                 <span data-i18n="hero.ctaDownloadWindows">Baixar para Windows (.zip • 11,7 MB)</span>
               </a>
-              <a class="platform-pill" data-platform-target="linux" data-direct-download="linux" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz">
+              <a class="platform-pill" data-platform-target="linux" data-direct-download="linux" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-linux-x64-portable.tar.gz">
                 <span class="platform-pill-dot" aria-hidden="true">▲</span>
                 <span data-i18n="hero.ctaDownloadLinux">Baixar para Ubuntu / Linux (.tar.gz • 9,5 MB)</span>
               </a>
@@ -265,7 +265,7 @@
             <h3 data-i18n="modes.localTitle">2 Jogadores (Local) no Mesmo Aparelho</h3>
             <p data-i18n="modes.localIntro">A experiência clássica de dividir a folha de caderno com quem está ao seu lado:</p>
             <ul>
-              <li data-i18n="modes.localItem1">Identidade visual e simbólica clara entre Jogador 1 (● J1, Azul Cobalto) e Jogador 2 (■ J2, Âmbar Queimado).</li>
+              <li data-i18n="modes.localItem1">Identidade visual e simbólica clara entre Jogador 1 (● J1, Azul Cobalto) e Jogador 2 (◆ J2, Âmbar Queimado).</li>
               <li data-i18n="modes.localItem2">Revanche justa com um toque: ao terminar a partida, quem começa o próximo duelo alterna automaticamente.</li>
             </ul>
           </article>
@@ -323,12 +323,13 @@
         </div>
         <div class="swatch-row" aria-hidden="true">
           <div class="swatch swatch-p1" data-i18n="demo.boxOwnerYou">● J1</div>
+          <div class="swatch swatch-p2" data-i18n="demo.boxOwnerP2">◆ J2</div>
           <div class="swatch swatch-bot" data-i18n="demo.boxOwnerBot">▲ BOT</div>
           <div class="swatch swatch-last" data-i18n="a11y.lastMoveRole">Última Jogada</div>
         </div>
         <ul class="identity-list">
           <li><strong data-i18n="a11y.p1Role">Jogador 1 / Você</strong><span data-i18n="a11y.p1Desc">Círculo + Inicial J1 + Azul Cobalto</span></li>
-          <li><strong data-i18n="a11y.p2Role">Jogador 2 (Local)</strong><span data-i18n="a11y.p2Desc">Quadrado + Inicial J2 + Âmbar Queimado</span></li>
+          <li><strong data-i18n="a11y.p2Role">Jogador 2 (Local)</strong><span data-i18n="a11y.p2Desc">Losango + Inicial J2 + Âmbar Queimado</span></li>
           <li><strong data-i18n="a11y.botRole">Computador (IA)</strong><span data-i18n="a11y.botDesc">Triângulo + Rótulo BOT + Âmbar Queimado</span></li>
           <li><strong data-i18n="a11y.lastMoveRole">Última Jogada</strong><span data-i18n="a11y.lastMoveDesc">Destaque Verde Esmeralda no traço recém-marcado</span></li>
         </ul>
@@ -476,7 +477,7 @@
           </details>
           <details>
             <summary data-i18n="faq.q5">O jogo é gratuito? Em quais plataformas posso baixar e jogar?</summary>
-            <p data-i18n="faq.a5">Sim! O Pontinhos é 100% gratuito, livre de anúncios e sem cobranças. Você pode baixar gratuitamente nesta página os pacotes oficiais para Android (.apk assinado, 50,7 MB), Windows 10/11 64-bit (.zip portátil, 11,7 MB) e Ubuntu / Linux 64-bit (.tar.gz portátil, 9,5 MB), ou jogar a demonstração direto no navegador.</p>
+            <p data-i18n="faq.a5">Sim! O Pontinhos é 100% gratuito, livre de anúncios e sem cobranças. Você pode baixar gratuitamente nesta página os pacotes oficiais para Android (.apk assinado, 53,5 MB), Windows 10/11 64-bit (.zip portátil, 11,7 MB) e Ubuntu / Linux 64-bit (.tar.gz portátil, 9,5 MB), ou jogar a demonstração direto no navegador.</p>
           </details>
           <details>
             <summary data-i18n="faq.q6">Como funcionam os pacotes portáteis de Windows (.zip) e Ubuntu/Linux (.tar.gz)? Preciso de instalador?</summary>
@@ -517,7 +518,7 @@
               <span class="metric-label"><span class="metric-symbol" aria-hidden="true">●</span> <span data-i18n="metrics.androidLabel">Downloads Android</span></span>
               <strong class="metric-value" id="metric-android-count" data-metric="android" aria-live="polite">—</strong>
               <span class="metric-sub" data-i18n="metrics.androidSub">Pacote .apk assinado</span>
-              <span class="metric-size" data-i18n="download.android.size">50,7 MB</span>
+              <span class="metric-size" data-i18n="download.android.size">53,5 MB</span>
             </article>
             <article class="metric-counter-card metric-windows">
               <span class="metric-label"><span class="metric-symbol" aria-hidden="true">◆</span> <span data-i18n="metrics.windowsLabel">Downloads Windows</span></span>
@@ -535,8 +536,8 @@
           <div class="metrics-footer">
             <p class="metrics-status" id="metrics-status-text" aria-live="polite" data-i18n="metrics.statusLoading">Consultando GitHub Releases...</p>
             <p class="metrics-source-row">
-              <span><span data-i18n="metrics.latestReleaseLabel">Versão atual:</span> v0.1.0-beta.1</span>
-              <a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1" data-i18n="metrics.sourceLinkText">Fonte verificável: API pública do GitHub Releases</a>
+              <span><span data-i18n="metrics.latestReleaseLabel">Versão atual:</span> v0.1.2</span>
+              <a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.2" data-i18n="metrics.sourceLinkText">Fonte verificável: API pública do GitHub Releases</a>
             </p>
             <p class="metrics-privacy-note" data-i18n="metrics.privacySealDetail">Estes números vêm exclusivamente do contador público de arquivos do GitHub. O jogo Pontinhos permanece 100% offline, sem telemetria e sem coletar nenhum dado pessoal.</p>
             <p class="metrics-fallback" id="metrics-fallback" hidden>
@@ -557,25 +558,25 @@
             </div>
             <span class="card-badge" data-i18n="download.android.format">APK Assinado (.apk)</span>
             <dl class="download-specs">
-              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.android.versionBadge">v1.0.0</span> · <span data-i18n="download.android.releaseTag">v0.1.0-beta.1</span></dd></div>
-              <div><dt data-i18n="download.sizeLabel">Tamanho</dt><dd data-i18n="download.android.size">50,7 MB</dd></div>
+              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.android.versionBadge">v1.0.0</span> · <span data-i18n="download.android.releaseTag">v0.1.2</span></dd></div>
+              <div><dt data-i18n="download.sizeLabel">Tamanho</dt><dd data-i18n="download.android.size">53,5 MB</dd></div>
               <div><dt data-i18n="download.reqLabel">Requisitos</dt><dd data-i18n="download.android.req">Android 8.0+ (ARM / x64)</dd></div>
             </dl>
-            <a class="btn btn-primary" data-direct-download="android" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk" data-i18n="download.android.btnText" data-i18n-aria="download.android.btnAria" aria-label="Baixar pacote APK assinado do Pontinhos para Android (50,7 megabytes)">Baixar APK Android (50,7 MB)</a>
+            <a class="btn btn-primary" data-direct-download="android" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-release.apk" data-i18n="download.android.btnText" data-i18n-aria="download.android.btnAria" aria-label="Baixar pacote APK assinado do Pontinhos para Android (53,5 megabytes)">Baixar APK Android (53,5 MB)</a>
             <div>
               <h4 data-i18n="download.quickInstallTitle">Como instalar e jogar (3 passos rápidos)</h4>
               <ol class="install-steps">
-                <li data-i18n="download.android.step1">1. Baixe o arquivo pontinhos-v0.1.0-release.apk no seu celular ou tablet Android.</li>
+                <li data-i18n="download.android.step1">1. Baixe o arquivo pontinhos-v0.1.2-release.apk no seu celular ou tablet Android.</li>
                 <li data-i18n="download.android.step2">2. Toque no arquivo baixado e, se o Android solicitar, autorize a instalação desta fonte.</li>
                 <li data-i18n="download.android.step3">3. Abra o Pontinhos e divirta-se 100% offline — sem cadastro e sem anúncios!</li>
               </ol>
             </div>
             <div class="checksum-box">
               <span data-i18n="download.sha256Label">Checksum SHA-256</span>
-              <code>01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f</code>
+              <code>74d70e6bedd27a9358709b2ed462fd217bdc139155ee1b77f52446905dc669c5</code>
               <div class="checksum-actions">
-                <button type="button" class="btn btn-secondary checksum-copy" data-copy-hash="01c295f9edad0f7750f2f7f35e4fd3ba4b365ddff20d706ffe794178e776529f" data-i18n="download.sha256CopyBtn" data-i18n-aria="download.android.sha256Aria" aria-label="Copiar hash SHA-256 do APK de Android">Copiar SHA-256</button>
-                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
+                <button type="button" class="btn btn-secondary checksum-copy" data-copy-hash="74d70e6bedd27a9358709b2ed462fd217bdc139155ee1b77f52446905dc669c5" data-i18n="download.sha256CopyBtn" data-i18n-aria="download.android.sha256Aria" aria-label="Copiar hash SHA-256 do APK de Android">Copiar SHA-256</button>
+                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-release.apk.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
               </div>
             </div>
           </article>
@@ -591,15 +592,15 @@
             </div>
             <span class="card-badge" data-i18n="download.windows.format">Pacote Portátil (.zip)</span>
             <dl class="download-specs">
-              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.windows.versionBadge">v1.0.0</span> · <span data-i18n="download.windows.releaseTag">v0.1.0-beta.1</span></dd></div>
+              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.windows.versionBadge">v1.0.0</span> · <span data-i18n="download.windows.releaseTag">v0.1.2</span></dd></div>
               <div><dt data-i18n="download.sizeLabel">Tamanho</dt><dd data-i18n="download.windows.size">11,7 MB</dd></div>
               <div><dt data-i18n="download.reqLabel">Requisitos</dt><dd data-i18n="download.windows.req">Windows 10/11 (64-bit)</dd></div>
             </dl>
-            <a class="btn btn-primary" data-direct-download="windows" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip" data-i18n="download.windows.btnText" data-i18n-aria="download.windows.btnAria" aria-label="Baixar pacote portátil ZIP do Pontinhos para Windows 10 e 11 de 64 bits (11,7 megabytes)">Baixar para Windows (.zip • 11,7 MB)</a>
+            <a class="btn btn-primary" data-direct-download="windows" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-windows-x64-portable.zip" data-i18n="download.windows.btnText" data-i18n-aria="download.windows.btnAria" aria-label="Baixar pacote portátil ZIP do Pontinhos para Windows 10 e 11 de 64 bits (11,7 megabytes)">Baixar para Windows (.zip • 11,7 MB)</a>
             <div>
               <h4 data-i18n="download.quickInstallTitle">Como instalar e jogar (3 passos rápidos)</h4>
               <ol class="install-steps">
-                <li data-i18n="download.windows.step1">1. Baixe o arquivo pontinhos-v0.1.0-windows-x64-portable.zip no seu computador.</li>
+                <li data-i18n="download.windows.step1">1. Baixe o arquivo pontinhos-v0.1.2-windows-x64-portable.zip no seu computador.</li>
                 <li data-i18n="download.windows.step2">2. Extraia todo o conteúdo do arquivo .zip em qualquer pasta de sua preferência.</li>
                 <li data-i18n="download.windows.step3">3. Dê dois cliques em pontinhos.exe para jogar — sem instalador e sem precisar de permissão de administrador!</li>
               </ol>
@@ -609,7 +610,7 @@
               <code>ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f</code>
               <div class="checksum-actions">
                 <button type="button" class="btn btn-secondary checksum-copy" data-copy-hash="ccaa56237254f3e33ab4f68ce2bc6be63d229ccbea3378bbc9ed2ce22e28b85f" data-i18n="download.sha256CopyBtn" data-i18n-aria="download.windows.sha256Aria" aria-label="Copiar hash SHA-256 do pacote portátil de Windows">Copiar SHA-256</button>
-                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
+                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-windows-x64-portable.zip.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
               </div>
             </div>
           </article>
@@ -625,26 +626,26 @@
             </div>
             <span class="card-badge" data-i18n="download.linux.format">Pacote Portátil (.tar.gz)</span>
             <dl class="download-specs">
-              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.linux.versionBadge">v1.0.0</span> · <span data-i18n="download.linux.releaseTag">v0.1.0-beta.1</span></dd></div>
+              <div><dt data-i18n="download.versionLabel">Versão</dt><dd><span data-i18n="download.linux.versionBadge">v1.0.0</span> · <span data-i18n="download.linux.releaseTag">v0.1.2</span></dd></div>
               <div><dt data-i18n="download.sizeLabel">Tamanho</dt><dd data-i18n="download.linux.size">9,5 MB</dd></div>
               <div><dt data-i18n="download.reqLabel">Requisitos</dt><dd data-i18n="download.linux.req">Ubuntu 22.04+ / Linux x64 (GTK3)</dd></div>
             </dl>
-            <a class="btn btn-primary" data-direct-download="linux" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz" data-i18n="download.linux.btnText" data-i18n-aria="download.linux.btnAria" aria-label="Baixar pacote portátil TAR.GZ do Pontinhos para Ubuntu e Linux de 64 bits (9,5 megabytes)">Baixar para Ubuntu / Linux (.tar.gz • 9,5 MB)</a>
+            <a class="btn btn-primary" data-direct-download="linux" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-linux-x64-portable.tar.gz" data-i18n="download.linux.btnText" data-i18n-aria="download.linux.btnAria" aria-label="Baixar pacote portátil TAR.GZ do Pontinhos para Ubuntu e Linux de 64 bits (9,5 megabytes)">Baixar para Ubuntu / Linux (.tar.gz • 9,5 MB)</a>
             <div>
               <h4 data-i18n="download.quickInstallTitle">Como instalar e jogar (3 passos rápidos)</h4>
               <ol class="install-steps">
-                <li data-i18n="download.linux.step1">1. Baixe o arquivo pontinhos-v0.1.0-linux-x64-portable.tar.gz no seu sistema Linux.</li>
-                <li data-i18n="download.linux.step2">2. Extraia o pacote pelo gerenciador de arquivos ou terminal (tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz).</li>
+                <li data-i18n="download.linux.step1">1. Baixe o arquivo pontinhos-v0.1.2-linux-x64-portable.tar.gz no seu sistema Linux.</li>
+                <li data-i18n="download.linux.step2">2. Extraia o pacote pelo gerenciador de arquivos ou terminal (tar -xzf pontinhos-v0.1.2-linux-x64-portable.tar.gz).</li>
                 <li data-i18n="download.linux.step3">3. Execute ./pontinhos na pasta extraída — pronto para jogar 100% offline, sem instalação complexa!</li>
               </ol>
-              <pre class="terminal-snippet"><code>tar -xzf pontinhos-v0.1.0-linux-x64-portable.tar.gz &amp;&amp; ./pontinhos</code></pre>
+              <pre class="terminal-snippet"><code>tar -xzf pontinhos-v0.1.2-linux-x64-portable.tar.gz &amp;&amp; ./pontinhos</code></pre>
             </div>
             <div class="checksum-box">
               <span data-i18n="download.sha256Label">Checksum SHA-256</span>
               <code>3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730</code>
               <div class="checksum-actions">
                 <button type="button" class="btn btn-secondary checksum-copy" data-copy-hash="3628a374b3d9fffd4f8e3c2a4e585a16528a207a07a16a9a6d248a5fe58a6730" data-i18n="download.sha256CopyBtn" data-i18n-aria="download.linux.sha256Aria" aria-label="Copiar hash SHA-256 do pacote portátil de Linux">Copiar SHA-256</button>
-                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
+                <a class="checksum-link" href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-linux-x64-portable.tar.gz.sha256" data-i18n="download.sha256FileLink">Baixar arquivo .sha256</a>
               </div>
             </div>
           </article>
@@ -681,7 +682,7 @@
             <p data-i18n="stores.snapStore.desc">Distribuição em 1 clique para Ubuntu e Linux. Você já pode jogar agora baixando o pacote portátil .tar.gz acima!</p>
           </article>
         </div>
-        <p class="section-lead"><a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1" data-i18n="download.allReleasesLink">Ver todas as versões e notas de lançamento no GitHub Releases</a></p>
+        <p class="section-lead"><a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.2" data-i18n="download.allReleasesLink">Ver todas as versões e notas de lançamento no GitHub Releases</a></p>
       </div>
     </section>
 
@@ -729,10 +730,10 @@
         <h3 data-i18n="footer.colDownloads">Downloads &amp; Suporte</h3>
         <ul>
           <li><a href="#download" data-i18n="footer.linkDownloadSection">Downloads (Android, Windows e Linux)</a></li>
-          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-release.apk" data-direct-download="android" data-i18n="footer.linkDownloadApk">Baixar APK Android (50,7 MB)</a></li>
-          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-windows-x64-portable.zip" data-direct-download="windows" data-i18n="footer.linkDownloadWin">Baixar Windows Portátil (.zip • 11,7 MB)</a></li>
-          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.0-beta.1/pontinhos-v0.1.0-linux-x64-portable.tar.gz" data-direct-download="linux" data-i18n="footer.linkDownloadLinux">Baixar Ubuntu / Linux (.tar.gz • 9,5 MB)</a></li>
-          <li><a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.0-beta.1" data-i18n="footer.linkReleases">Notas de Lançamento (Releases)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-release.apk" data-direct-download="android" data-i18n="footer.linkDownloadApk">Baixar APK Android (53,5 MB)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-windows-x64-portable.zip" data-direct-download="windows" data-i18n="footer.linkDownloadWin">Baixar Windows Portátil (.zip • 11,7 MB)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/releases/download/v0.1.2/pontinhos-v0.1.2-linux-x64-portable.tar.gz" data-direct-download="linux" data-i18n="footer.linkDownloadLinux">Baixar Ubuntu / Linux (.tar.gz • 9,5 MB)</a></li>
+          <li><a href="https://github.com/regardgames/pontinhos/releases/tag/v0.1.2" data-i18n="footer.linkReleases">Notas de Lançamento (Releases)</a></li>
           <li><a href="https://github.com/regardgames/pontinhos/issues" data-i18n="footer.linkFeedback">Enviar Sugestão ou Feedback</a></li>
         </ul>
       </div>

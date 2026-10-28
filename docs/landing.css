@@ -1077,6 +1077,7 @@ tr:last-child td {
   border: 2px solid var(--color-p1);
 }
 
+.swatch-p2,
 .swatch-bot {
   color: var(--color-p2);
   border: 2px solid var(--color-p2);
